@@ -1,0 +1,38 @@
+================================================================================
+ART Analysis 2: System × Urgency Interaction (all trials)
+================================================================================
+N = 23 participants
+Aggregated across scenarios (mean of Interview + Math per cell).
+Detectability excluded (SonoAdapt-Low is silent).
+Wobbrock, J.O. et al. (2011). The Aligned Rank Transform.
+
+
+--- Appropriateness (1 = completely inappropriate … 7 = completely appropriate; higher = better) ---
+  system                          F(2,44) = 55.58, p = 0.00000 ***  η²_p = 0.716
+  urgency                         F(1,22) = 31.33, p = 0.00001 ***  η²_p = 0.588
+  system:urgency                  F(2,44) = 28.57, p = 0.00000 ***  η²_p = 0.565
+
+--- SocialAcceptability (1 = completely unacceptable  … 7 = completely acceptable;  higher = better) ---
+  system                          F(2,44) = 58.87, p = 0.00000 ***  η²_p = 0.728
+  urgency                         F(1,22) = 27.58, p = 0.00003 ***  η²_p = 0.556
+  system:urgency                  F(2,44) = 44.57, p = 0.00000 ***  η²_p = 0.670
+
+--- Disruptiveness (1 = not disruptive at all    … 7 = extremely disruptive;   LOWER = better) ---
+  system                          F(2,44) = 106.15, p = 0.00000 ***  η²_p = 0.828
+  urgency                         F(1,22) = 34.53, p = 0.00001 ***  η²_p = 0.611
+  system:urgency                  F(2,44) = 73.81, p = 0.00000 ***  η²_p = 0.770
+
+
+================================================================================
+COPYABLE LaTeX SNIPPETS
+================================================================================
+
+Appropriateness — System × Urgency interaction:
+  $F(2,44) = 28.57$, $p = 0.000$, $\eta^2_p = 0.565$
+
+SocialAcceptability — System × Urgency interaction:
+  $F(2,44) = 44.57$, $p = 0.000$, $\eta^2_p = 0.670$
+
+Disruptiveness — System × Urgency interaction:
+  $F(2,44) = 73.81$, $p = 0.000$, $\eta^2_p = 0.770$
+

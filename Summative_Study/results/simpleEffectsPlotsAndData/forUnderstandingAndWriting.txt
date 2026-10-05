@@ -1,0 +1,176 @@
+================================================================================
+SIMPLE EFFECTS — forUnderstandingAndWriting.txt
+================================================================================
+
+─── EASY-TO-UNDERSTAND SUMMARY ────────────────────────────────────────────────
+
+"Does the system preference change depending on urgency/importance?"
+
+We split the data into LOW and HIGH urgency/importance and repeat the
+3-system comparison (Earcon vs Speech vs SonoAdapt) within each level.
+
+→ LOW urgency:   SonoAdapt (muted) is overwhelmingly preferred.
+                  Speech is rated worst (inappropriate for low-urgency).
+→ HIGH urgency:  SonoAdapt ≈ best baseline. All three produce audible
+                  notifications, differences are smaller.
+
+These analyses explain WHERE the main effect comes from.
+
+
+─── WHAT IS A "SIMPLE EFFECT"? ────────────────────────────────────────────────
+
+A "simple effect" tests one factor (System) at a FIXED level of another
+factor (Urgency/Importance). It is the standard follow-up when you have
+a multi-factor design and want to decompose the main effect.
+
+  Main effect:    System, collapsed across everything
+  Simple effect:  System at LOW only  +  System at HIGH only
+
+This answers: "Is the system preference the same for low-urgency and
+high-urgency notifications, or does it differ?"
+
+
+─── WHAT WE COMPARE ───────────────────────────────────────────────────────────
+
+Analysis 1 — LOW URGENCY/IMPORTANCE:
+  Compare Earcon vs Speech vs SonoAdapt for LOW notifications only.
+  Each participant's score = mean of their 2 LOW trials per system
+    (Interview-Low + Math-Low).
+  Key: SonoAdapt MUTES all LOW notifications → Detectability = NaN.
+
+Analysis 2 — HIGH URGENCY/IMPORTANCE:
+  Compare Earcon vs Speech vs SonoAdapt for HIGH notifications only.
+  Each participant's score = mean of their 2 HIGH trials per system
+    (Interview-High + Math-High).
+  Key: SonoAdapt plays Earcon in Interview-High, Speech in Math-High.
+  All systems produce audible output → all 4 DVs available.
+
+
+─── WHAT DATA WAS USED ────────────────────────────────────────────────────────
+
+Same as main effects:
+  Source:       raw.xlsx
+  N = 23       (after removing 4 outliers)
+  Outliers:    Defined in potential_outliers.json
+
+Unit of analysis:
+  Per participant: mean of their 2 trials per system WITHIN a given
+  urgency level. → 1 value per participant per system per DV per urgency.
+
+Special case — Detectability for LOW:
+  SonoAdapt mutes LOW → Detectability is NaN for SonoAdapt.
+  → Friedman runs on 3 DVs only (Appropriateness, Social, Disruptiveness).
+  → For Detectability-LOW, we report a 2-system Wilcoxon (Earcon vs Speech).
+  This is the exact same logic as mainEffects.py, just more explicit here
+  because we're already split by urgency.
+
+
+─── STATISTICAL TESTS ─────────────────────────────────────────────────────────
+
+Identical pipeline to mainEffects.py:
+  Omnibus:   Friedman test (χ²(2), Kendall's W)
+  Post-hoc:  3 pairwise Wilcoxon signed-rank, Holm-Bonferroni corrected
+  Effect sizes: r_rb, r, Cohen's d_z
+  α = .025 (from power analysis)
+
+For Detectability-LOW (only 2 groups: Earcon vs Speech):
+  Single Wilcoxon signed-rank test (no correction needed, only 1 comparison).
+
+WHY SAME TESTS AS MAIN EFFECTS?
+  Consistency. The simple effects use the same non-parametric approach so
+  results are directly comparable. The only difference is the data subset.
+
+
+─── PLOTS GENERATED ───────────────────────────────────────────────────────────
+
+LOW urgency plots (always 3 DVs — no Detectability for SonoAdapt):
+  fig_simpleEffects_LOW_SonoAdapt     3 systems × 3 DVs (thesis)
+  fig_simpleEffects_LOW_AudioAdapt    Same with AudioAdapt naming (paper)
+
+HIGH urgency plots (two versions each):
+  fig_simpleEffects_HIGH_SonoAdapt_4DV    3 systems × 4 DVs (thesis)
+  fig_simpleEffects_HIGH_SonoAdapt_3DV    Same without Detectability (thesis)
+  fig_simpleEffects_HIGH_AudioAdapt_4DV   3 systems × 4 DVs (paper)
+  fig_simpleEffects_HIGH_AudioAdapt_3DV   Same without Detectability (paper)
+
+All saved as .png (300 DPI) + .pdf (vector).
+
+Colors: same as main effects:
+  Earcon: #FFC300, Speech: #694487, SonoAdapt/AudioAdapt: #56C959
+
+Plot titles:
+  "Simple Effect of System for LOW Urgency/Importance: Likert Ratings"
+  "Simple Effect of System for HIGH Urgency/Importance: Likert Ratings"
+
+WHAT THE PLOTS SHOW:
+  Same layout as the main effect plots (3 boxplots per DV), but now
+  restricted to either LOW or HIGH trials. You can directly compare
+  the patterns: for LOW, the differences are dramatic (Speech is terrible,
+  SonoAdapt/mute is clearly preferred); for HIGH, systems are more similar.
+
+
+─── OTHER OUTPUT FILES ────────────────────────────────────────────────────────
+
+  simpleEffectsResults.txt     Full statistical report (console output)
+  participantMeans_LOW.csv     Participant-level means for LOW analysis
+  participantMeans_HIGH.csv    Participant-level means for HIGH analysis
+
+
+─── WHAT THE SCRIPT DOES UNDER THE HOOD ───────────────────────────────────────
+
+  1. Loads raw.xlsx and removes pilot row
+  2. Reshapes wide → long (same as mainEffects.py)
+  3. Maps Likert labels → numeric 1–7
+  4. Removes outlier participants
+  5. Sets Detectability = NaN for SonoAdapt + LOW
+  6. SPLITS data into LOW and HIGH subsets
+  7. For each urgency level:
+     a. Computes participant-level means per system
+     b. Runs Friedman + Wilcoxon pipeline per DV
+     c. Handles Detectability specially for LOW
+  8. Generates publication-ready boxplots
+  9. Saves participant means CSVs
+
+
+─── RELATIONSHIP TO MAIN EFFECTS ──────────────────────────────────────────────
+
+  mainEffects.py  →  "Overall, which system is preferred?"
+  simpleEffects.py →  "Is the preference the same for LOW and HIGH?"
+
+The simple effects DECOMPOSE the main effect. If the main effect shows
+SonoAdapt > Earcon > Speech, the simple effects reveal:
+  - For LOW: SonoAdapt ≫ Earcon ≫ Speech  (huge differences, driven by muting)
+  - For HIGH: differences are smaller, SonoAdapt ≈ best baseline
+
+This decomposition is important because SonoAdapt behaves very differently
+for LOW (mutes) vs HIGH (plays earcon or speech). Collapsing across urgency
+hides this distinction.
+
+
+─── REVIEWER DEFENSE NOTES ────────────────────────────────────────────────────
+
+Q: "Isn't comparing SonoAdapt (muted) to Earcon/Speech unfair for LOW?"
+A: No — that IS the point. SonoAdapt's adaptive decision to mute LOW
+   notifications is a feature, not a confound. The high Appropriateness
+   ratings (M=6.15) confirm users found muting appropriate for low-urgency
+   messages. We transparently exclude Detectability from this comparison.
+
+Q: "Why not do a full 3×2 factorial ANOVA instead of separate simple effects?"
+A: (1) Our data is ordinal, not interval, so parametric ANOVA is questionable.
+   (2) The Detectability issue (NaN for SonoAdapt+LOW) breaks the balanced
+   design needed for factorial analysis.
+   (3) Your supervisor's approach — main effect + simple effects — is the
+   standard way to report this in HCI. A formal interaction test would
+   require ART (Aligned Rank Transform) repeated-measures, which is a
+   separate analysis your supervisor mentioned doing in R.
+
+Q: "For HIGH, SonoAdapt plays Earcon in one scenario and Speech in the other.
+    Aren't you mixing apples and oranges?"
+A: Each participant's SonoAdapt-HIGH score is the mean of (Interview-HIGH
+   where SonoAdapt played Earcon) and (Math-HIGH where SonoAdapt played
+   Speech). This is exactly how participants experienced it. The sanity checks
+   (in furtherEffects.py) confirm SonoAdapt's ratings match the corresponding
+   baselines in each scenario, validating that the adaptive choices were
+   equivalent to the baselines.
+
+Script: simpleEffects.py

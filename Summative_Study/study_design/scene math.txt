@@ -1,0 +1,11 @@
+A (Team Event): Richtig (Total: €75.70)
+
+B (Groceries): Falsch (Angegeben: €59.60, Echt: €57.60)
+
+C (Trattoria): Richtig (Total: €75.00)
+
+D (Office Supplies): Falsch (Angegeben: €79.70, Echt: €80.70)
+
+E (Hardware Store): Richtig (Total: €74.10)
+
+F (Pharmacy): Falsch (Angegeben: €64.30, Echt: €63.30)

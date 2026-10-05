@@ -1,0 +1,44 @@
+================================================================================
+ART Analysis 1: System × Scenario Interaction (HIGH-urgency trials only)
+================================================================================
+N = 23 participants, HIGH trials only
+Wobbrock, J.O. et al. (2011). The Aligned Rank Transform.
+
+
+--- Appropriateness (1 = completely inappropriate … 7 = completely appropriate; higher = better) ---
+  system                          F(2,44) = 1.80, p = 0.17700 n.s.  η²_p = 0.076
+  scenario                        F(1,22) = 3.43, p = 0.07767 .  η²_p = 0.135
+  system:scenario                 F(2,44) = 3.39, p = 0.04255 *  η²_p = 0.134
+
+--- SocialAcceptability (1 = completely unacceptable  … 7 = completely acceptable;  higher = better) ---
+  system                          F(2,44) = 3.19, p = 0.05070 .  η²_p = 0.127
+  scenario                        F(1,22) = 11.49, p = 0.00264 **  η²_p = 0.343
+  system:scenario                 F(2,44) = 3.67, p = 0.03347 *  η²_p = 0.143
+
+--- Detectability (1 = very difficult to detect … 7 = very easy to detect;    higher = better) ---
+  system                          F(2,44) = 3.13, p = 0.05378 .  η²_p = 0.124
+  scenario                        F(1,22) = 0.17, p = 0.68781 n.s.  η²_p = 0.007
+  system:scenario                 F(2,44) = 5.72, p = 0.00619 **  η²_p = 0.206
+
+--- Disruptiveness (1 = not disruptive at all    … 7 = extremely disruptive;   LOWER = better) ---
+  system                          F(2,44) = 47.87, p = 0.00000 ***  η²_p = 0.685
+  scenario                        F(1,22) = 6.31, p = 0.01985 *  η²_p = 0.223
+  system:scenario                 F(2,44) = 22.32, p = 0.00000 ***  η²_p = 0.504
+
+
+================================================================================
+COPYABLE LaTeX SNIPPETS
+================================================================================
+
+Appropriateness — System × Scenario interaction:
+  $F(2,44) = 3.39$, $p = 0.043$, $\eta^2_p = 0.134$
+
+SocialAcceptability — System × Scenario interaction:
+  $F(2,44) = 3.67$, $p = 0.033$, $\eta^2_p = 0.143$
+
+Detectability — System × Scenario interaction:
+  $F(2,44) = 5.72$, $p = 0.006$, $\eta^2_p = 0.206$
+
+Disruptiveness — System × Scenario interaction:
+  $F(2,44) = 22.32$, $p = 0.000$, $\eta^2_p = 0.504$
+

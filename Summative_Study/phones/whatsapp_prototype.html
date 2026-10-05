@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WhatsApp Notification Prototype</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; -webkit-font-smoothing:antialiased; }
+
+  html, body {
+    width: 390px;
+    height: 844px;
+    background:#000;
+    font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow:hidden;
+  }
+
+  .phone {
+    width: 390px;
+    height: 844px;
+    position: relative;
+    background:#efe7dd;
+    overflow:hidden;
+  }
+
+  /* ---------- hidden low/high indicator dot ---------- */
+  .marker {
+    position:absolute;
+    top:5px;
+    right:6px;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    border:1px solid rgba(0,0,0,0.25);
+    z-index: 100;
+  }
+  .marker.low  { background:#fff; }
+  .marker.high { background:#000; }
+
+  /* ---------- Status bar ---------- */
+  .status-bar {
+    height: 47px;
+    background:#075E54;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    padding: 0 22px 6px 28px;
+    color:#fff;
+    font-size:15px;
+    font-weight:600;
+  }
+  .status-bar .icons { display:flex; align-items:center; gap:5px; }
+  .status-bar svg { display:block; }
+
+  /* ---------- WhatsApp chat header ---------- */
+  .chat-header {
+    background:#075E54;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    padding: 8px 8px 12px 4px;
+    gap: 6px;
+  }
+  .chat-header .back { width:24px; height:24px; margin-right:2px; }
+  .chat-header .avatar {
+    width:38px; height:38px;
+    border-radius:50%;
+    background-size:cover;
+    background-position:center;
+    flex-shrink:0;
+    background-color:#ccc;
+    overflow:hidden;
+  }
+  .chat-header .info { flex:1; min-width:0; }
+  .chat-header .name {
+    font-size:17px;
+    font-weight:600;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+  .chat-header .status { font-size:12.5px; color:#d9f4ee; margin-top:1px; }
+  .chat-header .actions { display:flex; gap:20px; align-items:center; margin-right:4px; }
+
+  /* ---------- Chat background ---------- */
+  .chat-body {
+    position:relative;
+    height: calc(844px - 47px - 60px);
+    background-color:#efe7dd;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.55)),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cg fill='%23d9d0c3' fill-opacity='0.4'%3E%3Ccircle cx='10' cy='10' r='1.4'/%3E%3Ccircle cx='40' cy='30' r='1.4'/%3E%3Ccircle cx='70' cy='15' r='1.4'/%3E%3Ccircle cx='25' cy='60' r='1.4'/%3E%3Ccircle cx='60' cy='70' r='1.4'/%3E%3Ccircle cx='90' cy='50' r='1.4'/%3E%3Ccircle cx='15' cy='90' r='1.4'/%3E%3C/g%3E%3C/svg%3E");
+    padding: 14px 12px 0 12px;
+    overflow:hidden;
+  }
+
+  .day-chip {
+    display:block;
+    width:fit-content;
+    margin: 0 auto 14px auto;
+    background:#e1f2fb;
+    color:#5b6f7a;
+    font-size:12.5px;
+    padding:5px 12px;
+    border-radius:8px;
+  }
+
+  .bubble {
+    max-width:75%;
+    padding: 6px 9px 8px 9px;
+    border-radius: 8px;
+    font-size:15px;
+    line-height:1.35;
+    margin-bottom:8px;
+    position:relative;
+    box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
+    width:fit-content;
+  }
+  .bubble.in { background:#fff; border-top-left-radius:0; }
+  .bubble .time { display:block; text-align:right; font-size:11px; color:#8a8a8a; margin-top:2px; white-space:nowrap; }
+
+  /* ---------- Input bar ---------- */
+  .input-bar {
+    position:absolute;
+    bottom:0; left:0; right:0;
+    height:60px;
+    background:#efe7dd;
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding: 8px 8px 14px 8px;
+  }
+  .input-pill {
+    flex:1;
+    height:38px;
+    background:#fff;
+    border-radius:20px;
+    display:flex;
+    align-items:center;
+    padding:0 12px;
+    color:#8b8b8b;
+    font-size:15px;
+    gap:10px;
+  }
+  .mic-btn, .cam-btn {
+    width:38px; height:38px;
+    border-radius:50%;
+    background:#075E54;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+  }
+
+  /* ---------- Click-through controls (hide before printing) ---------- */
+  .controls {
+    position:absolute;
+    bottom:70px;
+    left:0; right:0;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 0 14px;
+    z-index: 200;
+  }
+  .controls.hidden { display:none; }
+
+  .nav-btn {
+    width:42px; height:42px;
+    border-radius:50%;
+    background:rgba(0,0,0,0.55);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    user-select:none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  }
+  .nav-btn svg { display:block; }
+  .nav-btn.disabled { opacity:0.3; pointer-events:none; }
+
+  .counter {
+    background:rgba(0,0,0,0.55);
+    color:#fff;
+    font-size:13px;
+    padding:5px 10px;
+    border-radius:12px;
+  }
+
+  .toggle-controls-btn {
+    position:absolute;
+    top:52px;
+    right:6px;
+    z-index: 200;
+    background:rgba(0,0,0,0.55);
+    color:#fff;
+    font-size:11px;
+    padding:4px 8px;
+    border-radius:8px;
+    cursor:pointer;
+    user-select:none;
+  }
+
+  .download-all-btn {
+    position:absolute;
+    top:52px;
+    left:6px;
+    z-index: 200;
+    background:rgba(0,0,0,0.55);
+    color:#fff;
+    font-size:11px;
+    padding:4px 8px;
+    border-radius:8px;
+    cursor:pointer;
+    user-select:none;
+  }
+  .download-all-btn.busy { background:rgba(0,0,0,0.75); }
+
+  /* while a snapshot is being captured, every overlay control is hidden */
+  .phone.capturing .controls,
+  .phone.capturing .toggle-controls-btn,
+  .phone.capturing .download-all-btn {
+    display:none !important;
+  }
+</style>
+</head>
+<body>
+
+<div class="phone">
+
+  <div class="marker" id="marker"></div>
+
+  <!-- Status bar -->
+  <div class="status-bar">
+    <div class="time">9:41</div>
+    <div class="icons">
+      <svg width="18" height="12" viewBox="0 0 18 12" fill="none"><rect x="0" y="7" width="3" height="5" rx="0.5" fill="#fff"/><rect x="5" y="5" width="3" height="7" rx="0.5" fill="#fff"/><rect x="10" y="3" width="3" height="9" rx="0.5" fill="#fff"/><rect x="15" y="0" width="3" height="12" rx="0.5" fill="#fff"/></svg>
+      <svg width="17" height="12" viewBox="0 0 17 12" fill="none"><path d="M8.5 10.5C9.3 10.5 10 11.2 10 12H7C7 11.2 7.7 10.5 8.5 10.5Z" fill="#fff"/><path d="M4.8 7.8C6.9 5.9 10.1 5.9 12.2 7.8L11 9C9.6 7.8 7.4 7.8 6 9L4.8 7.8Z" fill="#fff"/><path d="M1.8 4.7C6 0.9 11 0.9 15.2 4.7L14 5.9C10.5 2.8 6.5 2.8 3 5.9L1.8 4.7Z" fill="#fff"/></svg>
+      <svg width="25" height="12" viewBox="0 0 25 12" fill="none"><rect x="0.5" y="0.5" width="21" height="11" rx="2.5" stroke="#fff" stroke-opacity="0.6"/><rect x="2" y="2" width="18" height="8" rx="1.5" fill="#fff"/><rect x="22.5" y="4" width="1.8" height="4" rx="0.9" fill="#fff" fill-opacity="0.6"/></svg>
+    </div>
+  </div>
+
+  <!-- WhatsApp chat header -->
+  <div class="chat-header">
+    <svg class="back" viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <div class="avatar" id="headerAvatar"></div>
+    <div class="info">
+      <div class="name" id="headerName"></div>
+      <div class="status">online</div>
+    </div>
+    <div class="actions">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M23 7l-7 5 7 5V7z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><rect x="1" y="5" width="15" height="14" rx="2" stroke="#fff" stroke-width="2"/></svg>
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.51l.7 2.81a2 2 0 01-.51 1.9l-1.2 1.2a16 16 0 007.07 7.07l1.2-1.2a2 2 0 011.9-.51l2.81.7A2 2 0 0122 18.72V21a2 2 0 01-2 2h-1C9.16 23 1 14.84 1 5V4a2 2 0 011-1.73" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg>
+      <svg width="4" height="18" viewBox="0 0 4 18" fill="none"><circle cx="2" cy="2" r="2" fill="#fff"/><circle cx="2" cy="9" r="2" fill="#fff"/><circle cx="2" cy="16" r="2" fill="#fff"/></svg>
+    </div>
+  </div>
+
+  <!-- Chat body: filled in by script below -->
+  <div class="chat-body" id="chatBody"></div>
+
+  <!-- Click-through controls -->
+  <div class="controls" id="controls">
+    <div class="nav-btn" id="prevBtn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="counter" id="counter">1 / 12</div>
+    <div class="nav-btn" id="nextBtn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 5l7 7-7 7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+
+  <div class="toggle-controls-btn" id="toggleControlsBtn">hide UI</div>
+  <div class="download-all-btn" id="downloadAllBtn">download all</div>
+
+  <!-- Input bar -->
+  <div class="input-bar">
+    <div class="input-pill">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 2a3 3 0 00-3 3v6a3 3 0 006 0V5a3 3 0 00-3-3z" stroke="#8b8b8b" stroke-width="2"/><path d="M5 11a7 7 0 0014 0M12 18v4" stroke="#8b8b8b" stroke-width="2" stroke-linecap="round"/></svg>
+      Message
+    </div>
+    <div class="cam-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 8a2 2 0 012-2h1l1.5-2h7L17 6h1a2 2 0 012 2v10a2 2 0 01-2 2H6a2 2 0 01-2-2V8z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="14" r="3.5" stroke="#fff" stroke-width="2"/></svg>
+    </div>
+    <div class="mic-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2a3 3 0 00-3 3v6a3 3 0 006 0V5a3 3 0 00-3-3z" stroke="#fff" stroke-width="2"/><path d="M5 11a7 7 0 0014 0M12 18v4" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script>
+/* ============================================================
+   THE 12 FIXED MESSAGES — edit here if a value ever needs to change
+   ============================================================ */
+const MESSAGES = [
+  // ---- LOW (importance 0.1 / urgency 0.1) ----
+  { name:"Lilly", gender:"f", color:"#F6C1D9", text:"I went for a short walk after work yesterday.", time:"18:32", category:"low" },
+  { name:"Max",   gender:"m", color:"#AEDFF7", text:"I had pasta for dinner yesterday.", time:"18:41", category:"low" },
+  { name:"Anna",  gender:"f", color:"#FBE2A7", text:"I watched a documentary yesterday.", time:"19:03", category:"low" },
+  { name:"Ben",   gender:"m", color:"#C9E4C5", text:"I took the bus to work yesterday.", time:"19:17", category:"low" },
+  { name:"Emma",  gender:"f", color:"#F7D9C4", text:"I stopped by a bakery after work yesterday.", time:"19:28", category:"low" },
+  { name:"Tom",   gender:"m", color:"#D3C4F7", text:"I finished a book I was reading yesterday.", time:"19:45", category:"low" },
+
+  // ---- HIGH (importance 0.9 / urgency 0.9) ----
+  { name:"Sarah", gender:"f", color:"#F7B7A3", text:"I was in a bike accident. Can you call me right now?", time:"20:02", category:"high" },
+  { name:"Leo",   gender:"m", color:"#A3D2F7", text:"The fire alarm is going off in your apartment. Can you check?", time:"20:09", category:"high" },
+  { name:"Laura", gender:"f", color:"#F2C9DE", text:"I think I forgot to turn the stove off. Can you check?", time:"20:14", category:"high" },
+  { name:"Paul",  gender:"m", color:"#B7E4C7", text:"I forgot my keys. Can you come downstairs and open the door?", time:"20:21", category:"high" },
+  { name:"Sophie",gender:"f", color:"#F9E0B3", text:"I'm outside your building now. Can you come down?", time:"20:27", category:"high" },
+  { name:"David", gender:"m", color:"#C7D2F7", text:"I think I left my wallet on the train. Can you call me right away?", time:"20:33", category:"high" },
+];
+/* ============================================================ */
+
+let index = 0;
+
+const headerName   = document.getElementById("headerName");
+const headerAvatar = document.getElementById("headerAvatar");
+const chatBody      = document.getElementById("chatBody");
+const marker        = document.getElementById("marker");
+const counter        = document.getElementById("counter");
+const prevBtn        = document.getElementById("prevBtn");
+const nextBtn        = document.getElementById("nextBtn");
+const controls        = document.getElementById("controls");
+const toggleControlsBtn = document.getElementById("toggleControlsBtn");
+
+function avatarSVG(gender, bgColor) {
+  const hair = gender === "f"
+    ? `<path d="M50 18c-16 0-26 12-26 26c0 4 1 8 3 11c2-10 10-16 23-16s21 6 23 16c2-3 3-7 3-11c0-14-10-26-26-26z" fill="#3a2c22"/>`
+    : `<path d="M50 20c-14 0-23 9-23 21c0 3 0 6 1 9h44c1-3 1-6 1-9c0-12-9-21-23-21z" fill="#3a2c22"/>`;
+  return `<svg viewBox="0 0 100 100" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100" height="100" fill="${bgColor}"/>
+    <circle cx="50" cy="42" r="18" fill="#f2c9a0"/>
+    ${hair}
+    <path d="M20 95c2-20 14-32 30-32s28 12 30 32z" fill="#f2c9a0"/>
+  </svg>`;
+}
+
+function render() {
+  const m = MESSAGES[index];
+
+  headerName.textContent = m.name;
+  headerAvatar.innerHTML = avatarSVG(m.gender, m.color);
+
+  chatBody.innerHTML = "";
+
+  const bubble = document.createElement("div");
+  bubble.className = "bubble in";
+  bubble.textContent = m.text;
+  const timeSpan = document.createElement("span");
+  timeSpan.className = "time";
+  timeSpan.textContent = m.time;
+  bubble.appendChild(timeSpan);
+  chatBody.appendChild(bubble);
+
+  marker.className = "marker " + m.category;
+
+  counter.textContent = (index + 1) + " / " + MESSAGES.length;
+  prevBtn.classList.toggle("disabled", index === 0);
+  nextBtn.classList.toggle("disabled", index === MESSAGES.length - 1);
+}
+
+prevBtn.addEventListener("click", () => {
+  if (index > 0) { index--; render(); }
+});
+nextBtn.addEventListener("click", () => {
+  if (index < MESSAGES.length - 1) { index++; render(); }
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft" && index > 0) { index--; render(); }
+  if (e.key === "ArrowRight" && index < MESSAGES.length - 1) { index++; render(); }
+});
+
+let controlsVisible = true;
+toggleControlsBtn.addEventListener("click", () => {
+  controlsVisible = !controlsVisible;
+  controls.classList.toggle("hidden", !controlsVisible);
+  toggleControlsBtn.textContent = controlsVisible ? "hide UI" : "show UI";
+});
+
+render();
+
+/* ---------- Download all 12 as PNG (bundled in one ZIP) ---------- */
+const phoneEl = document.querySelector(".phone");
+const downloadAllBtn = document.getElementById("downloadAllBtn");
+
+async function downloadAll() {
+  if (downloadAllBtn.classList.contains("busy")) return;
+  downloadAllBtn.classList.add("busy");
+
+  const wasControlsVisible = controlsVisible;
+  const startIndex = index;
+
+  const zip = new JSZip();
+  phoneEl.classList.add("capturing");
+
+  try {
+    for (let i = 0; i < MESSAGES.length; i++) {
+      index = i;
+      render();
+      downloadAllBtn.textContent = `rendering ${i + 1}/${MESSAGES.length}`;
+
+      // give the browser a frame to actually paint the DOM update
+      await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+
+      const canvas = await html2canvas(phoneEl, {
+        backgroundColor: "#000000",
+        useCORS: true,
+        scale: 2,
+      });
+
+      const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+      const num = String(i + 1).padStart(2, "0");
+      const safeName = MESSAGES[i].name.replace(/[^a-z0-9]/gi, "");
+      zip.file(`${num}_${MESSAGES[i].category}_${safeName}.png`, blob);
+    }
+
+    downloadAllBtn.textContent = "zipping…";
+    const zipBlob = await zip.generateAsync({ type: "blob" });
+
+    const url = URL.createObjectURL(zipBlob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "whatsapp_notifications_1-12.zip";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  } catch (err) {
+    console.error(err);
+    alert("Something went wrong while capturing the screens. Check the browser console for details.");
+  } finally {
+    phoneEl.classList.remove("capturing");
+    index = startIndex;
+    render();
+    controlsVisible = wasControlsVisible;
+    controls.classList.toggle("hidden", !controlsVisible);
+    downloadAllBtn.classList.remove("busy");
+    downloadAllBtn.textContent = "download all";
+  }
+}
+
+downloadAllBtn.addEventListener("click", downloadAll);
+</script>
+
+</body>
+</html>

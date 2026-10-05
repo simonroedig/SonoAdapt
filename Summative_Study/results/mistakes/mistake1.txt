@@ -1,0 +1,404 @@
+Bei Participant 23 (Robert)
+13. August von 17-18 uhr
+bei IXH4 (sollte earcon, hat aber speech)
+
+Supabase ID: 998
+Reason:
+
+{
+  "reason": "best moment is imminent",
+  "best_step": {
+    "cost": {
+      "D_task": 0.7,
+      "C_total": 0.317,
+      "A_social": 0.25,
+      "C_M_unmasking": 0.08,
+      "C_I_interruption": 0.475
+    },
+    "scene": {
+      "activity": "The user settles back into the office chair, looking at the newly picked-up smartphone screen.",
+      "loudness": 0.3,
+      "environment": "Office setting with a desk, laptop, and whiteboard.",
+      "social_grouping": "alone",
+      "interaction_mode": "none",
+      "activity_category": "sedentary",
+      "setting_formality": "semi_formal",
+      "subject_in_motion": false,
+      "enforced_silence_venue": false
+    },
+    "benefit": {
+      "B_total": 0.8122,
+      "G_d_semantic": 1,
+      "I_n_importance": 0.9,
+      "U_eff_urgency_decayed": 0.7629
+    },
+    "step_index": 0,
+    "t_offset_s": 8,
+    "cost_rationale": "Quiet alone setting, but moderate disruption as the user focuses intently on their phone screen.",
+    "forecast_uncertainty": 0.2
+  },
+  "suppressed": false,
+  "forecast_steps": [
+    {
+      "costs": {
+        "e_task": 0.6,
+        "social_cost": {
+          "earcon": 0.15,
+          "speech": 0.25
+        },
+        "cost_rationale": "Quiet alone setting, but moderate disruption as the user focuses intently on their phone screen.",
+        "unmasking_cost": {
+          "earcon": 0.1,
+          "speech": 0.08
+        },
+        "disruption_cost": {
+          "earcon": 0.45,
+          "speech": 0.7
+        }
+      },
+      "observed": false,
+      "t_offset_s": 8,
+      "deliverable": true,
+      "task_context": {
+        "gaze_target": "smartphone",
+        "content_mode": "interacting",
+        "activity_category": "sedentary",
+        "subject_in_motion": false,
+        "activity_description": "The user settles back into the office chair, looking at the newly picked-up smartphone screen.",
+        "observable_task_artifacts": [
+          "smartphone",
+          "laptop"
+        ]
+      },
+      "scene_context": {
+        "environment": "Office setting with a desk, laptop, and whiteboard.",
+        "estimated_overall_loudness": 0.3
+      },
+      "sound_sources": [
+        {
+          "object": "device owner",
+          "distance": "near",
+          "direction": "front",
+          "sound_type": [
+            "speech"
+          ],
+          "uncertainty": 0.2,
+          "motion_state": "static",
+          "sound_probability": 0.2,
+          "estimated_loudness": 0.2
+        }
+      ],
+      "change_summary": "User transitions to interacting with the smartphone.",
+      "duration_max_s": 30,
+      "duration_min_s": 10,
+      "social_context": {
+        "venue_type": "office_shared",
+        "subject_role": "participant",
+        "setting_privacy": "semi_private",
+        "social_grouping": "alone",
+        "interaction_mode": "none",
+        "setting_formality": "semi_formal",
+        "observed_social_cues": [
+          "desk with smartphone",
+          "laptop"
+        ],
+        "enforced_silence_venue": false
+      },
+      "start_latest_s": 0,
+      "start_earliest_s": 0,
+      "frame_timestamp_s": 46.986,
+      "forecast_uncertainty": 0.2
+    },
+    {
+      "costs": {
+        "e_task": 0.8,
+        "social_cost": {
+          "earcon": 0.2,
+          "speech": 0.3
+        },
+        "cost_rationale": "High disruption due to deep mental focus on laptop task, though social cost remains low while alone.",
+        "unmasking_cost": {
+          "earcon": 0.12,
+          "speech": 0.08
+        },
+        "disruption_cost": {
+          "earcon": 0.55,
+          "speech": 0.82
+        }
+      },
+      "observed": false,
+      "t_offset_s": 20,
+      "deliverable": true,
+      "task_context": {
+        "gaze_target": "laptop screen",
+        "content_mode": "creating",
+        "activity_category": "high_mental",
+        "subject_in_motion": false,
+        "activity_description": "The user places the smartphone down and engages in focused desk work or typing on the laptop.",
+        "observable_task_artifacts": [
+          "laptop",
+          "keyboard",
+          "whiteboard"
+        ]
+      },
+      "scene_context": {
+        "environment": "Office setting with a desk, laptop, and whiteboard.",
+        "estimated_overall_loudness": 0.35
+      },
+      "sound_sources": [
+        {
+          "object": "laptop keyboard",
+          "distance": "near",
+          "direction": "front",
+          "sound_type": [
+            "typing"
+          ],
+          "uncertainty": 0.2,
+          "motion_state": "static",
+          "sound_probability": 0.8,
+          "estimated_loudness": 0.3
+        }
+      ],
+      "change_summary": "User transitions into focused laptop work with intermittent typing.",
+      "duration_max_s": 150,
+      "duration_min_s": 60,
+      "social_context": {
+        "venue_type": "office_shared",
+        "subject_role": "participant",
+        "setting_privacy": "semi_private",
+        "social_grouping": "alone",
+        "interaction_mode": "none",
+        "setting_formality": "semi_formal",
+        "observed_social_cues": [
+          "desk setup",
+          "focused workspace"
+        ],
+        "enforced_silence_venue": false
+      },
+      "start_latest_s": 30,
+      "start_earliest_s": 10,
+      "frame_timestamp_s": 58.986,
+      "forecast_uncertainty": 0.3
+    },
+    {
+      "costs": {
+        "e_task": 0.3,
+        "social_cost": {
+          "earcon": 0.15,
+          "speech": 0.25
+        },
+        "cost_rationale": "Lower task load during a brief physical pause makes this a favorable moment for notification delivery.",
+        "unmasking_cost": {
+          "earcon": 0.1,
+          "speech": 0.08
+        },
+        "disruption_cost": {
+          "earcon": 0.25,
+          "speech": 0.45
+        }
+      },
+      "observed": false,
+      "t_offset_s": 125,
+      "deliverable": true,
+      "task_context": {
+        "gaze_target": "water bottle",
+        "content_mode": "pausing",
+        "activity_category": "light_routine_physical",
+        "subject_in_motion": false,
+        "activity_description": "The user pauses typing to reach for the water bottle and take a drink.",
+        "observable_task_artifacts": [
+          "water bottle",
+          "laptop"
+        ]
+      },
+      "scene_context": {
+        "environment": "Office setting, brief break from desk work.",
+        "estimated_overall_loudness": 0.3
+      },
+      "sound_sources": [
+        {
+          "object": "water bottle",
+          "distance": "near",
+          "direction": "front",
+          "sound_type": [
+            "handling"
+          ],
+          "uncertainty": 0.3,
+          "motion_state": "moving",
+          "sound_probability": 0.6,
+          "estimated_loudness": 0.2
+        }
+      ],
+      "change_summary": "User pauses work briefly to drink water.",
+      "duration_max_s": 60,
+      "duration_min_s": 20,
+      "social_context": {
+        "venue_type": "office_shared",
+        "subject_role": "participant",
+        "setting_privacy": "semi_private",
+        "social_grouping": "alone",
+        "interaction_mode": "none",
+        "setting_formality": "semi_formal",
+        "observed_social_cues": [
+          "water bottle on desk"
+        ],
+        "enforced_silence_venue": false
+      },
+      "start_latest_s": 180,
+      "start_earliest_s": 70,
+      "frame_timestamp_s": 163.986,
+      "forecast_uncertainty": 0.507
+    },
+    {
+      "costs": {
+        "e_task": 0.75,
+        "social_cost": {
+          "earcon": 0.2,
+          "speech": 0.3
+        },
+        "cost_rationale": "Return to high mental absorption increases disruption cost significantly.",
+        "unmasking_cost": {
+          "earcon": 0.12,
+          "speech": 0.08
+        },
+        "disruption_cost": {
+          "earcon": 0.52,
+          "speech": 0.79
+        }
+      },
+      "observed": false,
+      "t_offset_s": 165,
+      "deliverable": true,
+      "task_context": {
+        "gaze_target": "laptop screen",
+        "content_mode": "reading_writing",
+        "activity_category": "high_mental",
+        "subject_in_motion": false,
+        "activity_description": "The user resumes working on the laptop, reading text and writing notes.",
+        "observable_task_artifacts": [
+          "laptop",
+          "whiteboard"
+        ]
+      },
+      "scene_context": {
+        "environment": "Office setting with a desk, laptop, and whiteboard.",
+        "estimated_overall_loudness": 0.35
+      },
+      "sound_sources": [
+        {
+          "object": "laptop keyboard",
+          "distance": "near",
+          "direction": "front",
+          "sound_type": [
+            "typing"
+          ],
+          "uncertainty": 0.3,
+          "motion_state": "static",
+          "sound_probability": 0.7,
+          "estimated_loudness": 0.3
+        }
+      ],
+      "change_summary": "User resumes focused reading and writing on the computer.",
+      "duration_max_s": 120,
+      "duration_min_s": 40,
+      "social_context": {
+        "venue_type": "office_shared",
+        "subject_role": "participant",
+        "setting_privacy": "semi_private",
+        "social_grouping": "alone",
+        "interaction_mode": "none",
+        "setting_formality": "semi_formal",
+        "observed_social_cues": [
+          "focused workspace"
+        ],
+        "enforced_silence_venue": false
+      },
+      "start_latest_s": 240,
+      "start_earliest_s": 90,
+      "frame_timestamp_s": 203.986,
+      "forecast_uncertainty": 0.621
+    },
+    {
+      "costs": {
+        "e_task": 0.5,
+        "social_cost": {
+          "earcon": 0.18,
+          "speech": 0.28
+        },
+        "cost_rationale": "Transitioning posture and looking at the whiteboard creates a moderate interruption window with lower mental load than deep coding.",
+        "unmasking_cost": {
+          "earcon": 0.1,
+          "speech": 0.08
+        },
+        "disruption_cost": {
+          "earcon": 0.35,
+          "speech": 0.6
+        }
+      },
+      "observed": false,
+      "t_offset_s": 245,
+      "deliverable": true,
+      "task_context": {
+        "gaze_target": "whiteboard",
+        "content_mode": "observing",
+        "activity_category": "light_routine_physical",
+        "subject_in_motion": true,
+        "activity_description": "The user stands up or shifts posture to look at the whiteboard, contemplating notes.",
+        "observable_task_artifacts": [
+          "whiteboard"
+        ]
+      },
+      "scene_context": {
+        "environment": "Office setting near a whiteboard.",
+        "estimated_overall_loudness": 0.3
+      },
+      "sound_sources": [
+        {
+          "object": "device owner",
+          "distance": "near",
+          "direction": "front",
+          "sound_type": [
+            "movement"
+          ],
+          "uncertainty": 0.4,
+          "motion_state": "moving",
+          "sound_probability": 0.4,
+          "estimated_loudness": 0.25
+        }
+      ],
+      "change_summary": "User shifts attention away from the laptop to the whiteboard.",
+      "duration_max_s": 90,
+      "duration_min_s": 30,
+      "social_context": {
+        "venue_type": "office_shared",
+        "subject_role": "participant",
+        "setting_privacy": "semi_private",
+        "social_grouping": "alone",
+        "interaction_mode": "none",
+        "setting_formality": "semi_formal",
+        "observed_social_cues": [
+          "whiteboard in background"
+        ],
+        "enforced_silence_venue": false
+      },
+      "start_latest_s": 360,
+      "start_earliest_s": 130,
+      "frame_timestamp_s": 283.986,
+      "forecast_uncertainty": 0.85
+    }
+  ],
+  "force_delivered": false,
+  "expected_timeline": "The user briefly checks their smartphone before settling into a prolonged period of focused laptop work. A short pause occurs as they drink water, followed by another block of intensive reading and writing, concluding with a shift in attention toward the whiteboard.",
+  "optimizer_summary": {
+    "n_steps": 5,
+    "tau_u_s": 48.4,
+    "n_candidates": 5,
+    "speech_threshold_delta_cost": 0.225
+  },
+  "notification_inputs": {
+    "urgency": 0.9,
+    "elapsed_held_s": 0.001,
+    "importance_sender": 0.9,
+    "importance_content": 0.9
+  }
+}

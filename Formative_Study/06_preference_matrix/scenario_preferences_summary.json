@@ -1,0 +1,363 @@
+{
+    "Scene_1_Home_Alone_Computer": {
+        "scenario_name": "Scene 1 Home Alone Computer",
+        "macro_timing": {
+            "Immediate": {
+                "Rich Speech (V3)": 7,
+                "Total": 12,
+                "Short Speech (V2)": 4,
+                "Earcon (V1)": 1
+            },
+            "Delayed": {
+                "Earcon (V1)": 8,
+                "Total": 25,
+                "Rich Speech (V3)": 11,
+                "Short Speech (V2)": 5,
+                "None / No Audio": 1
+            }
+        },
+        "micro_timing_delayed_breakdown": {
+            "Other:": {
+                "Earcon (V1)": 2,
+                "Total": 3,
+                "None / No Audio": 1
+            },
+            "Later, when I am done working": {
+                "Rich Speech (V3)": 6,
+                "Total": 12,
+                "Earcon (V1)": 2,
+                "Short Speech (V2)": 4
+            },
+            "When I briefly pause while writing / thinking": {
+                "Earcon (V1)": 1,
+                "Total": 5,
+                "Rich Speech (V3)": 3,
+                "Short Speech (V2)": 1
+            },
+            "After I finish the current task (e.g., finish writing (part of the) code)": {
+                "Earcon (V1)": 3,
+                "Total": 5,
+                "Rich Speech (V3)": 2
+            }
+        }
+    },
+    "Scene_2_Home_Music": {
+        "scenario_name": "Scene 2 Home Music",
+        "macro_timing": {
+            "Immediate": {
+                "Rich Speech (V3)": 17,
+                "Total": 27,
+                "Earcon (V1)": 8,
+                "Short Speech (V2)": 2
+            },
+            "Delayed": {
+                "Rich Speech (V3)": 4,
+                "Total": 10,
+                "Earcon (V1)": 3,
+                "None / No Audio": 1,
+                "Short Speech (V2)": 2
+            }
+        },
+        "micro_timing_delayed_breakdown": {
+            "When I am between songs / during a natural pause in music": {
+                "Rich Speech (V3)": 1,
+                "Total": 4,
+                "Earcon (V1)": 2,
+                "Short Speech (V2)": 1
+            },
+            "Later, when I am done with music and relaxing": {
+                "Earcon (V1)": 1,
+                "Total": 3,
+                "Rich Speech (V3)": 1,
+                "Short Speech (V2)": 1
+            },
+            "Other:": {
+                "None / No Audio": 1,
+                "Total": 2,
+                "Rich Speech (V3)": 1
+            },
+            "When I switch from relaxing to another task (e.g. tidying room). Music continues.": {
+                "Rich Speech (V3)": 1,
+                "Total": 1
+            }
+        }
+    },
+    "Scene_3_Cooking_Dinner": {
+        "scenario_name": "Scene 3 Cooking Dinner",
+        "macro_timing": {
+            "Immediate": {
+                "Rich Speech (V3)": 7,
+                "Total": 16,
+                "Earcon (V1)": 7,
+                "Short Speech (V2)": 2
+            },
+            "Delayed": {
+                "Rich Speech (V3)": 13,
+                "Total": 21,
+                "Earcon (V1)": 8
+            }
+        },
+        "micro_timing_delayed_breakdown": {
+            "Other:": {
+                "Rich Speech (V3)": 4,
+                "Total": 5,
+                "Earcon (V1)": 1
+            },
+            "When there is a natural pause in the podcast or a brief break in cooking (e.g., waiting for water to boil)": {
+                "Rich Speech (V3)": 5,
+                "Total": 9,
+                "Earcon (V1)": 4
+            },
+            "Later, when dinner is completely cooked and I am done in the kitchen": {
+                "Rich Speech (V3)": 4,
+                "Total": 7,
+                "Earcon (V1)": 3
+            }
+        }
+    },
+    "Scene_4_Study_Coffee_Shop": {
+        "scenario_name": "Scene 4 Study Coffee Shop",
+        "macro_timing": {
+            "Immediate": {
+                "Rich Speech (V3)": 9,
+                "Total": 16,
+                "Short Speech (V2)": 4,
+                "Earcon (V1)": 3
+            },
+            "Delayed": {
+                "Earcon (V1)": 5,
+                "Total": 21,
+                "Short Speech (V2)": 7,
+                "Rich Speech (V3)": 8,
+                "None / No Audio": 1
+            }
+        },
+        "micro_timing_delayed_breakdown": {
+            "Other:": {
+                "Earcon (V1)": 2,
+                "Total": 4,
+                "None / No Audio": 1,
+                "Rich Speech (V3)": 1
+            },
+            "Later, when I am completely done studying": {
+                "Short Speech (V2)": 2,
+                "Total": 5,
+                "Rich Speech (V3)": 2,
+                "Earcon (V1)": 1
+            },
+            "When I briefly pause my studying/reading to take a sip of coffee or look up": {
+                "Rich Speech (V3)": 4,
+                "Total": 8,
+                "Short Speech (V2)": 3,
+                "Earcon (V1)": 1
+            },
+            "After I finish completing the current study task": {
+                "Short Speech (V2)": 2,
+                "Total": 4,
+                "Earcon (V1)": 1,
+                "Rich Speech (V3)": 1
+            }
+        }
+    },
+    "Scene_5_Grocery_Shopping": {
+        "scenario_name": "Scene 5 Grocery Shopping",
+        "macro_timing": {
+            "Immediate": {
+                "Rich Speech (V3)": 8,
+                "Total": 22,
+                "Earcon (V1)": 10,
+                "Short Speech (V2)": 4
+            },
+            "Delayed": {
+                "Rich Speech (V3)": 10,
+                "Total": 15,
+                "None / No Audio": 1,
+                "Short Speech (V2)": 2,
+                "Earcon (V1)": 2
+            }
+        },
+        "micro_timing_delayed_breakdown": {
+            "Other:": {
+                "Rich Speech (V3)": 4,
+                "Total": 4
+            },
+            "After I am done shopping": {
+                "Rich Speech (V3)": 2,
+                "Total": 6,
+                "None / No Audio": 1,
+                "Short Speech (V2)": 2,
+                "Earcon (V1)": 1
+            },
+            "Once I have collected all items and start walking to the checkout": {
+                "Rich Speech (V3)": 2,
+                "Total": 2
+            },
+            "Between picking up items on my shopping list": {
+                "Rich Speech (V3)": 2,
+                "Total": 3,
+                "Earcon (V1)": 1
+            }
+        }
+    },
+    "Scene_6_Cycle_City": {
+        "scenario_name": "Scene 6 Cycle City",
+        "macro_timing": {
+            "Immediate": {
+                "Rich Speech (V3)": 8,
+                "Total": 9,
+                "Short Speech (V2)": 1
+            },
+            "Delayed": {
+                "Rich Speech (V3)": 16,
+                "Total": 28,
+                "Earcon (V1)": 5,
+                "Short Speech (V2)": 7
+            }
+        },
+        "micro_timing_delayed_breakdown": {
+            "After I reach a safe stopping point (e.g., at a traffic light)": {
+                "Rich Speech (V3)": 3,
+                "Total": 8,
+                "Earcon (V1)": 1,
+                "Short Speech (V2)": 4
+            },
+            "When I am not actively crossing a street or making a decision about movement": {
+                "Rich Speech (V3)": 8,
+                "Total": 10,
+                "Short Speech (V2)": 2
+            },
+            "After I have finished cycling / reached my destination": {
+                "Earcon (V1)": 4,
+                "Total": 9,
+                "Rich Speech (V3)": 4,
+                "Short Speech (V2)": 1
+            },
+            "Other:": {
+                "Rich Speech (V3)": 1,
+                "Total": 1
+            }
+        }
+    },
+    "Scene_7_Team_Meeting": {
+        "scenario_name": "Scene 7 Team Meeting",
+        "macro_timing": {
+            "Delayed": {
+                "Rich Speech (V3)": 13,
+                "Total": 31,
+                "Earcon (V1)": 8,
+                "Short Speech (V2)": 9,
+                "None / No Audio": 1
+            },
+            "Immediate": {
+                "Earcon (V1)": 3,
+                "Total": 6,
+                "Rich Speech (V3)": 2,
+                "Short Speech (V2)": 1
+            }
+        },
+        "micro_timing_delayed_breakdown": {
+            "When I am not speaking and there is a natural break in conversation": {
+                "Rich Speech (V3)": 2,
+                "Total": 6,
+                "Earcon (V1)": 2,
+                "Short Speech (V2)": 2
+            },
+            "Other:": {
+                "Earcon (V1)": 2,
+                "Total": 4,
+                "Rich Speech (V3)": 1,
+                "None / No Audio": 1
+            },
+            "Later, when the meeting is over": {
+                "Rich Speech (V3)": 8,
+                "Total": 18,
+                "Earcon (V1)": 3,
+                "Short Speech (V2)": 7
+            },
+            "After the meeting segment I am currently involved in ends": {
+                "Earcon (V1)": 1,
+                "Total": 3,
+                "Rich Speech (V3)": 2
+            }
+        }
+    },
+    "Scene_8_Quiet_Friend_Over": {
+        "scenario_name": "Scene 8 Quiet Friend Over",
+        "macro_timing": {
+            "Immediate": {
+                "Rich Speech (V3)": 6,
+                "Total": 19,
+                "Short Speech (V2)": 5,
+                "Earcon (V1)": 8
+            },
+            "Delayed": {
+                "Rich Speech (V3)": 10,
+                "Total": 18,
+                "Earcon (V1)": 4,
+                "Short Speech (V2)": 4
+            }
+        },
+        "micro_timing_delayed_breakdown": {
+            "After we completely conclude our current topic of conversation": {
+                "Rich Speech (V3)": 2,
+                "Total": 3,
+                "Earcon (V1)": 1
+            },
+            "At the next natural pause in the conversation after we resume talking": {
+                "Rich Speech (V3)": 3,
+                "Total": 6,
+                "Earcon (V1)": 2,
+                "Short Speech (V2)": 1
+            },
+            "Other:": {
+                "Earcon (V1)": 1,
+                "Total": 2,
+                "Rich Speech (V3)": 1
+            },
+            "Later, after Jessica has left / our hangout is over": {
+                "Rich Speech (V3)": 4,
+                "Total": 7,
+                "Short Speech (V2)": 3
+            }
+        }
+    },
+    "Scene_9_Tent": {
+        "scenario_name": "Scene 9 Tent",
+        "macro_timing": {
+            "Immediate": {
+                "Rich Speech (V3)": 14,
+                "Total": 25,
+                "Short Speech (V2)": 6,
+                "Earcon (V1)": 5
+            },
+            "Delayed": {
+                "Rich Speech (V3)": 5,
+                "Total": 12,
+                "Earcon (V1)": 4,
+                "Short Speech (V2)": 3
+            }
+        },
+        "micro_timing_delayed_breakdown": {
+            "Later, when the whole tent is set up and we are done working": {
+                "Rich Speech (V3)": 2,
+                "Total": 3,
+                "Earcon (V1)": 1
+            },
+            "Other:": {
+                "Earcon (V1)": 1,
+                "Total": 4,
+                "Short Speech (V2)": 1,
+                "Rich Speech (V3)": 2
+            },
+            "After I finish setting up the current part of the tent (e.g., finishing putting in a pole)": {
+                "Earcon (V1)": 2,
+                "Total": 3,
+                "Rich Speech (V3)": 1
+            },
+            "When there is a brief pause in the physical setup (e.g., stopping to look at instructions or taking a breath)": {
+                "Short Speech (V2)": 2,
+                "Total": 2
+            }
+        }
+    }
+}

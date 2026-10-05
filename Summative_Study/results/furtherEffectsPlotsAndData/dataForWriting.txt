@@ -1,0 +1,422 @@
+================================================================================
+FURTHER EFFECTS — Data Reference for Writing
+================================================================================
+N = 23 participants (after removing 4 outliers)
+All values are participant-level (1 trial per cell).
+All p-values are UNCORRECTED (exploratory analyses).
+
+================================================================================
+GROUP 1 — URGENCY/IMPORTANCE EFFECT (Low vs High)
+Plot: fig_urgencyEffect.png/.pdf
+================================================================================
+
+--------------------------------------------------------------------------------
+COMPARISON: Interview × Earcon: Low vs High
+  Conditions: Low vs High
+
+  Appropriateness:
+    Low           M = 3.87,  SD = 1.74
+    High          M = 4.74,  SD = 1.76
+    ΔM = -0.87,  p = 0.13395,  r_rb = -0.39  n.s.
+    Snippet: Low (M = 3.87, SD = 1.74) vs High (M = 4.74, SD = 1.76), ΔM = -0.87, p = 0.13395
+
+  Social Acceptability:
+    Low           M = 3.91,  SD = 1.59
+    High          M = 5.43,  SD = 1.24
+    ΔM = -1.52,  p = 0.00100,  r_rb = -0.90  ***
+    Snippet: Low (M = 3.91, SD = 1.59) vs High (M = 5.43, SD = 1.24), ΔM = -1.52, p = 0.00100
+
+  Detectability:
+    Low           M = 6.09,  SD = 1.31
+    High          M = 6.13,  SD = 0.92
+    ΔM = -0.04,  p = 0.74773,  r_rb = -0.14  n.s.
+    Snippet: Low (M = 6.09, SD = 1.31) vs High (M = 6.13, SD = 0.92), ΔM = -0.04, p = 0.74773
+
+  Disruptiveness (lower = better):
+    Low           M = 3.30,  SD = 1.55
+    High          M = 3.13,  SD = 1.29
+    ΔM = 0.17,  p = 0.79917,  r_rb = 0.08  n.s.
+    Snippet: Low (M = 3.30, SD = 1.55) vs High (M = 3.13, SD = 1.29), ΔM = 0.17, p = 0.79917
+
+--------------------------------------------------------------------------------
+COMPARISON: Interview × Speech: Low vs High
+  Conditions: Low vs High
+
+  Appropriateness:
+    Low           M = 1.65,  SD = 0.65
+    High          M = 4.87,  SD = 1.29
+    ΔM = -3.22,  p = 0.00004,  r_rb = -1.00  ***
+    Snippet: Low (M = 1.65, SD = 0.65) vs High (M = 4.87, SD = 1.29), ΔM = -3.22, p = 0.00004
+
+  Social Acceptability:
+    Low           M = 1.91,  SD = 0.67
+    High          M = 4.43,  SD = 1.59
+    ΔM = -2.52,  p = 0.00008,  r_rb = -1.00  ***
+    Snippet: Low (M = 1.91, SD = 0.67) vs High (M = 4.43, SD = 1.59), ΔM = -2.52, p = 0.00008
+
+  Detectability:
+    Low           M = 6.26,  SD = 1.36
+    High          M = 6.04,  SD = 1.61
+    ΔM = 0.22,  p = 0.39117,  r_rb = 0.36  n.s.
+    Snippet: Low (M = 6.26, SD = 1.36) vs High (M = 6.04, SD = 1.61), ΔM = 0.22, p = 0.39117
+
+  Disruptiveness (lower = better):
+    Low           M = 6.00,  SD = 1.28
+    High          M = 5.78,  SD = 1.17
+    ΔM = 0.22,  p = 0.44078,  r_rb = 0.24  n.s.
+    Snippet: Low (M = 6.00, SD = 1.28) vs High (M = 5.78, SD = 1.17), ΔM = 0.22, p = 0.44078
+
+--------------------------------------------------------------------------------
+COMPARISON: Math × Earcon: Low vs High
+  Conditions: Low vs High
+
+  Appropriateness:
+    Low           M = 4.65,  SD = 1.80
+    High          M = 4.70,  SD = 1.94
+    ΔM = -0.04,  p = 0.97716,  r_rb = 0.01  n.s.
+    Snippet: Low (M = 4.65, SD = 1.80) vs High (M = 4.70, SD = 1.94), ΔM = -0.04, p = 0.97716
+
+  Social Acceptability:
+    Low           M = 4.91,  SD = 1.83
+    High          M = 5.78,  SD = 1.41
+    ΔM = -0.87,  p = 0.04930,  r_rb = -0.59  *
+    Snippet: Low (M = 4.91, SD = 1.83) vs High (M = 5.78, SD = 1.41), ΔM = -0.87, p = 0.04930
+
+  Detectability:
+    Low           M = 6.09,  SD = 1.50
+    High          M = 5.78,  SD = 1.54
+    ΔM = 0.30,  p = 0.13809,  r_rb = 0.51  n.s.
+    Snippet: Low (M = 6.09, SD = 1.50) vs High (M = 5.78, SD = 1.54), ΔM = 0.30, p = 0.13809
+
+  Disruptiveness (lower = better):
+    Low           M = 3.91,  SD = 1.62
+    High          M = 3.70,  SD = 1.26
+    ΔM = 0.22,  p = 0.56541,  r_rb = 0.15  n.s.
+    Snippet: Low (M = 3.91, SD = 1.62) vs High (M = 3.70, SD = 1.26), ΔM = 0.22, p = 0.56541
+
+--------------------------------------------------------------------------------
+COMPARISON: Math × Speech: Low vs High
+  Conditions: Low vs High
+
+  Appropriateness:
+    Low           M = 2.22,  SD = 1.09
+    High          M = 5.87,  SD = 1.46
+    ΔM = -3.65,  p = 0.00002,  r_rb = -1.00  ***
+    Snippet: Low (M = 2.22, SD = 1.09) vs High (M = 5.87, SD = 1.46), ΔM = -3.65, p = 0.00002
+
+  Social Acceptability:
+    Low           M = 3.87,  SD = 1.94
+    High          M = 5.83,  SD = 0.98
+    ΔM = -1.96,  p = 0.00049,  r_rb = -0.93  ***
+    Snippet: Low (M = 3.87, SD = 1.94) vs High (M = 5.83, SD = 0.98), ΔM = -1.96, p = 0.00049
+
+  Detectability:
+    Low           M = 6.74,  SD = 0.45
+    High          M = 6.78,  SD = 0.42
+    ΔM = -0.04,  p = 0.56370,  r_rb = -0.33  n.s.
+    Snippet: Low (M = 6.74, SD = 0.45) vs High (M = 6.78, SD = 0.42), ΔM = -0.04, p = 0.56370
+
+  Disruptiveness (lower = better):
+    Low           M = 5.39,  SD = 1.37
+    High          M = 5.30,  SD = 1.49
+    ΔM = 0.09,  p = 0.70253,  r_rb = 0.10  n.s.
+    Snippet: Low (M = 5.39, SD = 1.37) vs High (M = 5.30, SD = 1.49), ΔM = 0.09, p = 0.70253
+
+================================================================================
+GROUP 2 — SANITY CHECKS (SonoAdapt ≈ Baseline for HIGH)
+Plot: fig_sanityChecks_SonoAdapt/AudioAdapt.png/.pdf
+================================================================================
+
+--------------------------------------------------------------------------------
+COMPARISON: Sanity: Interview HIGH — Earcon vs SonoAdapt
+  Conditions: Earcon vs SonoAdapt
+
+  Appropriateness:
+    Earcon        M = 4.74,  SD = 1.76
+    SonoAdapt     M = 5.17,  SD = 1.40
+    ΔM = -0.43,  p = 0.35923,  r_rb = -0.28  n.s.
+    Snippet: Earcon (M = 4.74, SD = 1.76) vs SonoAdapt (M = 5.17, SD = 1.40), ΔM = -0.43, p = 0.35923
+
+  Social Acceptability:
+    Earcon        M = 5.43,  SD = 1.24
+    SonoAdapt     M = 5.35,  SD = 1.27
+    ΔM = 0.09,  p = 0.64339,  r_rb = 0.14  n.s.
+    Snippet: Earcon (M = 5.43, SD = 1.24) vs SonoAdapt (M = 5.35, SD = 1.27), ΔM = 0.09, p = 0.64339
+
+  Detectability:
+    Earcon        M = 6.13,  SD = 0.92
+    SonoAdapt     M = 6.04,  SD = 0.82
+    ΔM = 0.09,  p = 0.52709,  r_rb = 0.20  n.s.
+    Snippet: Earcon (M = 6.13, SD = 0.92) vs SonoAdapt (M = 6.04, SD = 0.82), ΔM = 0.09, p = 0.52709
+
+  Disruptiveness (lower = better):
+    Earcon        M = 3.13,  SD = 1.29
+    SonoAdapt     M = 3.52,  SD = 1.53
+    ΔM = -0.39,  p = 0.18402,  r_rb = -0.39  n.s.
+    Snippet: Earcon (M = 3.13, SD = 1.29) vs SonoAdapt (M = 3.52, SD = 1.53), ΔM = -0.39, p = 0.18402
+
+--------------------------------------------------------------------------------
+COMPARISON: Sanity: Math HIGH — Speech vs SonoAdapt
+  Conditions: Speech vs SonoAdapt
+
+  Appropriateness:
+    Speech        M = 5.87,  SD = 1.46
+    SonoAdapt     M = 5.78,  SD = 1.04
+    ΔM = 0.09,  p = 0.70480,  r_rb = 0.11  n.s.
+    Snippet: Speech (M = 5.87, SD = 1.46) vs SonoAdapt (M = 5.78, SD = 1.04), ΔM = 0.09, p = 0.70480
+
+  Social Acceptability:
+    Speech        M = 5.83,  SD = 0.98
+    SonoAdapt     M = 5.74,  SD = 1.21
+    ΔM = 0.09,  p = 0.79024,  r_rb = 0.08  n.s.
+    Snippet: Speech (M = 5.83, SD = 0.98) vs SonoAdapt (M = 5.74, SD = 1.21), ΔM = 0.09, p = 0.79024
+
+  Detectability:
+    Speech        M = 6.78,  SD = 0.42
+    SonoAdapt     M = 6.61,  SD = 0.58
+    ΔM = 0.17,  p = 0.15730,  r_rb = 0.67  n.s.
+    Snippet: Speech (M = 6.78, SD = 0.42) vs SonoAdapt (M = 6.61, SD = 0.58), ΔM = 0.17, p = 0.15730
+
+  Disruptiveness (lower = better):
+    Speech        M = 5.30,  SD = 1.49
+    SonoAdapt     M = 5.04,  SD = 1.82
+    ΔM = 0.26,  p = 0.48842,  r_rb = 0.20  n.s.
+    Snippet: Speech (M = 5.30, SD = 1.49) vs SonoAdapt (M = 5.04, SD = 1.82), ΔM = 0.26, p = 0.48842
+
+================================================================================
+GROUP 3 — SYSTEM CHOICE FOR HIGH (Earcon vs Speech)
+Plot: fig_systemChoice_SonoAdapt/AudioAdapt.png/.pdf
+Note: Uses BASELINE data (justified by sanity checks above)
+================================================================================
+
+--------------------------------------------------------------------------------
+COMPARISON: Interview HIGH: Earcon vs Speech (SonoAdapt chose Earcon)
+  Conditions: Earcon vs Speech
+
+  Appropriateness:
+    Earcon        M = 4.74,  SD = 1.76
+    Speech        M = 4.87,  SD = 1.29
+    ΔM = -0.13,  p = 0.84313,  r_rb = -0.05  n.s.
+    Snippet: Earcon (M = 4.74, SD = 1.76) vs Speech (M = 4.87, SD = 1.29), ΔM = -0.13, p = 0.84313
+
+  Social Acceptability:
+    Earcon        M = 5.43,  SD = 1.24
+    Speech        M = 4.43,  SD = 1.59
+    ΔM = 1.00,  p = 0.00642,  r_rb = 0.72  **
+    Snippet: Earcon (M = 5.43, SD = 1.24) vs Speech (M = 4.43, SD = 1.59), ΔM = 1.00, p = 0.00642
+
+  Detectability:
+    Earcon        M = 6.13,  SD = 0.92
+    Speech        M = 6.04,  SD = 1.61
+    ΔM = 0.09,  p = 0.80320,  r_rb = -0.08  n.s.
+    Snippet: Earcon (M = 6.13, SD = 0.92) vs Speech (M = 6.04, SD = 1.61), ΔM = 0.09, p = 0.80320
+
+  Disruptiveness (lower = better):
+    Earcon        M = 3.13,  SD = 1.29
+    Speech        M = 5.78,  SD = 1.17
+    ΔM = -2.65,  p = 0.00005,  r_rb = -0.95  ***
+    Snippet: Earcon (M = 3.13, SD = 1.29) vs Speech (M = 5.78, SD = 1.17), ΔM = -2.65, p = 0.00005
+
+--------------------------------------------------------------------------------
+COMPARISON: Math HIGH: Earcon vs Speech (SonoAdapt chose Speech)
+  Conditions: Earcon vs Speech
+
+  Appropriateness:
+    Earcon        M = 4.70,  SD = 1.94
+    Speech        M = 5.87,  SD = 1.46
+    ΔM = -1.17,  p = 0.04246,  r_rb = -0.53  *
+    Snippet: Earcon (M = 4.70, SD = 1.94) vs Speech (M = 5.87, SD = 1.46), ΔM = -1.17, p = 0.04246
+
+  Social Acceptability:
+    Earcon        M = 5.78,  SD = 1.41
+    Speech        M = 5.83,  SD = 0.98
+    ΔM = -0.04,  p = 1.00000,  r_rb = 0.00  n.s.
+    Snippet: Earcon (M = 5.78, SD = 1.41) vs Speech (M = 5.83, SD = 0.98), ΔM = -0.04, p = 1.00000
+
+  Detectability:
+    Earcon        M = 5.78,  SD = 1.54
+    Speech        M = 6.78,  SD = 0.42
+    ΔM = -1.00,  p = 0.00156,  r_rb = -1.00  **
+    Snippet: Earcon (M = 5.78, SD = 1.54) vs Speech (M = 6.78, SD = 0.42), ΔM = -1.00, p = 0.00156
+
+  Disruptiveness (lower = better):
+    Earcon        M = 3.70,  SD = 1.26
+    Speech        M = 5.30,  SD = 1.49
+    ΔM = -1.61,  p = 0.00040,  r_rb = -0.94  ***
+    Snippet: Earcon (M = 3.70, SD = 1.26) vs Speech (M = 5.30, SD = 1.49), ΔM = -1.61, p = 0.00040
+
+================================================================================
+GROUP 4 — SCENARIO EFFECT (Interview vs Math)
+Plot: fig_scenarioEffect.png/.pdf
+================================================================================
+
+--------------------------------------------------------------------------------
+COMPARISON: Speech × High: Interview vs Math
+  Conditions: Interview vs Math
+
+  Appropriateness:
+    Interview     M = 4.87,  SD = 1.29
+    Math          M = 5.87,  SD = 1.46
+    ΔM = -1.00,  p = 0.03811,  r_rb = -0.54  *
+    Snippet: Interview (M = 4.87, SD = 1.29) vs Math (M = 5.87, SD = 1.46), ΔM = -1.00, p = 0.03811
+
+  Social Acceptability:
+    Interview     M = 4.43,  SD = 1.59
+    Math          M = 5.83,  SD = 0.98
+    ΔM = -1.39,  p = 0.00454,  r_rb = -0.75  **
+    Snippet: Interview (M = 4.43, SD = 1.59) vs Math (M = 5.83, SD = 0.98), ΔM = -1.39, p = 0.00454
+
+  Detectability:
+    Interview     M = 6.04,  SD = 1.61
+    Math          M = 6.78,  SD = 0.42
+    ΔM = -0.74,  p = 0.02365,  r_rb = -0.89  *
+    Snippet: Interview (M = 6.04, SD = 1.61) vs Math (M = 6.78, SD = 0.42), ΔM = -0.74, p = 0.02365
+
+  Disruptiveness (lower = better):
+    Interview     M = 5.78,  SD = 1.17
+    Math          M = 5.30,  SD = 1.49
+    ΔM = 0.48,  p = 0.07328,  r_rb = 0.46  .
+    Snippet: Interview (M = 5.78, SD = 1.17) vs Math (M = 5.30, SD = 1.49), ΔM = 0.48, p = 0.07328
+
+--------------------------------------------------------------------------------
+COMPARISON: Speech × Low: Interview vs Math
+  Conditions: Interview vs Math
+
+  Appropriateness:
+    Interview     M = 1.65,  SD = 0.65
+    Math          M = 2.22,  SD = 1.09
+    ΔM = -0.57,  p = 0.01690,  r_rb = -0.74  *
+    Snippet: Interview (M = 1.65, SD = 0.65) vs Math (M = 2.22, SD = 1.09), ΔM = -0.57, p = 0.01690
+
+  Social Acceptability:
+    Interview     M = 1.91,  SD = 0.67
+    Math          M = 3.87,  SD = 1.94
+    ΔM = -1.96,  p = 0.00040,  r_rb = -1.00  ***
+    Snippet: Interview (M = 1.91, SD = 0.67) vs Math (M = 3.87, SD = 1.94), ΔM = -1.96, p = 0.00040
+
+  Detectability:
+    Interview     M = 6.26,  SD = 1.36
+    Math          M = 6.74,  SD = 0.45
+    ΔM = -0.48,  p = 0.08447,  r_rb = -0.67  .
+    Snippet: Interview (M = 6.26, SD = 1.36) vs Math (M = 6.74, SD = 0.45), ΔM = -0.48, p = 0.08447
+
+  Disruptiveness (lower = better):
+    Interview     M = 6.00,  SD = 1.28
+    Math          M = 5.39,  SD = 1.37
+    ΔM = 0.61,  p = 0.01444,  r_rb = 0.68  *
+    Snippet: Interview (M = 6.00, SD = 1.28) vs Math (M = 5.39, SD = 1.37), ΔM = 0.61, p = 0.01444
+
+--------------------------------------------------------------------------------
+COMPARISON: Speech × Combined: Interview vs Math
+  Conditions: Interview vs Math
+
+  Appropriateness:
+    Interview     M = 3.26,  SD = 0.67
+    Math          M = 4.04,  SD = 1.04
+    ΔM = -0.78,  p = 0.01149,  r_rb = -0.66  *
+    Snippet: Interview (M = 3.26, SD = 0.67) vs Math (M = 4.04, SD = 1.04), ΔM = -0.78, p = 0.01149
+
+  Social Acceptability:
+    Interview     M = 3.17,  SD = 0.86
+    Math          M = 4.85,  SD = 1.22
+    ΔM = -1.67,  p = 0.00031,  r_rb = -0.90  ***
+    Snippet: Interview (M = 3.17, SD = 0.86) vs Math (M = 4.85, SD = 1.22), ΔM = -1.67, p = 0.00031
+
+  Detectability:
+    Interview     M = 6.15,  SD = 1.37
+    Math          M = 6.76,  SD = 0.40
+    ΔM = -0.61,  p = 0.01078,  r_rb = -0.82  *
+    Snippet: Interview (M = 6.15, SD = 1.37) vs Math (M = 6.76, SD = 0.40), ΔM = -0.61, p = 0.01078
+
+  Disruptiveness (lower = better):
+    Interview     M = 5.89,  SD = 0.93
+    Math          M = 5.35,  SD = 1.25
+    ΔM = 0.54,  p = 0.02860,  r_rb = 0.54  *
+    Snippet: Interview (M = 5.89, SD = 0.93) vs Math (M = 5.35, SD = 1.25), ΔM = 0.54, p = 0.02860
+
+--------------------------------------------------------------------------------
+COMPARISON: Earcon × High: Interview vs Math
+  Conditions: Interview vs Math
+
+  Appropriateness:
+    Interview     M = 4.74,  SD = 1.76
+    Math          M = 4.70,  SD = 1.94
+    ΔM = 0.04,  p = 0.82345,  r_rb = 0.06  n.s.
+    Snippet: Interview (M = 4.74, SD = 1.76) vs Math (M = 4.70, SD = 1.94), ΔM = 0.04, p = 0.82345
+
+  Social Acceptability:
+    Interview     M = 5.43,  SD = 1.24
+    Math          M = 5.78,  SD = 1.41
+    ΔM = -0.35,  p = 0.41402,  r_rb = -0.21  n.s.
+    Snippet: Interview (M = 5.43, SD = 1.24) vs Math (M = 5.78, SD = 1.41), ΔM = -0.35, p = 0.41402
+
+  Detectability:
+    Interview     M = 6.13,  SD = 0.92
+    Math          M = 5.78,  SD = 1.54
+    ΔM = 0.35,  p = 0.29816,  r_rb = 0.38  n.s.
+    Snippet: Interview (M = 6.13, SD = 0.92) vs Math (M = 5.78, SD = 1.54), ΔM = 0.35, p = 0.29816
+
+  Disruptiveness (lower = better):
+    Interview     M = 3.13,  SD = 1.29
+    Math          M = 3.70,  SD = 1.26
+    ΔM = -0.57,  p = 0.03985,  r_rb = -0.57  *
+    Snippet: Interview (M = 3.13, SD = 1.29) vs Math (M = 3.70, SD = 1.26), ΔM = -0.57, p = 0.03985
+
+--------------------------------------------------------------------------------
+COMPARISON: Earcon × Low: Interview vs Math
+  Conditions: Interview vs Math
+
+  Appropriateness:
+    Interview     M = 3.87,  SD = 1.74
+    Math          M = 4.65,  SD = 1.80
+    ΔM = -0.78,  p = 0.07906,  r_rb = -0.51  .
+    Snippet: Interview (M = 3.87, SD = 1.74) vs Math (M = 4.65, SD = 1.80), ΔM = -0.78, p = 0.07906
+
+  Social Acceptability:
+    Interview     M = 3.91,  SD = 1.59
+    Math          M = 4.91,  SD = 1.83
+    ΔM = -1.00,  p = 0.04468,  r_rb = -0.57  *
+    Snippet: Interview (M = 3.91, SD = 1.59) vs Math (M = 4.91, SD = 1.83), ΔM = -1.00, p = 0.04468
+
+  Detectability:
+    Interview     M = 6.09,  SD = 1.31
+    Math          M = 6.09,  SD = 1.50
+    ΔM = 0.00,  p = 0.66577,  r_rb = -0.15  n.s.
+    Snippet: Interview (M = 6.09, SD = 1.31) vs Math (M = 6.09, SD = 1.50), ΔM = 0.00, p = 0.66577
+
+  Disruptiveness (lower = better):
+    Interview     M = 3.30,  SD = 1.55
+    Math          M = 3.91,  SD = 1.62
+    ΔM = -0.61,  p = 0.02748,  r_rb = -0.60  *
+    Snippet: Interview (M = 3.30, SD = 1.55) vs Math (M = 3.91, SD = 1.62), ΔM = -0.61, p = 0.02748
+
+--------------------------------------------------------------------------------
+COMPARISON: Earcon × Combined: Interview vs Math
+  Conditions: Interview vs Math
+
+  Appropriateness:
+    Interview     M = 4.30,  SD = 1.09
+    Math          M = 4.67,  SD = 1.13
+    ΔM = -0.37,  p = 0.33962,  r_rb = -0.25  n.s.
+    Snippet: Interview (M = 4.30, SD = 1.09) vs Math (M = 4.67, SD = 1.13), ΔM = -0.37, p = 0.33962
+
+  Social Acceptability:
+    Interview     M = 4.67,  SD = 1.14
+    Math          M = 5.35,  SD = 1.28
+    ΔM = -0.67,  p = 0.07654,  r_rb = -0.47  .
+    Snippet: Interview (M = 4.67, SD = 1.14) vs Math (M = 5.35, SD = 1.28), ΔM = -0.67, p = 0.07654
+
+  Detectability:
+    Interview     M = 6.11,  SD = 1.05
+    Math          M = 5.93,  SD = 1.36
+    ΔM = 0.17,  p = 0.45498,  r_rb = 0.23  n.s.
+    Snippet: Interview (M = 6.11, SD = 1.05) vs Math (M = 5.93, SD = 1.36), ΔM = 0.17, p = 0.45498
+
+  Disruptiveness (lower = better):
+    Interview     M = 3.22,  SD = 1.23
+    Math          M = 3.80,  SD = 1.29
+    ΔM = -0.59,  p = 0.02109,  r_rb = -0.58  *
+    Snippet: Interview (M = 3.22, SD = 1.23) vs Math (M = 3.80, SD = 1.29), ΔM = -0.59, p = 0.02109
+
+================================================================================
+END

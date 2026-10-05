@@ -1,0 +1,236 @@
+[
+    {
+        "scenario_id": 1,
+        "description": "Coding at home in a quiet apartment",
+        "factors": {
+            "social_setting": "Alone",
+            "task_load": "High mental",
+            "soundscape": "Quiet"
+        },
+        "costs": {
+            "disruption_cost": {
+                "earcon": 0.53,
+                "short_speech": 0.74,
+                "rich_speech": 0.81
+            },
+            "social_cost": {
+                "earcon": 0.26,
+                "short_speech": 0.3,
+                "rich_speech": 0.31
+            },
+            "masking_cost": {
+                "earcon": 0.12,
+                "short_speech": 0.08,
+                "rich_speech": 0.08
+            }
+        }
+    },
+    {
+        "scenario_id": 2,
+        "description": "Listening to music on the couch at home",
+        "factors": {
+            "social_setting": "Alone",
+            "task_load": "Low",
+            "soundscape": "Music"
+        },
+        "costs": {
+            "disruption_cost": {
+                "earcon": 0.26,
+                "short_speech": 0.44,
+                "rich_speech": 0.5
+            },
+            "social_cost": {
+                "earcon": 0.16,
+                "short_speech": 0.18,
+                "rich_speech": 0.22
+            },
+            "masking_cost": {
+                "earcon": 0.29,
+                "short_speech": 0.16,
+                "rich_speech": 0.15
+            }
+        }
+    },
+    {
+        "scenario_id": 3,
+        "description": "Cooking dinner alone with a podcast on",
+        "factors": {
+            "social_setting": "Alone",
+            "task_load": "High physical",
+            "soundscape": "Speech"
+        },
+        "costs": {
+            "disruption_cost": {
+                "earcon": 0.27,
+                "short_speech": 0.5,
+                "rich_speech": 0.6
+            },
+            "social_cost": {
+                "earcon": 0.15,
+                "short_speech": 0.26,
+                "rich_speech": 0.31
+            },
+            "masking_cost": {
+                "earcon": 0.22,
+                "short_speech": 0.44,
+                "rich_speech": 0.39
+            }
+        }
+    },
+    {
+        "scenario_id": 4,
+        "description": "Studying alone in a café with background music",
+        "factors": {
+            "social_setting": "Passive",
+            "task_load": "High mental",
+            "soundscape": "Music"
+        },
+        "costs": {
+            "disruption_cost": {
+                "earcon": 0.4,
+                "short_speech": 0.58,
+                "rich_speech": 0.63
+            },
+            "social_cost": {
+                "earcon": 0.17,
+                "short_speech": 0.26,
+                "rich_speech": 0.3
+            },
+            "masking_cost": {
+                "earcon": 0.25,
+                "short_speech": 0.13,
+                "rich_speech": 0.1
+            }
+        }
+    },
+    {
+        "scenario_id": 5,
+        "description": "Grocery shopping with store announcements",
+        "factors": {
+            "social_setting": "Passive",
+            "task_load": "Low",
+            "soundscape": "Speech"
+        },
+        "costs": {
+            "disruption_cost": {
+                "earcon": 0.22,
+                "short_speech": 0.51,
+                "rich_speech": 0.61
+            },
+            "social_cost": {
+                "earcon": 0.17,
+                "short_speech": 0.27,
+                "rich_speech": 0.3
+            },
+            "masking_cost": {
+                "earcon": 0.23,
+                "short_speech": 0.22,
+                "rich_speech": 0.22
+            }
+        }
+    },
+    {
+        "scenario_id": 6,
+        "description": "Cycling alone through a street with minor traffic",
+        "factors": {
+            "social_setting": "Passive",
+            "task_load": "High physical",
+            "soundscape": "Quiet"
+        },
+        "costs": {
+            "disruption_cost": {
+                "earcon": 0.35,
+                "short_speech": 0.43,
+                "rich_speech": 0.48
+            },
+            "social_cost": {
+                "earcon": 0.26,
+                "short_speech": 0.35,
+                "rich_speech": 0.37
+            },
+            "masking_cost": {
+                "earcon": 0.19,
+                "short_speech": 0.11,
+                "rich_speech": 0.09
+            }
+        }
+    },
+    {
+        "scenario_id": 7,
+        "description": "Team meeting, actively contributing",
+        "factors": {
+            "social_setting": "Interactive",
+            "task_load": "High mental",
+            "soundscape": "Speech"
+        },
+        "costs": {
+            "disruption_cost": {
+                "earcon": 0.6,
+                "short_speech": 0.83,
+                "rich_speech": 0.89
+            },
+            "social_cost": {
+                "earcon": 0.56,
+                "short_speech": 0.78,
+                "rich_speech": 0.82
+            },
+            "masking_cost": {
+                "earcon": 0.2,
+                "short_speech": 0.23,
+                "rich_speech": 0.24
+            }
+        }
+    },
+    {
+        "scenario_id": 8,
+        "description": "Having a friend over, she briefly checks her phone",
+        "factors": {
+            "social_setting": "Interactive",
+            "task_load": "Low",
+            "soundscape": "Quiet"
+        },
+        "costs": {
+            "disruption_cost": {
+                "earcon": 0.28,
+                "short_speech": 0.48,
+                "rich_speech": 0.58
+            },
+            "social_cost": {
+                "earcon": 0.32,
+                "short_speech": 0.49,
+                "rich_speech": 0.57
+            },
+            "masking_cost": {
+                "earcon": 0.09,
+                "short_speech": 0.04,
+                "rich_speech": 0.04
+            }
+        }
+    },
+    {
+        "scenario_id": 9,
+        "description": "Setting up a tent with friends",
+        "factors": {
+            "social_setting": "Interactive",
+            "task_load": "High physical",
+            "soundscape": "Music"
+        },
+        "costs": {
+            "disruption_cost": {
+                "earcon": 0.28,
+                "short_speech": 0.4,
+                "rich_speech": 0.46
+            },
+            "social_cost": {
+                "earcon": 0.21,
+                "short_speech": 0.32,
+                "rich_speech": 0.37
+            },
+            "masking_cost": {
+                "earcon": 0.3,
+                "short_speech": 0.2,
+                "rich_speech": 0.19
+            }
+        }
+    }
+]

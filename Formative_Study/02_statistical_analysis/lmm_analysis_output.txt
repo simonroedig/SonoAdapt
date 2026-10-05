@@ -1,0 +1,143 @@
+Loading data...
+Excluded 16 outliers.
+Transforming dataset (including Appropriateness)...
+
+Calculating Descriptive Statistics (Means & SDs)...
+-> Descriptive statistics saved successfully to 'descriptive_statistics.csv'.
+
+==================================================
+RUNNING LINEAR MIXED MODELS (LMM)
+==================================================
+
+--- MODEL 1: DISRUPTION ---
+                     Mixed Linear Model Regression Results
+================================================================================
+Model:                    MixedLM         Dependent Variable:         Disruption
+No. Observations:         999             Method:                     ML        
+No. Groups:               37              Scale:                      2.2842    
+Min. group size:          27              Log-Likelihood:             -1873.2552
+Max. group size:          27              Converged:                  Yes       
+Mean group size:          27.0                                                  
+--------------------------------------------------------------------------------
+                                     Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+--------------------------------------------------------------------------------
+Intercept                             3.763    0.205  18.394 0.000  3.362  4.164
+C(Notification_Type)[T.Rich Speech]   1.571    0.117  13.409 0.000  1.341  1.800
+C(Notification_Type)[T.Short Speech]  1.138    0.117   9.717 0.000  0.909  1.368
+C(Asocial)[T.Interactive]             0.090    0.117   0.769 0.442 -0.139  0.320
+C(Asocial)[T.Passive]                -0.300    0.117  -2.564 0.010 -0.530 -0.071
+C(e_Task)[T.High physical]           -1.477    0.117 -12.614 0.000 -1.707 -1.248
+C(e_Task)[T.Low]                     -1.408    0.117 -12.025 0.000 -1.638 -1.179
+C(CM)[T.Quiet]                        0.486    0.117   4.154 0.000  0.257  0.716
+C(CM)[T.Speech]                       0.727    0.117   6.205 0.000  0.497  0.956
+Group Var                             0.787    0.137                            
+================================================================================
+
+--- Fit Statistics for Disruption ---
+AIC:      3768.51
+R2_marg:  0.361
+R2_cond:  0.524
+----------------------------------------
+
+
+--- MODEL 2: SOCIAL ACCEPTABILITY ---
+                     Mixed Linear Model Regression Results
+================================================================================
+Model:                  MixedLM     Dependent Variable:     Social_Acceptability
+No. Observations:       999         Method:                 ML                  
+No. Groups:             37          Scale:                  2.1095              
+Min. group size:        27          Log-Likelihood:         -1835.6607          
+Max. group size:        27          Converged:              Yes                 
+Mean group size:        27.0                                                    
+--------------------------------------------------------------------------------
+                                     Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+--------------------------------------------------------------------------------
+Intercept                             6.123    0.203  30.127 0.000  5.725  6.521
+C(Notification_Type)[T.Rich Speech]  -0.856    0.113  -7.604 0.000 -1.076 -0.635
+C(Notification_Type)[T.Short Speech] -0.625    0.113  -5.549 0.000 -0.845 -0.404
+C(Asocial)[T.Interactive]            -1.538    0.113 -13.660 0.000 -1.758 -1.317
+C(Asocial)[T.Passive]                -0.222    0.113  -1.974 0.048 -0.443 -0.002
+C(e_Task)[T.High physical]            0.766    0.113   6.803 0.000  0.545  0.986
+C(e_Task)[T.Low]                      0.718    0.113   6.376 0.000  0.497  0.938
+C(CM)[T.Quiet]                       -0.691    0.113  -6.136 0.000 -0.911 -0.470
+C(CM)[T.Speech]                      -0.952    0.113  -8.457 0.000 -1.173 -0.731
+Group Var                             0.825    0.147                            
+================================================================================
+
+--- Fit Statistics for Social Acceptability ---
+AIC:      3693.32
+R2_marg:  0.357
+R2_cond:  0.538
+----------------------------------------
+
+
+--- MODEL 3: DETECTABILITY ---
+                     Mixed Linear Model Regression Results
+===============================================================================
+Model:                    MixedLM       Dependent Variable:       Detectability
+No. Observations:         999           Method:                   ML           
+No. Groups:               37            Scale:                    1.6256       
+Min. group size:          27            Log-Likelihood:           -1706.7347   
+Max. group size:          27            Converged:                Yes          
+Mean group size:          27.0                                                 
+-------------------------------------------------------------------------------
+                                     Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+-------------------------------------------------------------------------------
+Intercept                             5.658    0.182 31.088 0.000  5.301  6.014
+C(Notification_Type)[T.Rich Speech]   0.264    0.099  2.674 0.007  0.071  0.458
+C(Notification_Type)[T.Short Speech]  0.180    0.099  1.823 0.068 -0.013  0.374
+C(Asocial)[T.Interactive]             0.279    0.099  2.826 0.005  0.086  0.473
+C(Asocial)[T.Passive]                 0.273    0.099  2.766 0.006  0.080  0.467
+C(e_Task)[T.High physical]           -0.465    0.099 -4.711 0.000 -0.659 -0.272
+C(e_Task)[T.Low]                     -0.009    0.099 -0.091 0.927 -0.203  0.185
+C(CM)[T.Quiet]                        0.607    0.099  6.139 0.000  0.413  0.800
+C(CM)[T.Speech]                      -0.423    0.099 -4.285 0.000 -0.617 -0.230
+Group Var                             0.684    0.138                           
+===============================================================================
+
+--- Fit Statistics for Detectability ---
+AIC:      3435.47
+R2_marg:  0.277
+R2_cond:  0.491
+----------------------------------------
+
+
+--- MODEL 4: APPROPRIATENESS ---
+Testing: Which dimensions explain why people find a notification appropriate?
+             Mixed Linear Model Regression Results
+================================================================
+Model:             MixedLM  Dependent Variable:  Appropriateness
+No. Observations:  999      Method:              ML             
+No. Groups:        37       Scale:               1.3790         
+Min. group size:   27       Log-Likelihood:      -1619.6066     
+Max. group size:   27       Converged:           Yes            
+Mean group size:   27.0                                         
+----------------------------------------------------------------
+                     Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+----------------------------------------------------------------
+Intercept             2.758    0.271  10.178 0.000  2.227  3.289
+Detectability         0.118    0.027   4.345 0.000  0.065  0.171
+Disruption           -0.375    0.024 -15.335 0.000 -0.423 -0.327
+Social_Acceptability  0.526    0.026  20.457 0.000  0.476  0.577
+Group Var             0.432    0.098                            
+================================================================
+
+
+==================================================
+RELATIVE IMPORTANCE ANALYSIS (DOMINANCE)
+==================================================
+               names  Normalized_Weight Percentage
+Social_Acceptability              0.527      52.7%
+       Detectability              0.021       2.1%
+          Disruption              0.451      45.1%
+
+==================================================
+DATA PROCESSING SUMMARY
+==================================================
+Raw responses loaded:                      76
+Responses removed by date filter:          23
+Responses remaining before outlier check:  53
+Responses removed as outliers:             16
+Final valid participants analyzed:         37
+==================================================
+

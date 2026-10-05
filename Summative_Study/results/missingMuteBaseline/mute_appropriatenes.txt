@@ -1,0 +1,13 @@
+Only participants 9–27 (Anna through Ahmed) got the explicit numbered "1. / 2. / 3." format where question 3 asks for the 1–7 mute‑appropriateness rating. Participants 1–8 (Laura, Robert, Julian, Esha, Tejaswini, Stefanie, Evangelos, Ritika, Oksana) answered in free-flowing text without a distinct numeric answer to "how appropriate would muting have been" — this confirms the protocol changed partway through your study, as you mentioned.
+
+So the pool of people who actually rated the mute scenario numerically is 19 people (IDs 9–27). After removing your 4 outliers (Tejaswini=4, Ritika=7, Anna=9, Osama=21) — note only 9 (Anna) and 21 (Osama) fall inside that 19-person pool — you're left with 17 valid ratings.
+
+Tally of the 17 valid ratings
+Rating	Count	Participants
+1 (Completely inappropriate)	10	Petrova(10), Roxana(14), Cheng(15), Hannah(16), Stella(18), Pratham(19), Roberto(20), Julius(24), Babette(25), Ahmed(27)
+2	3	Ecesu(12), Marie(22), Florian(23)
+3	1	Jana(17)
+Ambiguous "1–2" (gave a range, not a single value)	3	Yannick(11), Delia(13), Emilia(26)
+
+Total: 17
+

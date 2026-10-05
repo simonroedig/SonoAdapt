@@ -1,0 +1,177 @@
+
+========================================================================================
+SonoAdapt Summative Study — Demographics
+========================================================================================
+Data source: C:\Users\simon\Desktop\SonoAdapt_SummativeStudy\results\raw.xlsx
+Output dir:  C:\Users\simon\Desktop\SonoAdapt_SummativeStudy\results\demographicsPlotsAndData
+
+Raw rows loaded (incl. header description rows): 28
+Rows after removing pilot: 27
+
+----------------------------------------------------------------------------------------
+OUTLIER REMOVAL
+----------------------------------------------------------------------------------------
+Outliers removed: Tejaswini, Ritika, Anna, Osama (4 participants)
+Participants remaining: 23 (was 27)
+
+
+========================================================================================
+SAMPLE OVERVIEW
+========================================================================================
+  Total raw survey responses:           28
+  Removed (pilot):                      1
+  Removed (outliers):                   4
+  Final sample:                         N = 23
+  Trials per participant:               12
+  Total individual observations:        276
+
+----------------------------------------------------------------------------------------
+AGE
+----------------------------------------------------------------------------------------
+  N valid:   23
+  Min:       21
+  Max:       40
+  Mean:      28.83
+  SD:        5.45
+  Median:    28.0
+
+----------------------------------------------------------------------------------------
+GENDER
+----------------------------------------------------------------------------------------
+
+  Gender distribution  (N = 23)
+  ──────────────────────────────────────────────────────────────────────
+    Female                                               14  ( 60.9%)
+    Male                                                  9  ( 39.1%)
+
+----------------------------------------------------------------------------------------
+LANGUAGE (NATIVE)
+----------------------------------------------------------------------------------------
+
+  Native language  (N = 23)
+  ──────────────────────────────────────────────────────────────────────
+    German                                                8  ( 34.8%)
+    german                                                4  ( 17.4%)
+    Ukrainian                                             2  (  8.7%)
+    English                                               2  (  8.7%)
+    Hindi, Marathi                                        1  (  4.3%)
+    GREEK                                                 1  (  4.3%)
+    deutsch                                               1  (  4.3%)
+    turkish                                               1  (  4.3%)
+    Chinese                                               1  (  4.3%)
+    Marathi                                               1  (  4.3%)
+    Italian                                               1  (  4.3%)
+
+----------------------------------------------------------------------------------------
+ENGLISH PROFICIENCY
+----------------------------------------------------------------------------------------
+
+  English proficiency (self-reported)  (N = 23)
+  ──────────────────────────────────────────────────────────────────────
+    Understand perfectly                                 12  ( 52.2%)
+    Understand very well                                  8  ( 34.8%)
+    Understand well                                       3  ( 13.0%)
+
+  At least 'very well' or 'perfectly': 20 (87.0%)
+
+----------------------------------------------------------------------------------------
+SMART GLASSES EXPERIENCE
+----------------------------------------------------------------------------------------
+
+  Smart glasses experience  (N = 23)
+  ──────────────────────────────────────────────────────────────────────
+    Never                                                22  ( 95.7%)
+    Tried once or twice                                   1  (  4.3%)
+
+----------------------------------------------------------------------------------------
+IMPAIRMENTS
+----------------------------------------------------------------------------------------
+
+  Hearing/visual impairments  (N = 23)
+  ──────────────────────────────────────────────────────────────────────
+    No                                                   23  (100.0%)
+
+----------------------------------------------------------------------------------------
+CURRENT NOTIFICATION SETTINGS
+----------------------------------------------------------------------------------------
+
+  Standard notification setting (private messages)  (N = 23)
+  ──────────────────────────────────────────────────────────────────────
+    Visual and Vibration (Screen lights up + phone vibrates)   11  ( 47.8%)
+    Visual only (Screen lights up or shows banner, no sound/vibration)    5  ( 21.7%)
+    No notification at all (Muted / Do Not Disturb)       4  ( 17.4%)
+    Visual and Audio (Screen lights up + sound plays)     2  (  8.7%)
+    Visual, Vibration, and Audio (Screen lights up + phone vibrates + sound plays)    1  (  4.3%)
+
+----------------------------------------------------------------------------------------
+WHY THESE NOTIFICATION SETTINGS
+----------------------------------------------------------------------------------------
+
+  Reason for notification settings  (N = 23)
+  ──────────────────────────────────────────────────────────────────────
+    Personal Focus: To avoid distracting myself or breaking my concentration.    4  ( 17.4%)
+    Social Etiquette: To avoid disturbing or annoying people around me.,Awareness: To ensure I don't miss any messages (e.g., needing sound/vibration to notice them).    3  ( 13.0%)
+    Social Etiquette: To avoid disturbing or annoying people around me.,Personal Focus: To avoid distracting myself or breaking my concentration.    3  ( 13.0%)
+    Awareness: To ensure I don't miss any messages (e.g., needing sound/vibration to notice them).,Habit: It's just my default setting / I never bothered to change it.    2  (  8.7%)
+    Social Etiquette: To avoid disturbing or annoying people around me.    2  (  8.7%)
+    Social Etiquette: To avoid disturbing or annoying people around me.,Personal Focus: To avoid distracting myself or breaking my concentration.,Privacy: So people around me don't know when I receive a message.,Awareness: To ensure I don't miss any messages (e.g., needing sound/vibration to notice them).    2  (  8.7%)
+    Social Etiquette: To avoid disturbing or annoying people around me.,Personal Focus: To avoid distracting myself or breaking my concentration.,Habit: It's just my default setting / I never bothered to change it.    1  (  4.3%)
+    Personal Focus: To avoid distracting myself or breaking my concentration.,Awareness: To ensure I don't miss any messages (e.g., needing sound/vibration to notice them).,Habit: It's just my default setting / I never bothered to change it.    1  (  4.3%)
+    Awareness: To ensure I don't miss any messages (e.g., needing sound/vibration to notice them).    1  (  4.3%)
+    Habit: It's just my default setting / I never bothered to change it.    1  (  4.3%)
+    Social Etiquette: To avoid disturbing or annoying people around me.,Personal Focus: To avoid distracting myself or breaking my concentration.,Awareness: To ensure I don't miss any messages (e.g., needing sound/vibration to notice them).    1  (  4.3%)
+    Social Etiquette: To avoid disturbing or annoying people around me.,Privacy: So people around me don't know when I receive a message.    1  (  4.3%)
+    Social Etiquette: To avoid disturbing or annoying people around me.,Personal Focus: To avoid distracting myself or breaking my concentration.,Privacy: So people around me don't know when I receive a message.    1  (  4.3%)
+
+----------------------------------------------------------------------------------------
+DESIRED AUDITORY NOTIFICATIONS ON SMART GLASSES
+----------------------------------------------------------------------------------------
+
+  Desired auditory notifications (multi-select, N = 23 respondents)
+  ──────────────────────────────────────────────────────────────────────
+    Phone Calls                                               18  ( 78.3%)
+    Navigation / Directions                                   17  ( 73.9%)
+    Calendar / Reminder Alerts                                16  ( 69.6%)
+    Direct Instant Messages (e.g.                             12  ( 52.2%)
+    WhatsApp                                                  12  ( 52.2%)
+    iMessage)                                                 12  ( 52.2%)
+    Emails                                                     6  ( 26.1%)
+    Others:                                                    1  (  4.3%)
+    None of the above                                          1  (  4.3%)
+
+----------------------------------------------------------------------------------------
+IMPORTANCE/URGENCY ATTITUDES
+----------------------------------------------------------------------------------------
+
+  Only notify about IMPORTANT messages
+  ──────────────────────────────────────────────────────────────────────
+    Agree                                       9  ( 39.1%)
+    Somewhat agree                              6  ( 26.1%)
+    Strongly agree                              3  ( 13.0%)
+    Disagree                                    3  ( 13.0%)
+    Somewhat disagree                           1  (  4.3%)
+    Strongly disagree                           1  (  4.3%)
+    → Numeric: M = 5.00, SD = 1.76, Mdn = 6.0
+
+  Only notify about URGENT messages
+  ──────────────────────────────────────────────────────────────────────
+    Agree                                       9  ( 39.1%)
+    Somewhat agree                              7  ( 30.4%)
+    Strongly agree                              4  ( 17.4%)
+    Disagree                                    1  (  4.3%)
+    Somewhat disagree                           1  (  4.3%)
+    Strongly disagree                           1  (  4.3%)
+    → Numeric: M = 5.35, SD = 1.53, Mdn = 6.0
+
+========================================================================================
+WRITING dataForWriting.txt
+========================================================================================
+
+  Saved: C:\Users\simon\Desktop\SonoAdapt_SummativeStudy\results\demographicsPlotsAndData\dataForWriting.txt
+
+========================================================================================
+DONE
+========================================================================================
+All results saved to: C:\Users\simon\Desktop\SonoAdapt_SummativeStudy\results\demographicsPlotsAndData
+
+✅ Demographics analysis complete.

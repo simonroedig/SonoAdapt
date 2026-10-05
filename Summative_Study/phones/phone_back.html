@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Phone Back</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  html, body {
+    width: 390px;
+    height: 844px;
+    background:#fff;
+    overflow:hidden;
+  }
+
+  .back-panel {
+    width: 390px;
+    height: 844px;
+    position:relative;
+    background:
+      radial-gradient(circle at 30% 15%, #3a3a3c 0%, #1c1c1e 45%, #0a0a0b 100%);
+  }
+
+  /* subtle edge/frame line to suggest the aluminum/titanium rim */
+  .back-panel::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    box-shadow: inset 0 0 0 3px #050505, inset 0 0 0 4px #2e2e30;
+  }
+
+  /* camera bump / module, top-left like most modern phones */
+  .camera-module {
+    position:absolute;
+    top:46px;
+    left:28px;
+    width:132px;
+    height:132px;
+    background: linear-gradient(160deg, #232325, #0d0d0e);
+    border-radius: 34px;
+    box-shadow:
+      0 3px 10px rgba(0,0,0,0.55),
+      inset 0 0 0 1px rgba(255,255,255,0.04);
+  }
+
+  .lens {
+    position:absolute;
+    width:52px;
+    height:52px;
+    border-radius:50%;
+    background:
+      radial-gradient(circle at 35% 30%, #4a4a4d 0%, #101012 55%, #000 100%);
+    box-shadow:
+      inset 0 0 0 6px #050505,
+      inset 0 0 12px rgba(0,0,0,0.9),
+      0 0 0 1px rgba(255,255,255,0.03);
+  }
+  .lens::after {
+    content:"";
+    position:absolute;
+    top:14px; left:16px;
+    width:12px; height:12px;
+    border-radius:50%;
+    background: rgba(140,170,200,0.25);
+    filter: blur(1px);
+  }
+
+  .lens.tl { top:12px; left:12px; }
+  .lens.tr { top:12px; right:12px; }
+  .lens.bl { top:68px; left:12px; width:44px; height:44px; }
+
+  .flash {
+    position:absolute;
+    bottom:14px;
+    right:16px;
+    width:20px; height:20px;
+    border-radius:50%;
+    background: radial-gradient(circle at 35% 30%, #d8d8d0, #8a8a80 60%, #55554e 100%);
+    box-shadow: inset 0 0 0 2px #1a1a18;
+  }
+
+  .mic-dot {
+    position:absolute;
+    bottom:14px;
+    left:20px;
+    width:10px; height:10px;
+    border-radius:50%;
+    background:#000;
+    box-shadow: inset 0 0 0 1px #333;
+  }
+
+  /* brand logo, centered lower half */
+  .logo {
+    position:absolute;
+    left:50%;
+    top:56%;
+    transform: translate(-50%, -50%);
+    width:46px;
+    height:46px;
+    opacity:0.55;
+  }
+
+  /* subtle vertical sheen for a glossy/matte glass look */
+  .sheen {
+    position:absolute;
+    inset:0;
+    background: linear-gradient(115deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 30%, rgba(255,255,255,0) 70%, rgba(255,255,255,0.03) 100%);
+    pointer-events:none;
+  }
+
+  /* side buttons drawn faintly so the silhouette reads correctly when cut out */
+  .btn {
+    position:absolute;
+    background:#050505;
+    border-radius:3px;
+  }
+  .btn.power { right:-3px; top:230px; width:3px; height:70px; }
+  .btn.vol-up { left:-3px; top:190px; width:3px; height:44px; }
+  .btn.vol-down { left:-3px; top:244px; width:3px; height:44px; }
+  .btn.mute { left:-3px; top:150px; width:3px; height:28px; }
+</style>
+</head>
+<body>
+
+<div class="back-panel">
+  <div class="btn power"></div>
+  <div class="btn vol-up"></div>
+  <div class="btn vol-down"></div>
+  <div class="btn mute"></div>
+
+  <div class="camera-module">
+    <div class="lens tl"></div>
+    <div class="lens tr"></div>
+    <div class="lens bl"></div>
+    <div class="flash"></div>
+    <div class="mic-dot"></div>
+  </div>
+
+  <svg class="logo" viewBox="0 0 100 100" fill="none">
+    <circle cx="50" cy="50" r="46" stroke="#aaa" stroke-width="4"/>
+    <path d="M30 55c5 10 15 15 20 15s15-5 20-15" stroke="#aaa" stroke-width="4" stroke-linecap="round" fill="none"/>
+  </svg>
+
+  <div class="sheen"></div>
+</div>
+
+</body>
+</html>

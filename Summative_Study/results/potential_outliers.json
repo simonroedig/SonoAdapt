@@ -1,0 +1,34 @@
+{
+    "outliers": [
+        {
+            "participant_id": "4",
+            "name": "Tejaswini",
+            "status": "is_outlier"
+        },
+        {
+            "participant_id": "7",
+            "name": "Ritika",
+            "status": "is_outlier"
+        },
+        {
+            "participant_id": "9",
+            "name": "Anna",
+            "status": "is_outlier"
+        },
+        {
+            "participant_id": "21",
+            "name": "Osama",
+            "status": "is_outlier"
+        },
+        {
+            "participant_id": "8",
+            "name": "Oksana",
+            "status": "isnot_outlier"
+        },
+        {
+            "participant_id": "10",
+            "name": "Petrova",
+            "status": "isnot_outlier"
+        }
+    ]
+}

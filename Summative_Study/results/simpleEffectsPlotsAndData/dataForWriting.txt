@@ -1,0 +1,179 @@
+================================================================================
+SIMPLE EFFECTS — Data Reference for Writing
+================================================================================
+N = 23 participants (after removing 4 outliers)
+All values are participant-level means.
+
+================================================================================
+URGENCY/IMPORTANCE = LOW
+================================================================================
+
+--------------------------------------------------------------------------------
+DV: Appropriateness  (LOW)
+  Scale: 1 = completely inappropriate … 7 = completely appropriate; higher = better
+
+  Descriptives per System:
+    Earcon        M = 4.26,  SD = 1.47,  Mdn = 4.00
+    Speech        M = 1.93,  SD = 0.71,  Mdn = 2.00
+    SonoAdapt     M = 6.15,  SD = 0.90,  Mdn = 6.50
+
+  Friedman: χ²(2) = 41.69, p = 0.00000, W = 0.906 ***
+
+  Pairwise (Holm-corrected):
+    Earcon vs Speech:  ΔM = 2.33,  p_Holm = 0.00007,  r_rb = 1.00,  d_z = 1.44  ***
+    Earcon vs SonoAdapt:  ΔM = -1.89,  p_Holm = 0.00029,  r_rb = -0.90,  d_z = -1.17  ***
+    Speech vs SonoAdapt:  ΔM = -4.22,  p_Holm = 0.00007,  r_rb = -1.00,  d_z = -3.32  ***
+
+  ── Copyable Snippets ──
+    Earcon: (M = 4.26, SD = 1.47)
+    Speech: (M = 1.93, SD = 0.71)
+    SonoAdapt: (M = 6.15, SD = 0.90)
+
+--------------------------------------------------------------------------------
+DV: SocialAcceptability  (LOW)
+  Scale: 1 = completely unacceptable  … 7 = completely acceptable;  higher = better
+
+  Descriptives per System:
+    Earcon        M = 4.41,  SD = 1.35,  Mdn = 4.00
+    Speech        M = 2.89,  SD = 1.02,  Mdn = 3.00
+    SonoAdapt     M = 6.67,  SD = 0.51,  Mdn = 7.00
+
+  Friedman: χ²(2) = 41.36, p = 0.00000, W = 0.899 ***
+
+  Pairwise (Holm-corrected):
+    Earcon vs Speech:  ΔM = 1.52,  p_Holm = 0.00019,  r_rb = 0.91,  d_z = 1.04  ***
+    Earcon vs SonoAdapt:  ΔM = -2.26,  p_Holm = 0.00008,  r_rb = -1.00,  d_z = -1.69  ***
+    Speech vs SonoAdapt:  ΔM = -3.78,  p_Holm = 0.00008,  r_rb = -1.00,  d_z = -3.05  ***
+
+  ── Copyable Snippets ──
+    Earcon: (M = 4.41, SD = 1.35)
+    Speech: (M = 2.89, SD = 1.02)
+    SonoAdapt: (M = 6.67, SD = 0.51)
+
+--------------------------------------------------------------------------------
+DV: Detectability  (LOW)
+  Scale: 1 = very difficult to detect … 7 = very easy to detect;    higher = better
+
+  Descriptives per System:
+    Earcon        M = 6.09,  SD = 1.29,  Mdn = 6.50
+    Speech        M = 6.50,  SD = 0.72,  Mdn = 7.00
+    SonoAdapt     N/A (muted by design)
+
+  Wilcoxon (2-system, no correction needed):
+    Earcon vs Speech:  ΔM = -0.41,  p = 0.11846,  r_rb = -0.47,  d_z = -0.29  n.s.
+
+  ── Copyable Snippets ──
+    Earcon: (M = 6.09, SD = 1.29)
+    Speech: (M = 6.50, SD = 0.72)
+
+--------------------------------------------------------------------------------
+DV: Disruptiveness  (LOW)
+  Scale: 1 = not disruptive at all    … 7 = extremely disruptive;   LOWER = better
+
+  Descriptives per System:
+    Earcon        M = 3.61,  SD = 1.45,  Mdn = 3.50
+    Speech        M = 5.70,  SD = 1.20,  Mdn = 6.00
+    SonoAdapt     M = 1.00,  SD = 0.00,  Mdn = 1.00
+
+  Friedman: χ²(2) = 45.07, p = 0.00000, W = 0.980 ***
+
+  Pairwise (Holm-corrected):
+    Earcon vs Speech:  ΔM = -2.09,  p_Holm = 0.00008,  r_rb = -1.00,  d_z = -1.50  ***
+    Earcon vs SonoAdapt:  ΔM = 2.61,  p_Holm = 0.00008,  r_rb = 1.00,  d_z = 1.80  ***
+    Speech vs SonoAdapt:  ΔM = 4.70,  p_Holm = 0.00008,  r_rb = 1.00,  d_z = 3.90  ***
+
+  ── Copyable Snippets ──
+    Earcon: (M = 3.61, SD = 1.45)
+    Speech: (M = 5.70, SD = 1.20)
+    SonoAdapt: (M = 1.00, SD = 0.00)
+
+================================================================================
+URGENCY/IMPORTANCE = HIGH
+================================================================================
+
+--------------------------------------------------------------------------------
+DV: Appropriateness  (HIGH)
+  Scale: 1 = completely inappropriate … 7 = completely appropriate; higher = better
+
+  Descriptives per System:
+    Earcon        M = 4.72,  SD = 1.50,  Mdn = 5.50
+    Speech        M = 5.37,  SD = 0.83,  Mdn = 5.50
+    SonoAdapt     M = 5.48,  SD = 0.86,  Mdn = 5.50
+
+  Friedman: χ²(2) = 3.88, p = 0.14364, W = 0.084 n.s.
+
+  Pairwise (Holm-corrected):
+    Earcon vs Speech:  ΔM = -0.65,  p_Holm = 0.27008,  r_rb = -0.36,  d_z = -0.39  n.s.
+    Earcon vs SonoAdapt:  ΔM = -0.76,  p_Holm = 0.18797,  r_rb = -0.45,  d_z = -0.46  n.s.
+    Speech vs SonoAdapt:  ΔM = -0.11,  p_Holm = 0.61562,  r_rb = -0.14,  d_z = -0.08  n.s.
+
+  ── Copyable Snippets ──
+    Earcon: (M = 4.72, SD = 1.50)
+    Speech: (M = 5.37, SD = 0.83)
+    SonoAdapt: (M = 5.48, SD = 0.86)
+
+--------------------------------------------------------------------------------
+DV: SocialAcceptability  (HIGH)
+  Scale: 1 = completely unacceptable  … 7 = completely acceptable;  higher = better
+
+  Descriptives per System:
+    Earcon        M = 5.61,  SD = 0.93,  Mdn = 6.00
+    Speech        M = 5.13,  SD = 0.84,  Mdn = 5.00
+    SonoAdapt     M = 5.54,  SD = 0.95,  Mdn = 6.00
+
+  Friedman: χ²(2) = 7.46, p = 0.02397, W = 0.162 *
+
+  Pairwise (Holm-corrected):
+    Earcon vs Speech:  ΔM = 0.48,  p_Holm = 0.05224,  r_rb = 0.56,  d_z = 0.48  .
+    Earcon vs SonoAdapt:  ΔM = 0.07,  p_Holm = 0.74181,  r_rb = 0.09,  d_z = 0.05  n.s.
+    Speech vs SonoAdapt:  ΔM = -0.41,  p_Holm = 0.04766,  r_rb = -0.62,  d_z = -0.44  *
+
+  ── Copyable Snippets ──
+    Earcon: (M = 5.61, SD = 0.93)
+    Speech: (M = 5.13, SD = 0.84)
+    SonoAdapt: (M = 5.54, SD = 0.95)
+
+--------------------------------------------------------------------------------
+DV: Detectability  (HIGH)
+  Scale: 1 = very difficult to detect … 7 = very easy to detect;    higher = better
+
+  Descriptives per System:
+    Earcon        M = 5.96,  SD = 1.08,  Mdn = 6.00
+    Speech        M = 6.41,  SD = 0.87,  Mdn = 7.00
+    SonoAdapt     M = 6.33,  SD = 0.56,  Mdn = 6.50
+
+  Friedman: χ²(2) = 6.92, p = 0.03146, W = 0.150 *
+
+  Pairwise (Holm-corrected):
+    Earcon vs Speech:  ΔM = -0.46,  p_Holm = 0.07897,  r_rb = -0.64,  d_z = -0.36  .
+    Earcon vs SonoAdapt:  ΔM = -0.37,  p_Holm = 0.07897,  r_rb = -0.69,  d_z = -0.48  .
+    Speech vs SonoAdapt:  ΔM = 0.09,  p_Holm = 0.31151,  r_rb = 0.29,  d_z = 0.08  n.s.
+
+  ── Copyable Snippets ──
+    Earcon: (M = 5.96, SD = 1.08)
+    Speech: (M = 6.41, SD = 0.87)
+    SonoAdapt: (M = 6.33, SD = 0.56)
+
+--------------------------------------------------------------------------------
+DV: Disruptiveness  (HIGH)
+  Scale: 1 = not disruptive at all    … 7 = extremely disruptive;   LOWER = better
+
+  Descriptives per System:
+    Earcon        M = 3.41,  SD = 1.12,  Mdn = 3.50
+    Speech        M = 5.54,  SD = 0.96,  Mdn = 5.50
+    SonoAdapt     M = 4.28,  SD = 1.41,  Mdn = 5.00
+
+  Friedman: χ²(2) = 35.65, p = 0.00000, W = 0.775 ***
+
+  Pairwise (Holm-corrected):
+    Earcon vs Speech:  ΔM = -2.13,  p_Holm = 0.00008,  r_rb = -1.00,  d_z = -1.90  ***
+    Earcon vs SonoAdapt:  ΔM = -0.87,  p_Holm = 0.00573,  r_rb = -0.70,  d_z = -0.74  **
+    Speech vs SonoAdapt:  ΔM = 1.26,  p_Holm = 0.00055,  r_rb = 0.92,  d_z = 1.02  ***
+
+  ── Copyable Snippets ──
+    Earcon: (M = 3.41, SD = 1.12)
+    Speech: (M = 5.54, SD = 0.96)
+    SonoAdapt: (M = 4.28, SD = 1.41)
+
+================================================================================
+END

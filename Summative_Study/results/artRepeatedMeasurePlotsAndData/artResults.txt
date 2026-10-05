@@ -1,0 +1,355 @@
+
+========================================================================================
+ART Repeated-Measures Analysis — Aligned Rank Transform (Wobbrock et al., 2011)
+========================================================================================
+Data source: C:\Users\simon\Desktop\SonoAdapt_SummativeStudy\results\raw.xlsx
+Output dir:  C:\Users\simon\Desktop\SonoAdapt_SummativeStudy\artRepeatedMeasurePlotsAndData
+
+Raw rows loaded: 28
+Rows after removing pilot: 27
+Total trials (long format): 324
+Participants: 27
+
+----------------------------------------------------------------------------------------
+OUTLIER REMOVAL
+----------------------------------------------------------------------------------------
+Outliers removed: Tejaswini, Ritika, Anna, Osama (4 participants)
+Participants remaining: 23 (was 27)
+
+SonoAdapt+LOW: 46 trials have Detectability set to NaN (silent by design)
+
+
+========================================================================================
+ANALYSIS 1: ART System × Scenario (HIGH-urgency trials only)
+========================================================================================
+Rationale: For HIGH notifications, all three systems deliver an audible
+notification. SonoAdapt delivers Earcon in Interview and Speech in Math.
+Testing whether the system effect depends on the scenario.
+
+HIGH-only trials: 138 (23 participants)
+Cells: {('Earcon', 'Interview'): 23, ('Earcon', 'Math'): 23, ('SonoAdapt', 'Interview'): 23, ('SonoAdapt', 'Math'): 23, ('Speech', 'Interview'): 23, ('Speech', 'Math'): 23}
+
+
+----------------------------------------------------------------------------------------
+[Appropriateness] — System × Scenario (HIGH only)
+----------------------------------------------------------------------------------------
+  Scale: 1 = completely inappropriate … 7 = completely appropriate; higher = better
+  Valid observations: 138
+  Cell means:
+                     mean   std  count
+system    scenario                    
+Earcon    Interview  4.74  1.76     23
+          Math       4.70  1.94     23
+SonoAdapt Interview  5.17  1.40     23
+          Math       5.78  1.04     23
+Speech    Interview  4.87  1.29     23
+          Math       5.87  1.46     23
+
+
+  ART Validation (aligned columns should have F ≈ 0 for non-target effects):
+    Aligned for [system]:
+      system                         F(2,44) =     1.8016, p = 0.17700 ← TARGET
+      scenario                       F(1,22) =     0.1746, p = 0.68012 (should be ≈ 0)
+      system:scenario                F(2,44) =     0.8989, p = 0.41436 (should be ≈ 0)
+    Aligned for [scenario]:
+      system                         F(2,44) =     1.4509, p = 0.24535 (should be ≈ 0)
+      scenario                       F(1,22) =     3.4256, p = 0.07767 ← TARGET
+      system:scenario                F(2,44) =     1.5912, p = 0.21517 (should be ≈ 0)
+    Aligned for [system:scenario]:
+      system                         F(2,44) =     1.7288, p = 0.18934 (should be ≈ 0)
+      scenario                       F(1,22) =     6.3971, p = 0.01910 (should be ≈ 0)
+      system:scenario                F(2,44) =     3.3949, p = 0.04255 ← TARGET
+
+  ── ART ANOVA Results (only the target effect row is valid) ──
+  system                          F(2,44) = 1.80, p = 0.17700 n.s.  η²_p = 0.076
+  scenario                        F(1,22) = 3.43, p = 0.07767 .  η²_p = 0.135
+  system:scenario                 F(2,44) = 3.39, p = 0.04255 *  η²_p = 0.134
+
+
+----------------------------------------------------------------------------------------
+[SocialAcceptability] — System × Scenario (HIGH only)
+----------------------------------------------------------------------------------------
+  Scale: 1 = completely unacceptable  … 7 = completely acceptable;  higher = better
+  Valid observations: 138
+  Cell means:
+                     mean   std  count
+system    scenario                    
+Earcon    Interview  5.43  1.24     23
+          Math       5.78  1.41     23
+SonoAdapt Interview  5.35  1.27     23
+          Math       5.74  1.21     23
+Speech    Interview  4.43  1.59     23
+          Math       5.83  0.98     23
+
+
+  ART Validation (aligned columns should have F ≈ 0 for non-target effects):
+    Aligned for [system]:
+      system                         F(2,44) =     3.1933, p = 0.05070 ← TARGET
+      scenario                       F(1,22) =     0.0285, p = 0.86757 (should be ≈ 0)
+      system:scenario                F(2,44) =     1.0548, p = 0.35691 (should be ≈ 0)
+    Aligned for [scenario]:
+      system                         F(2,44) =     0.2053, p = 0.81515 (should be ≈ 0)
+      scenario                       F(1,22) =    11.4885, p = 0.00264 ← TARGET
+      system:scenario                F(2,44) =     4.1863, p = 0.02166 (should be ≈ 0)
+    Aligned for [system:scenario]:
+      system                         F(2,44) =     2.3433, p = 0.10788 (should be ≈ 0)
+      scenario                       F(1,22) =     6.3893, p = 0.01917 (should be ≈ 0)
+      system:scenario                F(2,44) =     3.6735, p = 0.03347 ← TARGET
+
+  ── ART ANOVA Results (only the target effect row is valid) ──
+  system                          F(2,44) = 3.19, p = 0.05070 .  η²_p = 0.127
+  scenario                        F(1,22) = 11.49, p = 0.00264 **  η²_p = 0.343
+  system:scenario                 F(2,44) = 3.67, p = 0.03347 *  η²_p = 0.143
+
+
+----------------------------------------------------------------------------------------
+[Detectability] — System × Scenario (HIGH only)
+----------------------------------------------------------------------------------------
+  Scale: 1 = very difficult to detect … 7 = very easy to detect;    higher = better
+  Valid observations: 138
+  Cell means:
+                     mean   std  count
+system    scenario                    
+Earcon    Interview  6.13  0.92     23
+          Math       5.78  1.54     23
+SonoAdapt Interview  6.04  0.82     23
+          Math       6.61  0.58     23
+Speech    Interview  6.04  1.61     23
+          Math       6.78  0.42     23
+
+
+  ART Validation (aligned columns should have F ≈ 0 for non-target effects):
+    Aligned for [system]:
+      system                         F(2,44) =     3.1260, p = 0.05378 ← TARGET
+      scenario                       F(1,22) =     1.8698, p = 0.18530 (should be ≈ 0)
+      system:scenario                F(2,44) =     2.8965, p = 0.06580 (should be ≈ 0)
+    Aligned for [scenario]:
+      system                         F(2,44) =     0.1700, p = 0.84421 (should be ≈ 0)
+      scenario                       F(1,22) =     0.1658, p = 0.68781 ← TARGET
+      system:scenario                F(2,44) =     1.9272, p = 0.15764 (should be ≈ 0)
+    Aligned for [system:scenario]:
+      system                         F(2,44) =     5.4496, p = 0.00768 (should be ≈ 0)
+      scenario                       F(1,22) =     7.4635, p = 0.01217 (should be ≈ 0)
+      system:scenario                F(2,44) =     5.7214, p = 0.00619 ← TARGET
+
+  ── ART ANOVA Results (only the target effect row is valid) ──
+  system                          F(2,44) = 3.13, p = 0.05378 .  η²_p = 0.124
+  scenario                        F(1,22) = 0.17, p = 0.68781 n.s.  η²_p = 0.007
+  system:scenario                 F(2,44) = 5.72, p = 0.00619 **  η²_p = 0.206
+
+
+----------------------------------------------------------------------------------------
+[Disruptiveness] — System × Scenario (HIGH only)
+----------------------------------------------------------------------------------------
+  Scale: 1 = not disruptive at all    … 7 = extremely disruptive;   LOWER = better
+  Valid observations: 138
+  Cell means:
+                     mean   std  count
+system    scenario                    
+Earcon    Interview  3.13  1.29     23
+          Math       3.70  1.26     23
+SonoAdapt Interview  3.52  1.53     23
+          Math       5.04  1.82     23
+Speech    Interview  5.78  1.17     23
+          Math       5.30  1.49     23
+
+
+  ART Validation (aligned columns should have F ≈ 0 for non-target effects):
+    Aligned for [system]:
+      system                         F(2,44) =    47.8653, p = 0.00000 ← TARGET
+      scenario                       F(1,22) =     0.3658, p = 0.55151 (should be ≈ 0)
+      system:scenario                F(2,44) =    18.9349, p = 0.00000 (should be ≈ 0)
+    Aligned for [scenario]:
+      system                         F(2,44) =     0.4134, p = 0.66396 (should be ≈ 0)
+      scenario                       F(1,22) =     6.3094, p = 0.01985 ← TARGET
+      system:scenario                F(2,44) =     2.3635, p = 0.10593 (should be ≈ 0)
+    Aligned for [system:scenario]:
+      system                         F(2,44) =    43.4527, p = 0.00000 (should be ≈ 0)
+      scenario                       F(1,22) =     4.1377, p = 0.05417 (should be ≈ 0)
+      system:scenario                F(2,44) =    22.3198, p = 0.00000 ← TARGET
+
+  ── ART ANOVA Results (only the target effect row is valid) ──
+  system                          F(2,44) = 47.87, p = 0.00000 ***  η²_p = 0.685
+  scenario                        F(1,22) = 6.31, p = 0.01985 *  η²_p = 0.223
+  system:scenario                 F(2,44) = 22.32, p = 0.00000 ***  η²_p = 0.504
+
+
+========================================================================================
+ANALYSIS 2: ART System × Urgency (all trials)
+========================================================================================
+Rationale: Testing whether the system effect depends on urgency level.
+Detectability is excluded because SonoAdapt-Low is silent by design.
+
+All trials: 276 (23 participants)
+Aggregated data (1 obs per participant × system × urgency): 138
+
+
+----------------------------------------------------------------------------------------
+[Appropriateness] — System × Urgency (all trials)
+----------------------------------------------------------------------------------------
+  Scale: 1 = completely inappropriate … 7 = completely appropriate; higher = better
+  Valid observations: 138
+  Cell means:
+                   mean   std  count
+system    urgency                   
+Earcon    High     4.72  1.50     23
+          Low      4.26  1.47     23
+SonoAdapt High     5.48  0.86     23
+          Low      6.15  0.90     23
+Speech    High     5.37  0.83     23
+          Low      1.93  0.71     23
+
+
+  ART Validation (aligned columns should have F ≈ 0 for non-target effects):
+    Aligned for [system]:
+      system                         F(2,44) =    55.5770, p = 0.00000 ← TARGET
+      urgency                        F(1,22) =     0.9161, p = 0.34891 (should be ≈ 0)
+      system:urgency                 F(2,44) =    19.5460, p = 0.00000 (should be ≈ 0)
+    Aligned for [urgency]:
+      system                         F(2,44) =     0.1202, p = 0.88708 (should be ≈ 0)
+      urgency                        F(1,22) =    31.3342, p = 0.00001 ← TARGET
+      system:urgency                 F(2,44) =     7.4394, p = 0.00165 (should be ≈ 0)
+    Aligned for [system:urgency]:
+      system                         F(2,44) =    39.8298, p = 0.00000 (should be ≈ 0)
+      urgency                        F(1,22) =    14.9455, p = 0.00084 (should be ≈ 0)
+      system:urgency                 F(2,44) =    28.5655, p = 0.00000 ← TARGET
+
+  ── ART ANOVA Results ──
+  system                          F(2,44) = 55.58, p = 0.00000 ***  η²_p = 0.716
+  urgency                         F(1,22) = 31.33, p = 0.00001 ***  η²_p = 0.588
+  system:urgency                  F(2,44) = 28.57, p = 0.00000 ***  η²_p = 0.565
+
+
+----------------------------------------------------------------------------------------
+[SocialAcceptability] — System × Urgency (all trials)
+----------------------------------------------------------------------------------------
+  Scale: 1 = completely unacceptable  … 7 = completely acceptable;  higher = better
+  Valid observations: 138
+  Cell means:
+                   mean   std  count
+system    urgency                   
+Earcon    High     5.61  0.93     23
+          Low      4.41  1.35     23
+SonoAdapt High     5.54  0.95     23
+          Low      6.67  0.51     23
+Speech    High     5.13  0.84     23
+          Low      2.89  1.02     23
+
+
+  ART Validation (aligned columns should have F ≈ 0 for non-target effects):
+    Aligned for [system]:
+      system                         F(2,44) =    58.8707, p = 0.00000 ← TARGET
+      urgency                        F(1,22) =     0.0298, p = 0.86444 (should be ≈ 0)
+      system:urgency                 F(2,44) =    24.9476, p = 0.00000 (should be ≈ 0)
+    Aligned for [urgency]:
+      system                         F(2,44) =     0.1302, p = 0.87830 (should be ≈ 0)
+      urgency                        F(1,22) =    27.5806, p = 0.00003 ← TARGET
+      system:urgency                 F(2,44) =     6.8671, p = 0.00254 (should be ≈ 0)
+    Aligned for [system:urgency]:
+      system                         F(2,44) =    57.7767, p = 0.00000 (should be ≈ 0)
+      urgency                        F(1,22) =     8.3262, p = 0.00859 (should be ≈ 0)
+      system:urgency                 F(2,44) =    44.5684, p = 0.00000 ← TARGET
+
+  ── ART ANOVA Results ──
+  system                          F(2,44) = 58.87, p = 0.00000 ***  η²_p = 0.728
+  urgency                         F(1,22) = 27.58, p = 0.00003 ***  η²_p = 0.556
+  system:urgency                  F(2,44) = 44.57, p = 0.00000 ***  η²_p = 0.670
+
+
+----------------------------------------------------------------------------------------
+[Disruptiveness] — System × Urgency (all trials)
+----------------------------------------------------------------------------------------
+  Scale: 1 = not disruptive at all    … 7 = extremely disruptive;   LOWER = better
+  Valid observations: 138
+  Cell means:
+                   mean   std  count
+system    urgency                   
+Earcon    High     3.41  1.12     23
+          Low      3.61  1.45     23
+SonoAdapt High     4.28  1.41     23
+          Low      1.00  0.00     23
+Speech    High     5.54  0.96     23
+          Low      5.70  1.20     23
+
+
+  ART Validation (aligned columns should have F ≈ 0 for non-target effects):
+    Aligned for [system]:
+      system                         F(2,44) =   106.1490, p = 0.00000 ← TARGET
+      urgency                        F(1,22) =     0.4668, p = 0.50162 (should be ≈ 0)
+      system:urgency                 F(2,44) =    48.5333, p = 0.00000 (should be ≈ 0)
+    Aligned for [urgency]:
+      system                         F(2,44) =     0.0604, p = 0.94146 (should be ≈ 0)
+      urgency                        F(1,22) =    34.5315, p = 0.00001 ← TARGET
+      system:urgency                 F(2,44) =     8.7259, p = 0.00064 (should be ≈ 0)
+    Aligned for [system:urgency]:
+      system                         F(2,44) =   119.2889, p = 0.00000 (should be ≈ 0)
+      urgency                        F(1,22) =    24.7714, p = 0.00006 (should be ≈ 0)
+      system:urgency                 F(2,44) =    73.8102, p = 0.00000 ← TARGET
+
+  ── ART ANOVA Results ──
+  system                          F(2,44) = 106.15, p = 0.00000 ***  η²_p = 0.828
+  urgency                         F(1,22) = 34.53, p = 0.00001 ***  η²_p = 0.611
+  system:urgency                  F(2,44) = 73.81, p = 0.00000 ***  η²_p = 0.770
+
+
+========================================================================================
+SUMMARY TABLE — ART Interaction Effects
+========================================================================================
+
+N = 23 participants
+
+──────────────────────────────────────────────────────────────────────────────────────────
+                    Analysis 1: System × Scenario (HIGH-urgency only)                     
+──────────────────────────────────────────────────────────────────────────────────────────
+DV                        Effect                    F            df         p            η²_p     sig
+------------------------------------------------------------------------------------------
+Appropriateness           system                    1.80         (2,44)     0.17700      0.076    n.s.
+Appropriateness           scenario                  3.43         (1,22)     0.07767      0.135    .
+Appropriateness           system:scenario           3.39         (2,44)     0.04255      0.134    *
+SocialAcceptability       system                    3.19         (2,44)     0.05070      0.127    .
+SocialAcceptability       scenario                  11.49        (1,22)     0.00264      0.343    **
+SocialAcceptability       system:scenario           3.67         (2,44)     0.03347      0.143    *
+Detectability             system                    3.13         (2,44)     0.05378      0.124    .
+Detectability             scenario                  0.17         (1,22)     0.68781      0.007    n.s.
+Detectability             system:scenario           5.72         (2,44)     0.00619      0.206    **
+Disruptiveness            system                    47.87        (2,44)     0.00000      0.685    ***
+Disruptiveness            scenario                  6.31         (1,22)     0.01985      0.223    *
+Disruptiveness            system:scenario           22.32        (2,44)     0.00000      0.504    ***
+
+──────────────────────────────────────────────────────────────────────────────────────────
+            Analysis 2: System × Urgency (all trials, Detectability excluded)             
+──────────────────────────────────────────────────────────────────────────────────────────
+DV                        Effect                    F            df         p            η²_p     sig
+------------------------------------------------------------------------------------------
+Appropriateness           system                    55.58        (2,44)     0.00000      0.716    ***
+Appropriateness           urgency                   31.33        (1,22)     0.00001      0.588    ***
+Appropriateness           system:urgency            28.57        (2,44)     0.00000      0.565    ***
+SocialAcceptability       system                    58.87        (2,44)     0.00000      0.728    ***
+SocialAcceptability       urgency                   27.58        (1,22)     0.00003      0.556    ***
+SocialAcceptability       system:urgency            44.57        (2,44)     0.00000      0.670    ***
+Disruptiveness            system                    106.15       (2,44)     0.00000      0.828    ***
+Disruptiveness            urgency                   34.53        (1,22)     0.00001      0.611    ***
+Disruptiveness            system:urgency            73.81        (2,44)     0.00000      0.770    ***
+
+Significance codes: *** p<.001, ** p<.01, * p<.05, . p<.10, n.s. p≥.10
+Effect size: η²_p = partial eta squared
+ART procedure: Wobbrock, J.O. et al. (2011). CHI '11, pp. 143-146.
+
+========================================================================================
+GENERATING LaTeX SECTION
+========================================================================================
+LaTeX section saved to: C:\Users\simon\Desktop\SonoAdapt_SummativeStudy\artRepeatedMeasurePlotsAndData\artInteractionSection.tex
+
+
+========================================================================================
+DONE
+========================================================================================
+All results saved to: C:\Users\simon\Desktop\SonoAdapt_SummativeStudy\artRepeatedMeasurePlotsAndData
+
+Files generated:
+  art_data_full.csv
+  art_data_high.csv
+  art_system_x_scenario.txt
+  art_system_x_urgency.txt
+  artInteractionSection.tex
+  artResults.txt

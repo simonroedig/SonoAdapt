@@ -1,0 +1,359 @@
+
+
+
+
+\chapter{Formative Study}
+\label{chap:formative_study}
+
+To inform the design of \textit{SonoAdapt}, we first needed to understand how human preferences for auditory notifications shift depending on their  environment. We therefore conducted a formative \textit{online} user survey. 
+
+The primary goal of this study was to present users with a variety of everyday scenarios and identify two key aspects:
+\begin{enumerate}
+    \item \textbf{Type:} Which auditory notification format (\textbf{Earcon} vs. \textbf{Speech}) is preferred in a given situation?
+    \item \textbf{Timing:} When does the user prefer the delivery of the auditory notification?
+\end{enumerate}
+We aimed to analyze how three specific contextual \textbf{factors}, the social setting, the user's task load, and the surrounding acoustic soundscape, influence these preferences.
+
+\section{Study Design and Scenarios}
+\label{sec:study_design}
+
+Everyday scenarios are extremely diverse and complex. To systematically evaluate how context impacts notification preferences, we isolated three independent variables (factors), each with three distinct levels:
+\begin{itemize}
+    \item \textbf{Social Setting:} Alone, Passive Co-Presence (people are around but not interacting), Interactive Co-Presence (actively engaging with others).
+    \item \textbf{Task Load:} Low Load, High Mental Load, High Physical Load.
+    \item \textbf{Soundscape:} Quiet, Music, Speech.
+\end{itemize}
+
+In a standard full-factorial study design, testing every possible combination of these variables ($3 \times 3 \times 3$) would result in 27 unique scenarios. However, presenting 27 scenarios to a single participant and asking for his Type and Timing preference, would lead to severe fatigue and diminish the quality of the survey responses. 
+
+To solve this, we utilized a \textbf{Taguchi L9 Orthogonal Array} \cite{Roy_10_Taguchi1}: Instead of testing all 27 combinations, the L9 array selects a mathematically balanced subset of exactly nine scenarios. This structure guarantees that each individual factor-level (e.g., "High Mental Load") appears exactly three times across the survey, and that every pair of factor-levels co-occurs exactly once. This allowed us to extract insights regarding the main effects of each contextual factor using only a fraction of the trials. 
+
+When generating the actual scenarios based on the Taguchi matrix, we prioritized everyday possible situations. The resulting nine scenarios are detailed in \autoref{tab:scenarios}.
+
+\begin{table}[H]
+\centering
+\caption{The 9 scenarios evaluated in the formative study, structured via a Taguchi L9 Orthogonal Array to ensure balanced coverage of Social Setting, Task Load, and Soundscape.}
+\label{tab:scenarios}
+\begin{tabular}{@{}clllp{7.5cm}@{}}
+\toprule
+\textbf{\#} & \textbf{Social setting} & \textbf{Task load} & \textbf{Soundscape} & \textbf{Scenario Description} \\
+\midrule
+1 & Alone       & High mental   & Quiet  & Coding at home in a quiet apartment \\
+2 & Alone       & Low           & Music  & Listening to music on the couch at home \\
+3 & Alone       & High physical & Speech & Cooking dinner alone with a podcast on \\
+\midrule
+4 & Passive     & High mental   & Music  & Studying alone in a café with background music \\
+5 & Passive     & Low           & Speech & Grocery shopping with store announcements \\
+6 & Passive     & High physical & Quiet  & Cycling alone through a street with minor traffic\\
+\midrule
+7 & Interactive & High mental   & Speech & Team meeting, actively contributing \\
+8 & Interactive & Low           & Quiet  & Having a friend over, she briefly checks her phone \\
+9 & Interactive & High physical & Music  & Setting up a tent with friends \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Stimuli Creation}
+\label{sec:stimuli_creation}
+To ensure that participants could fully immerse themselves in each scenario and accurately rate their preferences for the auditory notification Type and Timing, we simulated the scenarios using a combination of visual images and auditory soundscapes.
+
+\subsection{Visual Stimuli}
+For each scenario, we generated a reference image depicting the scene from an egocentric point of view. These images were generated using Google's Gemini Nano Banana 2 model\footnote{\url{https://gemini.google/overview/image-generation/}}. To better simulate the experience of wearing smart glasses, a subtle black glasses rim was edited into the borders of the images.
+
+\begin{figure}[H]
+    \centering
+    % Ensure you have scenesImage.png in your figures folder
+    \includegraphics[width=0.9\textwidth]{figures/scenesImage.png}
+    \caption{Egocentric visual representations of the nine scenarios, featuring a subtle glasses-frame rim to simulate the smart-glasses experience. These visuals were presented alongside the soundscapes and auditory notification Types.}
+    \label{fig:scenes_image}
+\end{figure}
+
+\subsection{Auditory Soundscapes and Notification Types}
+For each scenario, we created an 8-second audio clip representing the environmental soundscape. They were created using a mix of assets from Pixabay\footnote{\url{https://pixabay.com/}}, self-recorded audio, and ElevenLabs\footnote{\url{https://elevenlabs.io/}} \gls{tts}. 
+
+Within these 8-second soundscapes, we embedded the auditory notification Types. To ensure consistency, the underlying notification message was kept constant across all trials:\\ A new WhatsApp message from a contact named Lilly (narrated as a familiar, close friend), reading \textit{"When are you here?"}.\\Participants were explicitly instructed to treat this message as both \textbf{important and urgent}. By holding the message constant, we isolated the user's preferences to be purely based on the environmental context, and the preferences for this high urgent/important message was later used as an upper anchor point to infer decicions for other levels in notifications.
+
+
+We evaluated three distinct auditory notification Types, representing increasing levels of informational detail:
+\begin{enumerate}
+    \item \textbf{Earcon:} The standard, default WhatsApp notification chime. \textit{(Information level: [New Notification + Source])}.
+    \item \textbf{Short Speech:} A \gls{tts}-generated voice announcing, \textit{"New WhatsApp from Lilly."} \textit{(Information level: [New Notification + Source] + [Sender])}.
+    \item \textbf{Rich Speech:} A \gls{tts}-generated voice announcing, \textit{"New WhatsApp from Lilly: When are you here?"} \textit{(Information level: [New Notification + Source] + [Sender] + [Content])}.
+\end{enumerate}
+
+All speech notifications were generated using ElevenLabs \gls{tts}. To ensure a fair perceptual comparison, every individual notification Type was volume-normalized to -20 \gls{lufs}. Soundscape levels were set to realistic environmental levels and subsequently verified through manual perceptual testing. The onset of the notification within the 8-second clip was placed arbitrarily within a range of 2 to 5 seconds to prevent participants from predicting the exact timing. 
+
+\section{Apparatus and Procedure}
+\label{sec:apparatus_procedure}
+The study was conducted as an online survey platform using Qualtrics\footnote{\url{https://www.qualtrics.com/}}. 
+
+\subsection{Audio Calibration and Quality Control}
+Because the perception of audio displays is highly dependent on hardware, we required all participants to wear headphones. The survey began with a headphone screening task, requiring users to correctly identify whether a test tone was playing from the left, right, or both audio channel. Participants who failed this check were flagged as outliers and excluded from the analysis. 
+
+Following the screening, participants completed a volume calibration step. They listened to a short, continuous audio snippet (also normalized to -20 \gls{lufs}) and were instructed to adjust their device volume to a comfortable level. Once set, participants were strictly instructed not to alter their system volume for the remainder of the study, while the survey platform restricted the volume adjustment on the audio clips itself. Two attention checks were also randomly embedded within the main survey to ensure data quality.
+
+\subsection{Survey Flow}
+After calibration, demographic \& background questions, users were presented with the 9 scenarios. To prevent ordering effects, the scenarios were presented as individual survey blocks displayed in a completely randomized order. 
+
+Within each scenario block, the user was shown the egocentric visual image and asked to listen to all three variations of the audio clip (soundscape embedded with: Earcon, Short Speech, and Rich Speech). To ensure informed responses, a forced-listening constraint was implemented in which participants were required to listen to all three 8-second clips in full before being allowed to continue.
+
+\section{Measurements}
+\label{sec:measurements}
+For each scenario block, we collected both quantitative and qualitative data regarding the user's perception of the three notification types. Participants evaluated each auditory type using 7-point Likert scales across four dimensions:
+\begin{itemize}
+    \item \textbf{Appropriateness:} How fitting the notification type felt for the current context.
+    \item \textbf{Detectability:} How easily the notification could be heard over the background soundscape.
+    \item \textbf{Disruption:} The extent to which the notification interrupted their current task.
+    \item \textbf{Social Acceptability:} How comfortable the users felt receiving this notification socially in that specific environment.
+\end{itemize}
+
+Beyond rating each type individually, participants were asked to choose their \textbf{Overall Preferred Type} for that scenario and provide a qualitative, open-text response explaining \textit{why} they made that choice. 
+
+Finally, participants evaluated their \textbf{Preferred Timing} for the notification delivery. We provided contextual options: they could choose to receive the notification \textit{immediately} (as heard in the audio clip), at one of two \textit{realistic breaks} within the ongoing scenario (\textit{micro break}, \textit{break between subtasks}), or deferred until \textit{after the scenario} was completed.
+
+
+
+\section{Participants}
+\label{sec:participants}
+
+\subsection{Sample Size Justification}
+To ensure that our study was adequately powered to detect meaningful differences without over-recruiting, we conducted an a priori power analysis using G*Power (version 3.1.9.6) \cite{Faul_07_Gpower}  prior to data collection. 
+
+For each of the three factors (Social Setting, Task Load, and Soundscape), we planned a one-way repeated-measures ANOVA with three within-subjects levels. Following established effect-size conventions for within-subjects HCI research, we aimed to detect a medium-sized effect (Cohen’s $f = 0.25$). To account for the three parallel factor analyses, we applied a Bonferroni correction to the family-wise error rate, yielding a per-test significance level of $\alpha = 0.05/3 \approx 0.0167$. Assuming a desired statistical power of $1 - \beta = 0.80$, a correlation among repeated measures of $\rho = 0.5$, and a nonsphericity correction of $\epsilon = 1$, the analysis indicated a minimum required sample size of 36 participants.
+
+
+\subsection{Recruitment and Data Filtering}
+In total, 53 raw survey responses were recorded. We strictly excluded participants who failed the mandatory headphone audio-routing check or the embedded attention checks. After removing 16 outliers, our final dataset consisted of $N = 37$ valid participants.
+
+Due to the Taguchi L9 design and the three notification Types tested per scenario, this yielded a robust set of 999 individual observations (37 participants $\times$ 9 scenarios $\times$ 3 notification types) for the statistical analysis.
+
+The final sample consisted of 37 participants (21 female, 16 male). Participants were between 18 and 37 years old ($M = 25.54$, $SD = 4.60$). As the study, including all experience scenarios, was conducted in English, participants self-reported their English proficiency. All participants indicated at least a good level of proficiency, with 34 (91.9\%) reporting that they understood English very well or perfectly.
+
+\section{Results}
+\label{sec:results}
+
+
+
+
+\subsection{Background}
+
+Participants had little prior experience with smart glasses. The majority had never used smart glasses before (81.1\%), while six participants (16.2\%) had tried them once or twice and only one participant (2.7\%) reported regular use.
+
+Despite this limited experience, participants expressed clear preferences regarding which information they would like to receive auditorily through smart glasses. Phone calls were the most frequently selected notification type (78.4\%), followed by navigation instructions (64.9\%), calendar or reminder alerts (48.6\%), and direct instant messages such as WhatsApp (40.5\%). Emails were selected less frequently (27.0\%).
+
+Participants also indicated a moderate preference for reserving auditory notifications primarily for messages of higher relevance. Overall, 56.7\% agreed or strongly agreed that they only wanted auditory notifications for important messages, while this proportion increased to 64.8\% for urgent messages.
+
+We also examined participants' existing smartphone notification habits (\autoref{fig:smartphone_habits}a). The active use of audio notifications was uncommon, with only 10.8\% of participants enabling audible alerts. Instead, most participants relied on either visual notifications combined with vibration (35.1\%), visual notifications only (29.7\%), or had notifications disabled entirely (24.3\%). When asked about the reasons for these configurations (\autoref{fig:smartphone_habits}b), the two most frequently selected motivations were avoiding self-distraction (70.3\%) and avoiding disturbing people nearby (54.1\%).
+
+
+\begin{figure}[H]
+    \centering
+
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{plots3/Standard_Smartphone_Notification_Setting.png}
+        \caption{Notification Settings}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{plots3/Reasons_For_Notification_Setting.png}
+        \caption{Reasons for Configuration}
+    \end{subfigure}
+
+    \caption{Baseline smartphone habits: (a) Participants' standard everyday notification settings, and (b) the primary reasons driving these choices.}
+    \label{fig:smartphone_habits}
+\end{figure}
+
+
+
+
+
+
+
+\subsection{Speech as Notification}
+\label{sec:speech_notification}
+
+Before evaluating notifications within different contextual scenarios, we asked how acceptable it would be to have \textbf{any} generic notification read out loud without an explicit request. Participants generally rejected the concept, with a clear majority expressing disagreement (59.5\%), compared to those who agreed (27.0\%) or remained neutral (13.5\%).
+
+However, when introducing the \textbf{important and urgent notification}, specifically, a message from a familiar person requiring immediate reaction, user preference shifted. \textit{Independent} of the context, a clear preference for speech-based notifications emerged for these messages (\autoref{fig:general_notification_preference}). Combined, ~73\% of participants opted for a speech notification: the majority selected either \textit{Rich Speech} (including sender and message content; 45.9\%) or \textit{Short Speech} (including sender only; 27.0\%). In comparison, only 10.8\% preferred the abstract Earcon, while 16.2\% did not want to receive this notification auditorily.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{plots3/01_General_Preference_Pie.png}
+    \caption{General preference for receiving an important and urgent notification through smart glasses with private audio, independent of contextual factors.}
+    \label{fig:general_notification_preference}
+\end{figure}
+
+As shown in \autoref{tab:qualitative_reasons} (a qualitative analysis of users' preferences), users who preferred speech notifications prioritized efficiency and triage, whereas those opting for minimal or no audio primarily wanted to reduce cognitive load and protect privacy. Quotes originally provided in German were translated to English.
+
+\begin{table}[H]
+\centering
+\footnotesize
+\caption{Summary of qualitative reasons for notification preference, clustered by dominant themes.}
+\label{tab:qualitative_reasons}
+\begin{tabular}{p{0.18\linewidth} p{0.22\linewidth} c p{0.45\linewidth}}
+\toprule
+\textbf{Preference} & \textbf{Primary Theme} & \textbf{n} & \textbf{Representative Quote} \\
+\midrule
+\multirow{2}{*}{\parbox{\linewidth}{\textbf{Rich Speech}\\(n=17)}} 
+ & Efficiency \& Hands-Free & 9 & ``It is an easy fast way to know what I just received, without checking my phone first.'' \\
+\cmidrule{2-4}
+ & Immediate Triage & 8 & ``...help me understand what the message is and know if its really urgent or not that I really need to respond to immediately.'' \\
+\midrule
+\multirow{3}{*}{\parbox{\linewidth}{\textbf{Short Speech}\\(n=10)}} 
+ & Information Balance & 4 & ``[Short Speech] is concise and you get to decide whether that particular person is important enough to trump one's own situation.'' \\
+\cmidrule{2-4}
+ & Minimizing Interruption & 4 & ``I might be busy [...] I don't want to be interrupted by a full message being read out loud to me.'' \\
+\cmidrule{2-4}
+ & Privacy \& Social Pressure & 2 & ``Hearing the full context of a message pressures me to reply immediately.'' \\
+\midrule
+\multirow{2}{*}{\parbox{\linewidth}{\textbf{No Audio}\\(n=6)}} 
+ & Attention Protection & 5 & ``I don't need technology to take even more of my attention.'' \\
+\cmidrule{2-4}
+ & Privacy \& AI Trust & 1 & ``I do not want AI to read my messages [...] I do not trust META in that sense.'' \\
+\midrule
+\textbf{Earcon} (n=4) 
+ & Unobtrusive Awareness & 4 & ``The reading out of the message itself can be valuable but in most situations I would find it annoying and/or distracting.'' \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+In our survey, participants generally associated Speech notifications with urgency and importance. When asked if they would assume a message is highly urgent and important if their smart glasses read it out loud instead of playing a standard "ding" (Earcon), 75.7\% of respondents indicated agreement (answering "Somewhat agree," "Agree," or "Strongly agree").
+
+When asked to select all acceptable maximum lengths for spoken notifications, the 37 participants overwhelmingly preferred shorter formats. Over half of the respondents (51.4\%) selected a maximum of 2-3 sentences as acceptable, while 48.6\% selected a very short length (1 sentence or headline only). Furthermore, even at this early stage in the survey, respondents already highlighted the importance of context, indicating that acceptable length depends on the specific message (29.7\%) or the user's current situation (27.0\%).
+
+When prompting users about their attitude toward the acceptability of an AI summarizing long messages, participants had a completely mixed reaction. The responses were polarized, with 48.6\% expressing some level of disagreement and 40.5\% indicating agreement, while the remaining 10.8\% remained neutral.
+
+\subsection{Statistical Approach and Interpretation}
+To analyze our repeated-measures design, we fitted Linear Mixed Models (LMMs) with maximum likelihood estimation using the \textit{statsmodels}\footnote{\url{https://www.statsmodels.org}} Python package. LMMs are highly appropriate for this type of study because they account for the fact that the same participant provided multiple ratings across different scenarios. By adding the participant ID as a random effect, the model controls for individual baseline differences (e.g., some users generally rating everything more conservatively). 
+
+Because our scenarios were structured using a fractional Taguchi L9 array rather than a full-factorial design, our models strictly evaluated the \textbf{main effects} of the independent variables (Notification Type, Social Setting, Task Load, and Soundscape) independently. Testing all cross-interactions would result in mathematical overfitting (singular matrices) due to the intentionally omitted combinations in the L9 array.
+
+To protect against Type I errors (false positives) that arise from running multiple parallel tests, we applied a Bonferroni correction for the post-hoc pairwise comparisons across our three main models (Disruption, Social Acceptability, Detectability). The threshold for pairwise statistical significance was thus strictly adjusted to $\alpha = .0167$ ($.05 / 3$). 
+
+\textbf{Omnibus Main Effect Tests:} Before examining specific pairwise differences, we first verified whether each factor had a statistically significant overall (omnibus) effect on each dependent variable using Type III Wald $\chi^2$ tests at the standard $\alpha = .05$ level. Only factors with a significant omnibus effect were subsequently interpreted via pairwise comparisons. As shown in \autoref{tab:omnibus_tests}, all main effects reached significance across all dependent variables, confirming that Task Load, Social Setting, Soundscape, and Notification Type each meaningfully influence user perception.
+
+\textbf{Pairwise Comparisons:} For each significant omnibus effect, we extracted all pairwise comparisons by systematically re-fitting the LMM with shifted reference levels for each factor. \autoref{tab:lmm_pairwise} details these comparisons. The resulting values ($\Delta M$) represent the absolute point-difference on our 7-point Likert scale between two specific factor levels. 
+For example, in \autoref{tab:lmm_pairwise}, the comparison ``Interactive vs. Alone'' shows a $\Delta M$ of $-1.54$ for Social Acceptability. This translates simply to: \textit{When users are in an interactive setting, they rate the social acceptability on average 1.54 points lower than when they are alone.}
+
+\textbf{Model Fit and Variance Explained:} To evaluate the robustness of our models, \autoref{tab:lmm_pairwise} includes the Akaike Information Criterion (AIC) and Nakagawa's $R^2$ metrics. The Marginal $R^2$ ($R^2_{marg}$) represents the variance explained exclusively by our fixed experimental factors (Notification Type, Social Setting, Task Load, and Soundscape). These factors alone account for 28\% to 36\% of the variance in user ratings, proving that context heavily dictates perception. Crucially, when including the random effect (individual participant differences), the Conditional $R^2$ ($R^2_{cond}$) shows that our models explain roughly 50\% of the total variance across all dimensions (e.g., $R^2_{cond} = 0.54$ for Social Acceptability).
+
+
+% ==========================================
+% OMNIBUS MAIN EFFECT TESTS TABLE
+% ==========================================
+\begin{table}[H]
+\centering
+\caption{Omnibus main effect tests (Type III Wald $\chi^2$) for each factor across the three dependent variables. All factors were tested with $df = 2$. Significance threshold: $\alpha = .05$.}
+\label{tab:omnibus_tests}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Factor} & \textbf{Disruption} & \textbf{Social Acc.} & \textbf{Detectability} \\
+\midrule
+Notification Type & $\chi^2 = 191.91$*** & $\chi^2 = 61.89$*** & $\chi^2 = 7.47$*\hphantom{**} \\
+Social Setting    & $\chi^2 = 12.18$**\hphantom{*}  & $\chi^2 = 218.02$*** & $\chi^2 = 10.43$**\hphantom{*} \\
+Task Load         & $\chi^2 = 202.71$*** & $\chi^2 = 58.08$***  & $\chi^2 = 29.03$*** \\
+Soundscape        & $\chi^2 = 39.97$***  & $\chi^2 = 76.38$***  & $\chi^2 = 109.81$*** \\
+\bottomrule
+\multicolumn{4}{l}{\small \textit{Note:} * $p < .05$, ** $p < .01$, *** $p < .001$. All tests with $df = 2$.}
+\end{tabular}
+\end{table}
+
+
+% ==========================================
+% PAIRWISE COMPARISON TABLE
+% ==========================================
+\begin{table}[H]
+\centering
+\caption{Linear Mixed Model (LMM) pairwise comparison results. Values ($\Delta M$) indicate the absolute point-difference on the 7-point Likert scale between the two compared levels. \textcolor{blue}{Blue} indicates a significant positive shift for the first level compared to the second, \textcolor{red}{Red} indicates a significant negative shift. The significance threshold is Bonferroni-corrected to $p < .0167$. \textbf{Framed cells} highlight the primary relationships targeted by our study design.}
+\label{tab:lmm_pairwise}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}lrrr@{}}
+\toprule
+\textbf{Pairwise Comparison} & \textbf{Disruption ($\Delta M$)} & \textbf{Social Acc. ($\Delta M$)} & \textbf{Detectability ($\Delta M$)} \\
+\midrule
+\textit{Notification Type} & & & \\
+Short Speech vs. Earcon & \textcolor{blue}{1.14***} & \textcolor{red}{-0.63***} & 0.18\hphantom{***} \\
+Rich Speech vs. Earcon & \textcolor{blue}{1.57***} & \textcolor{red}{-0.86***} & \textcolor{blue}{0.26**\hphantom{*}} \\
+Rich Speech vs. Short Speech & \textcolor{blue}{0.43***} & -0.23\hphantom{***} & 0.08\hphantom{***} \\
+\midrule
+\textit{Social Setting} & & & \\
+Passive vs. Alone & \textcolor{red}{-0.30*\hphantom{**}} & \fbox{-0.22\hphantom{***}} & \textcolor{blue}{0.27**\hphantom{*}} \\
+Interactive vs. Alone & 0.09\hphantom{***} & \fbox{\textcolor{red}{-1.54***}} & \textcolor{blue}{0.28**\hphantom{*}} \\
+Interactive vs. Passive & \textcolor{blue}{0.39***} & \fbox{\textcolor{red}{-1.32***}} & 0.01\hphantom{***} \\
+\midrule
+\textit{Task Load} & & & \\
+Low vs. High Mental & \fbox{\textcolor{red}{-1.41***}} & \textcolor{blue}{0.72***} & -0.01\hphantom{***} \\
+High Physical vs. High Mental & \fbox{\textcolor{red}{-1.48***}} & \textcolor{blue}{0.77***} & \textcolor{red}{-0.47***} \\
+High Physical vs. Low Load & \fbox{-0.07\hphantom{***}} & 0.05\hphantom{***} & \textcolor{red}{-0.46***} \\
+\midrule
+\textit{Soundscape} & & & \\
+Quiet vs. Music & \textcolor{blue}{0.49***} & \textcolor{red}{-0.69***} & \fbox{\textcolor{blue}{0.61***}} \\
+Speech vs. Music & \textcolor{blue}{0.73***} & \textcolor{red}{-0.95***} & \fbox{\textcolor{red}{-0.42***}} \\
+Speech vs. Quiet & 0.24\hphantom{***} & -0.26\hphantom{***} & \fbox{\textcolor{red}{-1.03***}} \\
+\midrule
+\textit{Model Fit Statistics} & & & \\
+AIC & 3768.51 & 3693.32 & 3435.47 \\
+$R^2_{marg}$ & 0.36 & 0.36 & 0.28 \\
+$R^2_{cond}$ & 0.52 & 0.54 & 0.49 \\
+\bottomrule
+\multicolumn{4}{l}{\small \textit{Note:} * $p < .0167$, ** $p < .01$, *** $p < .001$. Standard errors omitted for brevity. $R^2_{marg}$ represents} \\
+\multicolumn{4}{l}{\small variance explained by fixed effects; $R^2_{cond}$ represents variance explained by fixed and random effects combined.}
+\end{tabular}%
+}
+\end{table}
+
+
+
+
+
+
+
+
+\subsection{What Drives Disruption?}
+\label{sec:res_disruption}
+Our first hypothesis investigated the impact of \textbf{Task Load} on perceived \textbf{Disruption}. To evaluate this, we fitted the following model, including the participant as a random intercept to account for individual differences:
+$$ \text{Disruption} \sim \text{Notification Type} + \text{Social Setting} + \text{Task Load} + \text{Soundscape} + (1 | \text{Participant}) $$
+
+The LMM confirmed that task load is a critical factor. Compared to high mental load ($M = 5.00$), participants found notifications significantly \textit{less} disruptive when engaged in tasks with a high physical load ($M = 3.52$; $\Delta M = -1.48, p < .001$) or low load ($M = 3.59$; $\Delta M = -1.41, p < .001$), as seen in \autoref{fig:box_disruption}a. Notably, the difference between low load and high physical load was not statistically significant ($\Delta M = -0.07, p = .555$), suggesting that the elevated disruption is specifically driven by mental engagement rather than general task intensity.
+
+Unsurprisingly, the amount of auditory information delivered severely impacted distraction. Both \textit{Short Speech} ($M = 4.27$; $\Delta M = 1.14, p < .001$) and \textit{Rich Speech} ($M = 4.71$; $\Delta M = 1.57, p < .001$) were rated as significantly more disruptive than standard Earcons ($M = 3.14$). \autoref{fig:box_disruption}b visualizes this trend across all three notification formats.
+
+Exploring the descriptive data across the three task loads reveals a consistent trend: speech-based notifications inherently increase perceived disruption, regardless of the user's current engagement. For instance, during low-load tasks, participants rated Earcons as minimally disruptive ($M = 2.55$), whereas Short Speech ($M = 3.86$) and Rich Speech ($M = 4.37$) were notably higher. This uniform penalty for spoken information persists during high mental load (Earcon: $M = 4.05$; Rich Speech: $M = 5.66$) and high physical load (Earcon: $M = 2.80$; Rich Speech: $M = 4.09$). While the baseline disruption shifts depending on the task, the relative distraction caused by delivering spoken text remains constantly elevated across all conditions.
+
+\begin{figure}[H]
+    \centering
+    % Obere Reihe: Main Effects
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{plots/PrimaryAdvanced_Overall_e_Task_vs_Disruption_inline.png}
+        \caption{Overall by Task Load}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \includegraphics[width=\textwidth]{plots2/Disruption_Combined.png}
+        \caption{Overall by Notification Type}
+    \end{subfigure}
+    
+    \vskip\baselineskip % Abstand zwischen oberer und unterer Reihe
+    
+    % Untere Reihe: Breakdowns per Task Load
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{plots2/Disruption_Highmental.png}
+        \caption{High Mental Load}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{plots2/Disruption_Low.png}
+        \caption{Low Load}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.32\textwidth}
+        \includegraphics[width=\textwidth]{plots2/Disruption_Highphysical.png}
+        \caption{High Physical Load}
+    \end{subfigure}
+    \caption{Perceived disruption. Plots (a) and (b) visualize the overarching main effects of task load and notification type, corresponding directly to the marginal means derived from the Linear Mixed Model. Plots (c), (d), and (e) break down the disruption caused by each notification type across the three specific task loads.}
+    \label{fig:box_disruption}
+\end{figure}
+
+and so on..

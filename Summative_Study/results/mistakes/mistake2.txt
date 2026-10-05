@@ -1,0 +1,368 @@
+Bei Participant 26 (Emilia)
+14. August von 14-15 uhr
+bei MXH2, hat nach 3 cycles earcon anstatt sofort speech
+
+Supabase ID: 1131
+Reason:
+{
+  "reason": "best moment is imminent",
+  "best_step": {
+    "cost": {
+      "D_task": 0.45,
+      "C_total": 0.24,
+      "A_social": 0.15,
+      "C_M_unmasking": 0.15,
+      "C_I_interruption": 0.3
+    },
+    "scene": {
+      "activity": "The device owner continues reviewing the hardware store receipt and verbalizing calculations.",
+      "loudness": 0.4,
+      "environment": "indoor office or study desk",
+      "social_grouping": "alone",
+      "interaction_mode": "none",
+      "activity_category": "cognitive_medium",
+      "setting_formality": "casual",
+      "subject_in_motion": false,
+      "enforced_silence_venue": false
+    },
+    "benefit": {
+      "B_total": 0.4956,
+      "G_d_semantic": 0.1,
+      "I_n_importance": 0.9,
+      "U_eff_urgency_decayed": 0.4627
+    },
+    "step_index": 0,
+    "t_offset_s": 8,
+    "cost_rationale": "User is actively engaged in mental calculation and speaking aloud, making speech notifications moderately disruptive and requiring unmasking against self-speech.",
+    "forecast_uncertainty": 0.184
+  },
+  "suppressed": false,
+  "forecast_steps": [
+    {
+      "costs": {
+        "e_task": 0.65,
+        "social_cost": {
+          "earcon": 0.15,
+          "speech": 0.25
+        },
+        "cost_rationale": "User is actively engaged in mental calculation and speaking aloud, making speech notifications moderately disruptive and requiring unmasking against self-speech.",
+        "unmasking_cost": {
+          "earcon": 0.15,
+          "speech": 0.35
+        },
+        "disruption_cost": {
+          "earcon": 0.45,
+          "speech": 0.7
+        }
+      },
+      "observed": false,
+      "t_offset_s": 8,
+      "deliverable": true,
+      "task_context": {
+        "gaze_target": "physical_document",
+        "content_mode": "interacting",
+        "activity_category": "cognitive_medium",
+        "subject_in_motion": false,
+        "activity_description": "The device owner continues reviewing the hardware store receipt and verbalizing calculations.",
+        "observable_task_artifacts": [
+          "printed receipt titled Task: Verify Hardware Store Receipt",
+          "desk monitor base and cables"
+        ]
+      },
+      "scene_context": {
+        "environment": "indoor office or study desk",
+        "estimated_overall_loudness": 0.4
+      },
+      "sound_sources": [
+        {
+          "object": "device owner speaking",
+          "distance": "near",
+          "direction": "front",
+          "sound_type": [
+            "speech"
+          ],
+          "uncertainty": 0.1,
+          "motion_state": "static",
+          "sound_probability": 0.9,
+          "estimated_loudness": 0.4
+        }
+      ],
+      "change_summary": "no notable change",
+      "duration_max_s": 60,
+      "duration_min_s": 30,
+      "social_context": {
+        "venue_type": "office_shared",
+        "subject_role": "isolated",
+        "setting_privacy": "semi_private",
+        "social_grouping": "alone",
+        "interaction_mode": "none",
+        "setting_formality": "casual",
+        "observed_social_cues": [],
+        "enforced_silence_venue": false
+      },
+      "start_latest_s": 0,
+      "start_earliest_s": 0,
+      "frame_timestamp_s": 46.275,
+      "forecast_uncertainty": 0.184
+    },
+    {
+      "costs": {
+        "e_task": 0.7,
+        "social_cost": {
+          "earcon": 0.15,
+          "speech": 0.25
+        },
+        "cost_rationale": "Quiet environment lowers unmasking costs, but ongoing focused writing keeps task disruption high.",
+        "unmasking_cost": {
+          "earcon": 0.08,
+          "speech": 0.08
+        },
+        "disruption_cost": {
+          "earcon": 0.5,
+          "speech": 0.75
+        }
+      },
+      "observed": false,
+      "t_offset_s": 45,
+      "deliverable": true,
+      "task_context": {
+        "gaze_target": "physical_document",
+        "content_mode": "interacting",
+        "activity_category": "cognitive_medium",
+        "subject_in_motion": false,
+        "activity_description": "The user finishes calculating and silently writes down the final verification result on the receipt.",
+        "observable_task_artifacts": [
+          "printed receipt titled Task: Verify Hardware Store Receipt",
+          "pen"
+        ]
+      },
+      "scene_context": {
+        "environment": "indoor office or study desk",
+        "estimated_overall_loudness": 0.2
+      },
+      "sound_sources": [],
+      "change_summary": "user stops speaking aloud and writes quietly",
+      "duration_max_s": 40,
+      "duration_min_s": 20,
+      "social_context": {
+        "venue_type": "office_shared",
+        "subject_role": "isolated",
+        "setting_privacy": "semi_private",
+        "social_grouping": "alone",
+        "interaction_mode": "none",
+        "setting_formality": "casual",
+        "observed_social_cues": [],
+        "enforced_silence_venue": false
+      },
+      "start_latest_s": 60,
+      "start_earliest_s": 30,
+      "frame_timestamp_s": 83.275,
+      "forecast_uncertainty": 0.341
+    },
+    {
+      "costs": {
+        "e_task": 0.2,
+        "social_cost": {
+          "earcon": 0.12,
+          "speech": 0.2
+        },
+        "cost_rationale": "Task engagement drops significantly during the pause, making this an opportune window for notification delivery.",
+        "unmasking_cost": {
+          "earcon": 0.05,
+          "speech": 0.05
+        },
+        "disruption_cost": {
+          "earcon": 0.2,
+          "speech": 0.35
+        }
+      },
+      "observed": false,
+      "t_offset_s": 75,
+      "deliverable": true,
+      "task_context": {
+        "gaze_target": "room",
+        "content_mode": "observing",
+        "activity_category": "idle",
+        "subject_in_motion": false,
+        "activity_description": "The user leans back from the desk, stretches, and pauses between tasks.",
+        "observable_task_artifacts": [
+          "printed receipt",
+          "desk"
+        ]
+      },
+      "scene_context": {
+        "environment": "indoor office or study desk",
+        "estimated_overall_loudness": 0.2
+      },
+      "sound_sources": [],
+      "change_summary": "user pauses and relaxes between tasks",
+      "duration_max_s": 30,
+      "duration_min_s": 15,
+      "social_context": {
+        "venue_type": "office_shared",
+        "subject_role": "isolated",
+        "setting_privacy": "semi_private",
+        "social_grouping": "alone",
+        "interaction_mode": "none",
+        "setting_formality": "casual",
+        "observed_social_cues": [],
+        "enforced_silence_venue": false
+      },
+      "start_latest_s": 100,
+      "start_earliest_s": 50,
+      "frame_timestamp_s": 113.275,
+      "forecast_uncertainty": 0.468
+    },
+    {
+      "costs": {
+        "e_task": 0.8,
+        "social_cost": {
+          "earcon": 0.15,
+          "speech": 0.25
+        },
+        "cost_rationale": "Intense computer data entry creates high mental task engagement and severe disruption costs for speech.",
+        "unmasking_cost": {
+          "earcon": 0.12,
+          "speech": 0.1
+        },
+        "disruption_cost": {
+          "earcon": 0.55,
+          "speech": 0.8
+        }
+      },
+      "observed": false,
+      "t_offset_s": 97.5,
+      "deliverable": true,
+      "task_context": {
+        "gaze_target": "computer_monitor",
+        "content_mode": "interacting",
+        "activity_category": "cognitive_heavy",
+        "subject_in_motion": false,
+        "activity_description": "The user interacts with the computer monitor and keyboard to log receipt data into a spreadsheet.",
+        "observable_task_artifacts": [
+          "computer monitor",
+          "keyboard",
+          "spreadsheet application"
+        ]
+      },
+      "scene_context": {
+        "environment": "indoor office or study desk",
+        "estimated_overall_loudness": 0.3
+      },
+      "sound_sources": [
+        {
+          "object": "computer keyboard and mouse",
+          "distance": "near",
+          "direction": "front",
+          "sound_type": [
+            "clicking",
+            "typing"
+          ],
+          "uncertainty": 0.2,
+          "motion_state": "intermittent",
+          "sound_probability": 0.7,
+          "estimated_loudness": 0.3
+        }
+      ],
+      "change_summary": "user shifts attention to computer input with typing sounds",
+      "duration_max_s": 90,
+      "duration_min_s": 45,
+      "social_context": {
+        "venue_type": "office_shared",
+        "subject_role": "isolated",
+        "setting_privacy": "semi_private",
+        "social_grouping": "alone",
+        "interaction_mode": "none",
+        "setting_formality": "casual",
+        "observed_social_cues": [],
+        "enforced_silence_venue": false
+      },
+      "start_latest_s": 130,
+      "start_earliest_s": 65,
+      "frame_timestamp_s": 135.775,
+      "forecast_uncertainty": 0.564
+    },
+    {
+      "costs": {
+        "e_task": 0.6,
+        "social_cost": {
+          "earcon": 0.15,
+          "speech": 0.25
+        },
+        "cost_rationale": "Task load decreases slightly as active typing concludes and proofreading begins.",
+        "unmasking_cost": {
+          "earcon": 0.1,
+          "speech": 0.08
+        },
+        "disruption_cost": {
+          "earcon": 0.4,
+          "speech": 0.65
+        }
+      },
+      "observed": false,
+      "t_offset_s": 165,
+      "deliverable": true,
+      "task_context": {
+        "gaze_target": "computer_monitor",
+        "content_mode": "interacting",
+        "activity_category": "cognitive_medium",
+        "subject_in_motion": false,
+        "activity_description": "The user performs final review of the spreadsheet entries before saving the file.",
+        "observable_task_artifacts": [
+          "computer monitor",
+          "spreadsheet application"
+        ]
+      },
+      "scene_context": {
+        "environment": "indoor office or study desk",
+        "estimated_overall_loudness": 0.3
+      },
+      "sound_sources": [
+        {
+          "object": "computer keyboard and mouse",
+          "distance": "near",
+          "direction": "front",
+          "sound_type": [
+            "clicking",
+            "typing"
+          ],
+          "uncertainty": 0.3,
+          "motion_state": "intermittent",
+          "sound_probability": 0.5,
+          "estimated_loudness": 0.2
+        }
+      ],
+      "change_summary": "typing slows down as user enters review phase",
+      "duration_max_s": 60,
+      "duration_min_s": 30,
+      "social_context": {
+        "venue_type": "office_shared",
+        "subject_role": "isolated",
+        "setting_privacy": "semi_private",
+        "social_grouping": "alone",
+        "interaction_mode": "none",
+        "setting_formality": "casual",
+        "observed_social_cues": [],
+        "enforced_silence_venue": false
+      },
+      "start_latest_s": 220,
+      "start_earliest_s": 110,
+      "frame_timestamp_s": 203.275,
+      "forecast_uncertainty": 0.85
+    }
+  ],
+  "force_delivered": false,
+  "expected_timeline": "The user will finish calculating and verbalizing the receipt in the first minute, pause briefly to write down the final figures, take a short transitional break, and then transition into computer data entry and spreadsheet verification.",
+  "optimizer_summary": {
+    "n_steps": 5,
+    "tau_u_s": 48.4,
+    "n_candidates": 5,
+    "speech_threshold_delta_cost": 0.225
+  },
+  "notification_inputs": {
+    "urgency": 0.9,
+    "elapsed_held_s": 24.211,
+    "importance_sender": 0.9,
+    "importance_content": 0.9
+  }
+}

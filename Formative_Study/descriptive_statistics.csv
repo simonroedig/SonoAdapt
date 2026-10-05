@@ -1,0 +1,30 @@
+,,,,Detectability,Detectability,Disruption,Disruption,Social_Acceptability,Social_Acceptability,Appropriateness,Appropriateness
+,,,,mean,std,mean,std,mean,std,mean,std
+Notification_Type,Asocial,e_Task,CM,,,,,,,,
+Earcon,Alone,High mental,Quiet,6.27,1.37,4.19,1.96,5.46,1.63,4.43,2.33
+Earcon,Alone,High physical,Speech,5.65,1.62,2.62,1.59,6.11,0.97,5.62,1.53
+Earcon,Alone,Low,Music,5.27,2.05,2.59,1.8,6.05,1.53,5.54,2.16
+Earcon,Interactive,High mental,Speech,5.81,1.39,4.57,1.88,3.65,2.15,3.59,2.15
+Earcon,Interactive,High physical,Music,5.22,1.75,2.68,1.6,5.73,1.3,5.57,1.68
+Earcon,Interactive,Low,Quiet,6.46,0.84,2.7,1.54,5.05,1.84,5.22,1.64
+Earcon,Passive,High mental,Music,5.51,1.66,3.41,2.23,5.95,1.43,5.38,1.83
+Earcon,Passive,High physical,Quiet,5.89,1.37,3.11,1.97,5.41,1.64,4.78,2.0
+Earcon,Passive,Low,Speech,5.62,1.48,2.35,1.55,5.95,1.18,5.65,1.72
+Rich Speech,Alone,High mental,Quiet,6.54,1.19,5.86,1.42,5.16,1.89,3.62,2.36
+Rich Speech,Alone,High physical,Speech,4.68,2.4,4.62,2.03,5.14,1.99,4.43,2.15
+Rich Speech,Alone,Low,Music,6.11,1.58,4.0,1.84,5.7,1.71,5.32,2.01
+Rich Speech,Interactive,High mental,Speech,5.57,1.88,6.35,1.21,2.08,1.67,2.11,1.74
+Rich Speech,Interactive,High physical,Music,5.89,1.49,3.76,1.71,4.78,1.64,4.76,1.79
+Rich Speech,Interactive,Low,Quiet,6.76,0.49,4.46,1.82,3.59,1.99,3.62,2.06
+Rich Speech,Passive,High mental,Music,6.41,0.76,4.76,1.85,5.22,1.84,4.86,1.96
+Rich Speech,Passive,High physical,Quiet,6.46,1.12,3.89,2.02,4.76,1.92,4.57,2.32
+Rich Speech,Passive,Low,Speech,5.68,1.8,4.65,1.98,5.22,1.73,4.51,2.29
+Short Speech,Alone,High mental,Quiet,6.49,1.19,5.41,1.48,5.22,1.83,3.76,2.2
+Short Speech,Alone,High physical,Speech,4.35,2.36,4.03,1.82,5.43,1.71,4.57,1.98
+Short Speech,Alone,Low,Music,6.03,1.5,3.65,1.7,5.92,1.42,5.46,1.83
+Short Speech,Interactive,High mental,Speech,5.62,1.78,6.0,1.25,2.32,1.56,2.41,1.72
+Short Speech,Interactive,High physical,Music,5.81,1.47,3.41,1.59,5.08,1.5,5.0,1.56
+Short Speech,Interactive,Low,Quiet,6.76,0.49,3.86,1.65,4.05,1.91,4.19,1.85
+Short Speech,Passive,High mental,Music,6.24,0.93,4.46,1.85,5.41,1.67,5.05,1.88
+Short Speech,Passive,High physical,Quiet,6.32,1.27,3.59,1.96,4.92,1.88,4.54,2.02
+Short Speech,Passive,Low,Speech,5.7,1.65,4.05,1.82,5.38,1.64,4.65,2.12

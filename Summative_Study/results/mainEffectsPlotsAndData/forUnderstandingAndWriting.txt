@@ -1,0 +1,206 @@
+================================================================================
+MAIN EFFECTS — forUnderstandingAndWriting.txt
+================================================================================
+
+─── EASY-TO-UNDERSTAND SUMMARY ────────────────────────────────────────────────
+
+"Overall, which notification system do users prefer?"
+We collapse everything (both scenarios, both urgency levels) and compare:
+Earcon vs Speech vs SonoAdapt.
+→ SonoAdapt wins on Appropriateness & Social Acceptability.
+→ Speech is rated worst overall.
+→ Disruptiveness: SonoAdapt is least disruptive (it mutes LOW notifications).
+→ Detectability: handled specially because SonoAdapt mutes LOW (see below).
+
+This is the analysis your supervisor primarily wants for the paper.
+
+
+─── WHAT IS A "MAIN EFFECT"? ──────────────────────────────────────────────────
+
+In ANOVA terminology, a "main effect" is the overall influence of one
+independent variable (here: System) on the dependent variable, ignoring
+(collapsing across) all other factors.
+
+Our study has 3 factors:
+  • System:              Earcon / Speech / SonoAdapt   (3 levels)
+  • Urgency/Importance:  Low / High                    (2 levels)
+  • Scenario:            Interview / Math               (2 levels)
+
+The MAIN EFFECT OF SYSTEM collapses across Urgency and Scenario.
+Each participant's score = mean of all 4 trials for that system
+  (Interview-Low, Interview-High, Math-Low, Math-High).
+This gives N=23 participants × 3 systems = 69 data points per DV.
+
+
+─── WHAT WE COMPARE ───────────────────────────────────────────────────────────
+
+Three notification systems, fully within-subjects (every participant
+experienced all three):
+  1. Earcon:     short non-speech sound (always played)
+  2. Speech:     spoken notification (always played)
+  3. SonoAdapt:  adaptive system that decides to play earcon, speech, or mute
+                 depending on context (scenario + urgency)
+
+For the paper, SonoAdapt is called "AudioAdapt."
+
+
+─── WHAT DATA WAS USED ────────────────────────────────────────────────────────
+
+Source:         raw.xlsx (Qualtrics export, wide format)
+Participants:   N = 23 (after removing 4 outliers from original 27)
+Outliers:       Defined in potential_outliers.json
+                Removed: Tejaswini, Ritika, Anna, Osama
+Pilot:          First row removed (pilot participant)
+
+Unit of analysis:
+  Each participant's MEAN across all their trials for a given system.
+  Per system, each participant has 4 trials (2 scenarios × 2 urgency levels).
+  → 1 aggregated value per participant per system per DV.
+
+Special case — Detectability:
+  SonoAdapt mutes LOW-urgency notifications (by design). Users cannot rate
+  detectability of something silent → those ratings are set to NaN.
+  For Detectability, SonoAdapt's mean is computed from HIGH-only trials (2 per
+  participant), while Earcon and Speech use all 4 trials each.
+  This is transparently reported and defensible: you cannot detect silence.
+
+
+─── DEPENDENT VARIABLES (DVs) ─────────────────────────────────────────────────
+
+All are 7-point Likert scales:
+
+  1. Appropriateness       (1=completely inappropriate … 7=completely appropriate)
+                           ↑ higher = better
+  2. Social Acceptability  (1=completely unacceptable  … 7=completely acceptable)
+                           ↑ higher = better
+  3. Detectability         (1=very difficult to detect … 7=very easy to detect)
+                           ↑ higher = better
+  4. Disruptiveness        (1=not disruptive at all    … 7=extremely disruptive)
+                           ↓ LOWER = better (reversed scale!)
+
+Plots come in two versions:
+  • 4-DV version (includes Detectability)
+  • 3-DV version (excludes Detectability) — because the Detectability
+    comparison for SonoAdapt is imperfect (only HIGH trials contribute).
+
+
+─── STATISTICAL TESTS USED ────────────────────────────────────────────────────
+
+WHY NON-PARAMETRIC?
+  Likert data is ordinal. With N=23 and 7-point scales, normality assumptions
+  for parametric tests (repeated-measures ANOVA) are questionable. Non-
+  parametric tests are the conservative, safe choice that reviewers accept
+  for ordinal Likert data with small samples.
+
+OMNIBUS TEST:  Friedman test
+  • Non-parametric equivalent of one-way repeated-measures ANOVA.
+  • Tests: "Is there ANY difference among the 3 systems?"
+  • Reports: χ²(2), p-value.
+  • Effect size: Kendall's W (0 = no agreement, 1 = perfect agreement).
+    W > 0.5 is considered a large effect.
+
+POST-HOC PAIRWISE TESTS:  Wilcoxon signed-rank test
+  • Non-parametric paired comparison (like a paired t-test but on ranks).
+  • 3 pairwise comparisons: Earcon–Speech, Earcon–SonoAdapt, Speech–SonoAdapt.
+  • Multiple comparison correction: Holm-Bonferroni method.
+    (Controls family-wise error rate; less conservative than Bonferroni,
+     more powerful, but still rigorous.)
+  • Effect sizes reported:
+    - r_rb: matched-pairs rank-biserial correlation (effect size for Wilcoxon)
+    - r = |Z|/√N: standardized effect size
+    - Cohen's d_z: paired Cohen's d (mean difference / SD of differences)
+  • Significance threshold: α = .025 (from a-priori power analysis for 2
+    scenario-level analyses; Bonferroni-adjusted from .05).
+
+WHY NOT a linear mixed model (LMM)?
+  LMMs assume interval-level data and normally distributed residuals. With
+  ordinal 7-point Likert data and N=23, these assumptions are hard to defend.
+  The Friedman + Wilcoxon approach is more appropriate for our data type and
+  is the standard in HCI research with Likert scales.
+
+
+─── PLOTS GENERATED ───────────────────────────────────────────────────────────
+
+All saved as both .png (300 DPI) and .pdf (vector, for print).
+
+  fig_mainEffects_SonoAdapt_4DV    Boxplot: 3 systems × 4 DVs (thesis)
+  fig_mainEffects_SonoAdapt_3DV    Same but without Detectability (thesis)
+  fig_mainEffects_AudioAdapt_4DV   Same with "AudioAdapt" naming (paper)
+  fig_mainEffects_AudioAdapt_3DV   Same without Detectability (paper)
+  fig_mainEffects                  Legacy original plot (4 DVs, SonoAdapt)
+
+Colors:
+  Earcon:                #FFC300 (golden yellow)
+  Speech:                #694487 (dark purple)
+  SonoAdapt/AudioAdapt:  #56C959 (green)
+
+Plot title: "Main Effect of the System: Likert Ratings"
+Significance stars are shown above the boxes when p < .05 (Holm-corrected).
+
+WHAT THE PLOTS SHOW:
+  Each boxplot group has 3 boxes (one per system) for a DV. You can visually
+  see which system scored higher/lower. Significance brackets/stars indicate
+  which pairwise differences are statistically significant.
+
+
+─── OTHER OUTPUT FILES ────────────────────────────────────────────────────────
+
+  mainEffectsResults.txt    Full console output with all statistics
+  participantMeans.csv      The participant-level means used for the Friedman
+                            tests. Useful for re-analysis or verification.
+
+
+─── WHAT THE SCRIPT DOES UNDER THE HOOD ───────────────────────────────────────
+
+  1. Loads raw.xlsx (wide-format Qualtrics data)
+  2. Removes the pilot row
+  3. Reshapes wide → long format (1 row per trial)
+  4. Maps Likert text labels to numeric 1–7 values
+  5. Removes outlier participants (from potential_outliers.json)
+  6. Sets Detectability = NaN for SonoAdapt + LOW trials
+  7. Computes participant-level means (collapse across Scenario × Urgency)
+  8. For each DV:
+     a. Prints descriptive statistics (trial-level and participant-level)
+     b. Runs Friedman omnibus test
+     c. Runs 3 pairwise Wilcoxon signed-rank tests
+     d. Applies Holm-Bonferroni correction
+     e. Computes effect sizes (r_rb, r, Cohen's d_z)
+  9. Generates publication-ready boxplots (4 variants × 2 formats)
+ 10. Saves participantMeans.csv
+
+
+─── REVIEWER DEFENSE NOTES ────────────────────────────────────────────────────
+
+Q: "Why not use parametric tests (rm-ANOVA)?"
+A: Our DVs are ordinal Likert scales (7-point). With N=23, normality of the
+   sampling distribution is not guaranteed. Non-parametric tests (Friedman +
+   Wilcoxon) make no distributional assumptions and are the standard approach
+   for ordinal data in HCI research.
+
+Q: "Why Holm-Bonferroni and not regular Bonferroni?"
+A: Holm-Bonferroni controls the family-wise error rate (same guarantee as
+   Bonferroni) but is uniformly more powerful. It is strictly better.
+
+Q: "Why exclude Detectability for SonoAdapt LOW?"
+A: SonoAdapt mutes LOW-urgency notifications by design. Users rated
+   Detectability = "neither easy nor difficult" (value 4) because there was
+   nothing to detect. Including these as real ratings would artificially lower
+   SonoAdapt's Detectability score, which is misleading. The value "4" does
+   not represent actual difficulty — it represents absence of a stimulus.
+   This is transparently reported and all plots offer a 3-DV variant that
+   excludes Detectability entirely.
+
+Q: "Collapsing across Urgency and Scenario — is that valid?"
+A: This is the standard main-effect analysis. It answers the highest-level
+   question: "Overall, which system do users prefer?" The simple effects
+   (in simpleEffects.py) then decompose this by urgency level, and the
+   further effects (furtherEffects.py) decompose by scenario. The main effect
+   is the starting point; follow-up analyses explain where the effect lives.
+
+Q: "N=23 — is that enough?"
+A: An a-priori power analysis (G*Power, Friedman test, 3 groups, α = .025,
+   power = .80, medium effect size) indicated N ≥ 21 participants. We exceed
+   this threshold. The observed effect sizes (Kendall's W > 0.5 for most DVs)
+   confirm adequate power.
+
+Script: mainEffects.py

@@ -1,0 +1,403 @@
+{
+    "study_statistics": {
+        "total_participants": 37
+    },
+    "age": {
+        "n": 37,
+        "mean": 25.54,
+        "sd": 4.6,
+        "min": 18,
+        "max": 37
+    },
+    "gender": {
+        "n": 37,
+        "breakdown": {
+            "Female": {
+                "n": 21,
+                "percentage": 56.8
+            },
+            "Male": {
+                "n": 16,
+                "percentage": 43.2
+            }
+        }
+    },
+    "english_proficiency": {
+        "n": 37,
+        "breakdown": {
+            "Understand moderately well": {
+                "n": 1,
+                "percentage": 2.7
+            },
+            "Understand well": {
+                "n": 2,
+                "percentage": 5.4
+            },
+            "Understand very well": {
+                "n": 11,
+                "percentage": 29.7
+            },
+            "Understand perfectly": {
+                "n": 23,
+                "percentage": 62.2
+            }
+        }
+    },
+    "smart_glass_experience": {
+        "n": 37,
+        "breakdown": {
+            "Never": {
+                "n": 30,
+                "percentage": 81.1
+            },
+            "Tried once or twice": {
+                "n": 6,
+                "percentage": 16.2
+            },
+            "Used regularly": {
+                "n": 1,
+                "percentage": 2.7
+            }
+        }
+    },
+    "desired_apps_for_auditory_notifications": {
+        "n_participants": 37,
+        "breakdown": {
+            "Phone Calls": {
+                "n": 29,
+                "percentage": 78.4
+            },
+            "Navigation / Directions": {
+                "n": 24,
+                "percentage": 64.9
+            },
+            "Calendar / Reminder Alerts": {
+                "n": 18,
+                "percentage": 48.6
+            },
+            "Direct Instant Messages (e.g., WhatsApp, iMessage)": {
+                "n": 15,
+                "percentage": 40.5
+            },
+            "Emails": {
+                "n": 10,
+                "percentage": 27.0
+            },
+            "None of the above": {
+                "n": 2,
+                "percentage": 5.4
+            },
+            "Group Messages": {
+                "n": 2,
+                "percentage": 5.4
+            },
+            "Others:": {
+                "n": 1,
+                "percentage": 2.7
+            }
+        }
+    },
+    "only_notify_important": {
+        "n": 37,
+        "breakdown": {
+            "Strongly disagree": {
+                "n": 2,
+                "percentage": 5.4
+            },
+            "Somewhat disagree": {
+                "n": 4,
+                "percentage": 10.8
+            },
+            "Neither agree nor disagree": {
+                "n": 1,
+                "percentage": 2.7
+            },
+            "Somewhat agree": {
+                "n": 9,
+                "percentage": 24.3
+            },
+            "Agree": {
+                "n": 15,
+                "percentage": 40.5
+            },
+            "Strongly agree": {
+                "n": 6,
+                "percentage": 16.2
+            }
+        }
+    },
+    "only_notify_urgent": {
+        "n": 37,
+        "breakdown": {
+            "Strongly disagree": {
+                "n": 2,
+                "percentage": 5.4
+            },
+            "Somewhat disagree": {
+                "n": 3,
+                "percentage": 8.1
+            },
+            "Neither agree nor disagree": {
+                "n": 1,
+                "percentage": 2.7
+            },
+            "Somewhat agree": {
+                "n": 7,
+                "percentage": 18.9
+            },
+            "Agree": {
+                "n": 14,
+                "percentage": 37.8
+            },
+            "Strongly agree": {
+                "n": 10,
+                "percentage": 27.0
+            }
+        }
+    },
+    "general_notification_preference": {
+        "n": 37,
+        "breakdown": {
+            "🗣️🗣️ Version 3": {
+                "n": 17,
+                "percentage": 45.9
+            },
+            "🗣️Version 2": {
+                "n": 10,
+                "percentage": 27.0
+            },
+            "I don't want to be notified auditorily about this notification": {
+                "n": 6,
+                "percentage": 16.2
+            },
+            "🔔Version 1": {
+                "n": 4,
+                "percentage": 10.8
+            }
+        },
+        "reasons": {
+            "🗣️🗣️ Version 3": [
+                "Weil man die Information direkt verarbeiten kann und so gleich einen Schritt weiter ist. Man kann direkt entscheiden, ob und wie man darauf antwortet und muss nicht erst entscheiden ob man die Nachricht über die Brille (analog Car Play?) oder auf einem anderen Medium abruft.",
+                "I then know that she does expect an answer from me that relates to potentially meeting up soon - and that she does not just send me a messate ghat is not timely or relevant to answer on the spot.",
+                "Ich finde Version 2 und 3 am Besten. In diesem Fall, da ich nur eine Antwort anklicken konnte: Version 3. Ich weiß somit direkt, was der Inhalt der Nachricht ist. Es kann aber auch störend sein, gerade, wenn die Nachricht relativ lang ist. Deswegen eigentlich beide Versionen. Vielleicht, wenn die Nachricht unter drei Zeilen / bestimmter Wortanzahl ist: Version 3, ansonsten Version 2. Automatisch.",
+                "because its more practical and faster if i know what the message said.",
+                "Version 3 lets me know, whether I will need to answer the message or if it is simply informing me of something.",
+                "To handle urgent matters quickly, I prefer to hear the notification, sender info, and the full message all at once",
+                "I can know what Lily wants to do and get the information immediately.",
+                "It is an easy fast way to know, what I just received, without checking my phone first.",
+                "if its urgent, its practical if i dont have to take time to grab my phone and read it",
+                "I prefer it because it is the same as if you get an notification while using apple carplay, so name + message",
+                "ı want to know who send the massage and what is the content of the massage",
+                "because it gives the name of the peeson who is messaging me and what he or she wants",
+                "Bei kurzen Nachrichten ist es sinniger, wenn diese direkt mit vorgelesen werden, sodass ich sie nicht selbst erst raussuchen muss.",
+                "I save time because I get all information that's important in one go and don't need to check my phone for example",
+                "If it's urgent, I'd prefer to not have to get out and check my phone.",
+                "Because it is precise and it help me understand what the message is and know if its really urgent or not that i really need to respond to immediately",
+                "Because I like to hear the message without reading if it is urgent"
+            ],
+            "🗣️Version 2": [
+                "Only necessary information, text could be very long",
+                "I would prefer being notified about the incoming message and then act reading the message myself.",
+                "I would want to be notified of the sender, but not the message itself. Because if the message is quite long I don't think it would be very effective to be read out loud and would prefer to read it by myself.",
+                "Given that the message is urgent and important, I would open it anyway in order to answer. Therefore, no need to auditorily display the message.",
+                "It indicates who the message is from so I can indentify if it might be urgent or not and worth a immediate response.",
+                "it would probably be unlikely for other languages to be read out loud without the \"robot\" English accent. I am most likely to receive an urgent message in Russian, therefore it would be easier to just know that it is Lilly who is trying to reach out and quickly check my phone. also if I let someone try on my glasses, I wouldn't want them to know the content of the message itself",
+                "I might be busy with something like talking to someone at that moment. I don't want to be interrupted by a full message being read out loud to me. In this case it's a very short message, so it wouldn't bother me. Hearing the full context of a message pressures me to reply immediately.",
+                "When oneself is currently busy with/concentrating on something else eg. driving or other stressful situations, the third message may be too long, and the frist one is too vague and can be easily forgotten and dismissed when your head is somewhere else. The second version is concise and you get to decide wether that particular person is important enough to trump one's own situation",
+                "if it's important I want to know who is calling, but I don't need a long sentence",
+                "Version 1 wäre mir nicht informativ genug. Ich müsste erst auf das Handy sehen, um zu wissen, um welche Art von Benachrichtigung es geht (E-Mail, Whatsapp etc.). Version 3 ist mir zu lang. Wäre ich in einem Gespräch, wäre ich zu lange abgelenkt, insbesondere bei längeren Nachrichten. Version 2 ist ein guter Kompromiss."
+            ],
+            "I don't want to be notified auditorily about this notification": [
+                "I don't need technology to take even more of my attention.",
+                "möchte die Info asynchron erhalten (also möchte diese Nachricht eher lesen)",
+                "I do not want AI to read my messages, since there may be private messages (even though no one else can hear them), and I also do not know how it will be stored as data. So, I do not trust META in that sense.",
+                "No urgency in the message.",
+                "don't like the feeling of having to immediately respond to a message",
+                "I dislike auditory notifications in general and view them as unnecessary."
+            ],
+            "🔔Version 1": [
+                "it is simple and easy to understand.",
+                "I might be doing something important and can't listen to such long sentences, so it might be annoying",
+                "The first version does what I would want, to be informed that I got a message. Since the usage of smart glasses are dependent on the phone anyways that is all I need to know. Knowing who sent it is information I generally do not really value for audio alerts and if I do I manually individualize them for the people in my contact list, giving the same amount of information. The reading out of the message itself can be valuable but in most situations I would find it annoying and/or distracting. An option similar to \"car play\" where the reading out of messages is an option but not automatic would be far better for that.",
+                "I would rather have the audio only notify me of an important notification rather than reading out the message as I might be occupied or busy in that moment and the read out could distract me."
+            ]
+        }
+    },
+    "assumption_speech_means_urgent": {
+        "n": 37,
+        "breakdown": {
+            "Strongly disagree": {
+                "n": 3,
+                "percentage": 8.1
+            },
+            "Disagree": {
+                "n": 2,
+                "percentage": 5.4
+            },
+            "Somewhat disagree": {
+                "n": 2,
+                "percentage": 5.4
+            },
+            "Neither agree nor disagree": {
+                "n": 2,
+                "percentage": 5.4
+            },
+            "Somewhat agree": {
+                "n": 5,
+                "percentage": 13.5
+            },
+            "Agree": {
+                "n": 14,
+                "percentage": 37.8
+            },
+            "Strongly agree": {
+                "n": 9,
+                "percentage": 24.3
+            }
+        }
+    },
+    "acceptable_read_loud_unprompted": {
+        "n": 37,
+        "breakdown": {
+            "Strongly disagree": {
+                "n": 6,
+                "percentage": 16.2
+            },
+            "Disagree": {
+                "n": 10,
+                "percentage": 27.0
+            },
+            "Somewhat disagree": {
+                "n": 6,
+                "percentage": 16.2
+            },
+            "Neither agree nor disagree": {
+                "n": 5,
+                "percentage": 13.5
+            },
+            "Somewhat agree": {
+                "n": 7,
+                "percentage": 18.9
+            },
+            "Agree": {
+                "n": 2,
+                "percentage": 5.4
+            },
+            "Strongly agree": {
+                "n": 1,
+                "percentage": 2.7
+            }
+        }
+    },
+    "factors_influencing_speech_attitude": {
+        "n_participants": 37,
+        "breakdown": {
+            "I prefer control over when notifications speak": {
+                "n": 20,
+                "percentage": 54.1
+            },
+            "Depends on context": {
+                "n": 17,
+                "percentage": 45.9
+            },
+            "Depends on the notification/message": {
+                "n": 15,
+                "percentage": 40.5
+            },
+            "Reduces need to look at a device": {
+                "n": 14,
+                "percentage": 37.8
+            },
+            "Too intrusive": {
+                "n": 14,
+                "percentage": 37.8
+            },
+            "Privacy (others cannot hear it anymore)": {
+                "n": 12,
+                "percentage": 32.4
+            },
+            "Other (please specify):": {
+                "n": 8,
+                "percentage": 21.6
+            },
+            "I don’t trust automatic speech output": {
+                "n": 6,
+                "percentage": 16.2
+            },
+            "Speech is easier to understand": {
+                "n": 3,
+                "percentage": 8.1
+            },
+            "Reduces need to talk (back) with the smart glasses": {
+                "n": 2,
+                "percentage": 5.4
+            }
+        }
+    },
+    "maximum_acceptable_length": {
+        "n_participants": 37,
+        "breakdown": {
+            "Short (2–3 sentences)": {
+                "n": 19,
+                "percentage": 51.4
+            },
+            "Very short (1 sentence / headline only)": {
+                "n": 18,
+                "percentage": 48.6
+            },
+            "It depends on the message/notification": {
+                "n": 11,
+                "percentage": 29.7
+            },
+            "It depends on the situation": {
+                "n": 10,
+                "percentage": 27.0
+            },
+            "Long (no strong limit)": {
+                "n": 3,
+                "percentage": 8.1
+            },
+            "Other:": {
+                "n": 1,
+                "percentage": 2.7
+            },
+            "Medium (up to ~1 minute spoken content)": {
+                "n": 1,
+                "percentage": 2.7
+            }
+        }
+    },
+    "acceptance_ai_summarization": {
+        "n": 37,
+        "breakdown": {
+            "Strongly disagree": {
+                "n": 7,
+                "percentage": 18.9
+            },
+            "Disagree": {
+                "n": 5,
+                "percentage": 13.5
+            },
+            "Somewhat disagree": {
+                "n": 6,
+                "percentage": 16.2
+            },
+            "Neither agree nor disagree": {
+                "n": 4,
+                "percentage": 10.8
+            },
+            "Somewhat agree": {
+                "n": 7,
+                "percentage": 18.9
+            },
+            "Agree": {
+                "n": 2,
+                "percentage": 5.4
+            },
+            "Strongly agree": {
+                "n": 6,
+                "percentage": 16.2
+            }
+        }
+    }
+}

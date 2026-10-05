@@ -1,0 +1,767 @@
+%%
+%% This is file `sample-sigconf.tex',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% samples.dtx  (with options: `all,proceedings,bibtex,sigconf')
+%% 
+%% IMPORTANT NOTICE:
+%% 
+%% For the copyright see the source file.
+%% 
+%% Any modified versions of this file must be renamed
+%% with new filenames distinct from sample-sigconf.tex.
+%% 
+%% For distribution of the original source see the terms
+%% for copying and modification in the file samples.dtx.
+%% 
+%% This generated file may be distributed as long as the
+%% original source files, as listed above, are part of the
+%% same distribution. (The sources need not necessarily be
+%% in the same archive or directory.)
+%%
+%%
+%% Commands for TeXCount
+%TC:macro \cite [option:text,text]
+%TC:macro \citep [option:text,text]
+%TC:macro \citet [option:text,text]
+%TC:envir table 0 1
+%TC:envir table* 0 1
+%TC:envir tabular [ignore] word
+%TC:envir displaymath 0 word
+%TC:envir math 0 word
+%TC:envir comment 0 0
+%%
+%% The first command in your LaTeX source must be the \documentclass
+%% command.
+%%
+%% For submission and review of your manuscript please change the
+%% command to \documentclass[manuscript, screen, review]{acmart}.
+%%
+%% When submitting camera ready or to TAPS, please change the command
+%% to \documentclass[sigconf]{acmart} or whichever template is required
+%% for your publication.
+%%
+%%
+\documentclass[manuscript,review,anonymous]{acmart}
+
+
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+%%
+%% \BibTeX command to typeset BibTeX logo in the docs
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    Bib\TeX}}}
+
+%% Rights management information.  This information is sent to you
+%% when you complete the rights form.  These commands have SAMPLE
+%% values in them; it is your responsibility as an author to replace
+%% the commands and values with those provided to you when you
+%% complete the rights form.
+\setcopyright{acmlicensed}
+\copyrightyear{2018}
+\acmYear{2018}
+\acmDOI{XXXXXXX.XXXXXXX}
+%% These commands are for a PROCEEDINGS abstract or paper.
+\acmConference[Conference acronym 'XX]{Make sure to enter the correct
+  conference title from your rights confirmation email}{June 03--05,
+  2018}{Woodstock, NY}
+%%
+%%  Uncomment \acmBooktitle if the title of the proceedings is different
+%%  from ``Proceedings of ...''!
+%%
+%%\acmBooktitle{Woodstock '18: ACM Symposium on Neural Gaze Detection,
+%%  June 03--05, 2018, Woodstock, NY}
+\acmISBN{978-1-4503-XXXX-X/2018/06}
+
+
+%%
+%% Submission ID.
+%% Use this when submitting an article to a sponsored event. You'll
+%% receive a unique submission ID from the organizers
+%% of the event, and this ID should be used as the parameter to this command.
+%%\acmSubmissionID{123-A56-BU3}
+
+%%
+%% For managing citations, it is recommended to use bibliography
+%% files in BibTeX format.
+%%
+%% You can then either use BibTeX with the ACM-Reference-Format style,
+%% or BibLaTeX with the acmnumeric or acmauthoryear sytles, that include
+%% support for advanced citation of software artefact from the
+%% biblatex-software package, also separately available on CTAN.
+%%
+%% Look at the sample-*-biblatex.tex files for templates showcasing
+%% the biblatex styles.
+%%
+
+%%
+%% The majority of ACM publications use numbered citations and
+%% references.  The command \citestyle{authoryear} switches to the
+%% "author year" style.
+%%
+%% If you are preparing content for an event
+%% sponsored by ACM SIGGRAPH, you must use the "author year" style of
+%% citations and references.
+%% Uncommenting
+%% the next command will enable that style.
+%%\citestyle{acmauthoryear}
+
+
+%%
+%% end of the preamble, start of the body of the document source.
+\begin{document}
+
+%%
+%% The "title" command has an optional parameter,
+%% allowing the author to define a "short title" to be used in page headers.
+\title{AudioAdapt: Context-Aware Audio Notifications}
+
+\author{Laura Schütz}
+%\email{laura.schuetz@tum.de}
+\orcid{0000-0002-5534-3903}
+\affiliation{%
+  \institution{Technical University of Munich}
+  \city{Munich}
+  \country{Germany}}
+
+\author{Simon Rödig}
+%\email{}
+\orcid{}
+\affiliation{%
+  \institution{LMU Munich}
+  \city{Munich}
+  \country{Germany}}
+
+\author{Yi Fei Cheng}
+\orcid{0000-0002-6027-4236}
+\affiliation{%
+  \institution{Carnegie Mellon University}
+  \city{Pittsburgh}
+  \country{United States}}
+
+\author{Thomas Weber}
+%\email{}
+\orcid{}
+\affiliation{%
+  \institution{LMU Munich}
+  \city{Munich}
+  \country{Germany}}
+
+\author{David Lindlbauer}
+%\email{david.lindlbauer@cmu.edu}
+\orcid{0000-0002-0809-9696}
+\affiliation{%
+  \institution{Carnegie Mellon University}
+  \city{Pittsburgh}
+  \country{United States}}
+
+
+%%
+%% By default, the full list of authors will be used in the page
+%% headers. Often, this list is too long, and will overlap
+%% other information printed in the page headers. This command allows
+%% the author to define a more concise list
+%% of authors' names for this purpose.
+\renewcommand{\shortauthors}{Trovato et al.}
+
+%%
+%% The abstract is a short summary of the work to be presented in the
+%% article.
+\begin{abstract}
+  Audio notifications such as earcons and speech alerts provide an eyes-free way for users to receive information about messages and system state. However, their effectiveness depends heavily on context: notifications may be socially inappropriate in situations such as work meetings, inaudible in noisy environments, or disruptive during cognitively demanding tasks. In particular, audio notifications may be masked by environmental soundscapes or interfere with users’ ongoing activities when their acoustic properties are poorly matched to the context. To address these challenges, we present AudioAdapt, an optimization-based system that adapts both notification timing and acoustic properties to reduce disruptiveness while maintaining salience. We evaluated AudioAdapt with 20 participants against a non-adaptive baseline that delivered notifications without contextual timing or acoustic adjustments. Our results show that AudioAdapt reduces perceived disruptiveness while improving audio notification noticeability.
+\end{abstract}
+
+%%
+%% The code below is generated by the tool at http://dl.acm.org/ccs.cfm.
+%% Please copy and paste the code instead of the example below.
+%%
+\begin{CCSXML}
+<ccs2012>
+   <concept>
+       <concept_id>10003120.10003121.10003122.10003334</concept_id>
+       <concept_desc>Human-centered computing~User studies</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10003120.10003121.10003124.10010392</concept_id>
+       <concept_desc>Human-centered computing~Mixed / augmented reality</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10003120.10003121.10003125.10010597</concept_id>
+       <concept_desc>Human-centered computing~Sound-based input / output</concept_desc>
+       <concept_significance>500</concept_significance>
+       </concept>
+   <concept>
+       <concept_id>10003120.10003123.10011759</concept_id>
+       <concept_desc>Human-centered computing~Empirical studies in interaction design</concept_desc>
+       <concept_significance>300</concept_significance>
+       </concept>
+ </ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Human-centered computing~User studies}
+\ccsdesc[500]{Human-centered computing~Mixed / augmented reality}
+\ccsdesc[500]{Human-centered computing~Sound-based input / output}
+\ccsdesc[300]{Human-centered computing~Empirical studies in interaction design}
+
+
+%%
+%% Keywords. The author(s) should pick words that accurately describe
+%% the work being presented. Separate the keywords with commas.
+\keywords{Audio notification, Earcon, Notification, Adaptive user interfaces, Time adaptation, Optimization, Auditory Masking, Predicting actions, Context-aware computing, Augmented Reality, Audio AR, Release from Masking}
+%% A "teaser" image appears between the author and affiliation
+%% information and the body of the document, and typically spans the
+%% page.
+% \begin{teaserfigure}
+%   \includegraphics[width=\textwidth]{sampleteaser}
+%   \caption{Seattle Mariners at Spring Training, 2010.}
+%   \Description{Enjoying the baseball game from the third-base
+%   seats. Ichiro Suzuki preparing to bat.}
+%   \label{fig:teaser}
+% \end{teaserfigure}
+
+\received{20 February 2007}
+\received[revised]{12 March 2009}
+\received[accepted]{5 June 2009}
+
+%%
+%% This command processes the author and affiliation and title
+%% information and builds the first part of the formatted document.
+\maketitle
+
+\section{Introduction}
+
+% First Paragraph
+% CORE MESSAGE OF THIS PARAGRAPH:
+% \todo{P1.1. What is the large scope of the problem?}
+% \todo{P1.2. What is the specific problem?}
+
+% Second Paragraph
+% CORE MESSAGE OF THIS PARAGRAPH:
+% \todo{P2. The second paragraph should be about what have others been doing}
+% \todo{P2.3. Why is the problem important? Why was this work carried out?}
+
+% Third Paragraph
+% CORE MESSAGE OF THIS PARAGRAPH:
+% \todo{P3.4. What have you done?}
+% \todo{P3.5. What is new about your work?}
+
+% Fourth paragraph
+% CORE MESSAGE OF THIS PARAGRAPH:
+% \todo{P4.6. What did you find out? What are the concrete results?}
+% \todo{P4.7. What are the implications? What does this mean for the bigger picture?}
+
+
+\section{Related Work}
+
+\subsection{Context-Aware Notifications}
+Prior work in HCI and ubiquitous computing has extensively investigated when users are receptive to interruptions and how notification systems can infer opportune moments for information delivery. Early work on attention-sensitive computing formalized interruptions as a utility trade-off between the benefits of delivering information and the cognitive costs of disrupting a user’s ongoing activity. In particular, \citet{horvitz1999attention-sensitive} introduced probabilistic and utility-based models that inferred interruption cost from user attention, task context, notification criticality, and environmental signals, laying the foundation for attention-aware interfaces and intelligent notification scheduling \cite{horvitz1999attention-sensitive,horvitz2003models,10.1145/958432.958440}. These systems combined interaction traces, calendar information, ambient acoustic and visual sensing, and user activity patterns to estimate a user’s interruptibility and the expected cost of deferring notifications. Building on this perspective, subsequent research demonstrated that notification timing strongly affects disruption and task resumption performance. For example, \citet{czerwinski2000instant} showed that interruptions are particularly disruptive during task execution phases and when notification content is unrelated to the ongoing task. Similarly, Oasis linked notification delivery to perceptual task structure by detecting fine-, medium-, and coarse-grained task breakpoints from desktop interaction behavior, enabling notifications to be deferred until lower-cost transition moments \cite{iqbal2011oasis}. Other work showed that interruptions delivered during physical activity transitions are perceived as less burdensome than randomly timed notifications \cite{ho2005sensors-transitions-delivery}, motivating sensor-based interruptibility prediction using mobile sensing streams such as GPS, accelerometers, microphones, proximity sensors, and application usage logs \cite{poppinga2014sensor,pejovic2014interruptme}.
+
+More recent work expanded these models beyond physical context toward social, cognitive, and content-aware notions of receptivity. Studies found that factors such as task complexity, sender-recipient relationship, notification urgency, emotional state, engagement level, and social context all influence response latency and perceived disruption \cite{10.1145/2858036.2858566,mehrotra2015contentdriven}. In particular, Mehrotra et al. demonstrated that notification content and sender relationship can outperform purely contextual sensing for predicting whether users will respond to notifications within a short temporal window \cite{mehrotra2015contentdriven}. Other systems modeled conversational dynamics such as turn-taking and speaking behavior to infer receptivity during social interactions \cite{10.1145/2559206.2581320}. In AR and VR contexts, recent work has additionally explored computational models for optimizing the timing of intelligent interventions and suggestions based on user-centric utility functions and reinforcement learning \cite{yu2022timing}, while gaze and engagement sensing have been used to infer whether users notice ambient visual notifications \cite{10.1145/3706598.3713511}. Collectively, these systems contributed important computational frameworks for interruption management, including probabilistic attention modeling, breakpoint-aware notification scheduling, utility-directed alerting, interruptibility classification, and adaptive context-aware prompting.
+% what are we doing that others have not done before
+Despite these advances, prior work has largely focused on predicting whether the *current* moment is interruptible rather than anticipating *future* opportune moments for notification delivery. Existing systems typically classify the appropriateness of notifying “now,” defer notifications until predefined task boundaries, or estimate interruption cost retrospectively, but rarely model future trajectories of user attention, soundscapes, or social context to determine *how long* a notification should be delayed. Moreover, the overwhelming majority of prior work has focused on visual or mobile notifications, while comparatively little research has examined auditory notifications and earcons as a distinct interruption modality. Auditory displays introduce unique challenges because they are transient, difficult to ignore, tightly coupled to attentional capture, and highly dependent on the surrounding acoustic environment. Existing notification models rarely account for auditory masking, conversational overlap, spectral competition with environmental sound, or the relationship between audio notification salience and perceived disruption.
+Consequently, there is currently little understanding of how future soundscape conditions, social appropriateness, and task engagement should jointly influence the adaptive timing and type of auditory notifications.
+
+
+% Previous work also showed that context is more predictive of receptivity to instant message notifications than relationship with sender~\cite{lee2019closeness}.
+
+% \citet{lee2024opportune} evaluated factors influencing opportune moments for notifications and showed that social setting, i.e., the number of people interacting and high social norms, rendered moments less opportune for notification interruptions.
+
+
+
+% AR - manipulating time and space in AR (replay past moments or stop current moment to investigate)
+%particularly in immersive AR/VR environments where users may intentionally enter focused or interruption-sensitive states \cite{fender2022causality,lindlbauer2018remixed}.
+
+
+% Adaptive earcons / auditory display
+
+
+% adapt to message content
+%Although prior work explored expressive sonification of notifications \cite{alt2010creating}, the timing, masking requirements, and context-aware delivery of earcons remain largely unexplored. 
+
+\citet{pielot2017interruptibility} found that noisy environments were more, and quiet environments less opportune for visual notification delivery. However, they did not use multimodal scene analysis to infer the exact user context; instead, they relied solely on mobile phone sensor data and interaction logs, and they did not investigate audio notifications, which can be masked by the user's current sundscape.
+
+Building on this rich prior work, we delve deeper into the topic of audio notifications specifically, performing real-time analysis of user's current soundscape, task, and social setting to build an adaptive anticipatory system that chooses optimal audio notification type and timing.
+
+\subsection{Adaptive Extended Reality Interfaces}
+Prior work using VLMs to simulate user judgments of the suitability of UI placement~\cite{li2024situationadapt}.
+~\cite{li2026automating}
+
+\cite{lindlbauer2019context, cheng2023interactionadapt, cheng2021semanticadapt}
+
+\subsection{Adaptive Auditory Displays}
+
+
+\subsection{Action Anticipation}
+% prior work on estimating best time for notification delivery
+One prior work on estimating an opportune time for notification delivery examined task breakpoints~\cite{iqbal2011oasis}. Their system, Oasis, scheduled notifications by queuing notification requests with a specified deferral policy (e.g., defer-to-next-medium breakpoint) and delivery deadline (max 300s delay), releasing them when either a matching breakpoint occurred or the deadline expired. For policies that preferred the coarsest possible breakpoint, the system estimated the probability of a coarser breakpoint occurring within the remaining time window based on a distribution history of breakpoints, delaying delivery only when this probability exceeded a predefined threshold.
+This distribution history was obtained by analyzing a dataset of collected interaction data, including, e.g., system, mouse, keyboard, and window events.
+% we consider context, we are more versatile
+Our system extends this by anticipating the context (social and soundscape) alongside the user's task evolution, as interruptability is determined not only by the user's task but also by the context in which the user is in.
+The benefit of our VLM $\rightarrow$ LLM pipeline is its versatility and applicability to any unseen context and task, not requiring the collection of a curated dataset for every task and application.
+
+Oasis estimated task breakpoint timing. However, the type of task occurring next is another important piece of information.
+Long-term action anticipation (LTA) tackles this problem by taking an observed egocentric video up to a stop time and predicting a sequence of $Z\!=\!20$ future actions, each a \emph{(verb, noun)} pair, e.g.\ \emph{(pull, grass)}~\citep{grauman2022ego4d}. LTA is a challenging task in computer vision because of the unforeseeable nature of human action and environmental events. The accuracy of action anticipation is, for example, in the Ego4D benchmark scored by the minimum Damerau--Levenshtein edit distance over verbs, nouns, and actions between prediction and ground truth labels. The future time horizon is defined by action count rather than a fixed duration, spanning around one to two minutes~\citep{grauman2022ego4d,zhao2024antgpt}. LTA approaches roughly fall into four families: \emph{transformer-based} models~\cite{gong2022futr, mascaro2023icvae, peirone2024egopack}, including the Ego4D SlowFast baseline~\citep{grauman2022ego4d}, \emph{LLM-only} models such as AntGPT~\citep{zhao2024antgpt} and VideoLLM~\citep{chen2023videollm}, which feed recognized action labels (from an action recognition model) to a language model, \emph{vision–language hybrids}~\cite{ mittal2024plausivl, chu2025ego4dlta} such as Palm~\citep{kim2024palm}, which pair a vision-language model (VLM) that captions the observed video with an action recognition model, then prompt an LLM with both streams to anticipate the future action sequence, and \emph{generative} models such as the diffusion-based DiffAnt~\citep{zhong2023diffant}.
+
+Large language models are particularly suitable for LTA as they are pretrained on procedural text such as recipes and how-tos, thus encoding useful priors over action sequences~\citep{zhao2024antgpt}.
+Notably, the action recognition module in the hybrid pipelines is included not because the LLM requires it, but because Ego4D evaluates predictions against a closed taxonomy of 117 verbs and 521 nouns, a constraint that free-form captions do not satisfy. \citet{wang2024vamos} directly compared free-form caption and action-label inputs to an LLM on Ego4D LTA under matched conditions and reported that text-based representations are competitive with action labels, with visual embeddings providing only marginal or no additional improvement. For our purpose, the closed-taxonomy constraint of \emph{(verb, noun)} tuples is insufficient, as we additionally require anticipation of the user's future task engagement, social setting, and soundscape in order to estimate when an auditory notification should ideally be delivered. Thus, using open-text image captions, which carry more semantic detail, is preferable. 
+We therefore adopt the VLM-captioning $\to$ LLM-anticipation pipeline analogously to Palm and AntGPT~\citep{kim2024palm,zhao2024antgpt}, but omit the action recognition stage and replace the verb–noun output with a structured JSON schema of context, sound sources, task engagement, and social setting.
+
+% VLM captions, LLM reasoning for mobile phone action anticipation
+\citet{shaikh2026learning} present a similar pipeline for anticipating users' next actions during smartphone use. Instead of egocentric views, they collect interaction logs (e.g., screenshots, touch events, and sensor data) and use a VLM to convert screenshots into natural-language observations that are stored in an external memory together with the VLM's reasoning traces (i.e., hypotheses about the user's likely next actions). The VLM is then fine-tuned using reinforcement learning to retrieve relevant memories and predict future action sequences from recent observations and retrieved interaction history.
+% We omit fine-tuning, as everyday contexts are more present in video training data, while user interactions are not part of LLM training data, so we assume that VLM commonsense reasoning will suffice for our context anticipation.
+
+\citet{han2025robots} use VLM captions to understand context, followed by LLM reasoning to infer a user's goal when executing a physical task. They further use an LLM to plan robotic object motions to assist the user with the goal. No forecasting of anticipated user actions and anticipated context changes is performed.
+
+% what we do differently
+We employ the same VLM-captioning $\to$ LLM-reasoning pipeline as multiple previous works~\cite{shaikh2026learning, han2025robots, kim2024palm}, but use it to analyze a multimodal context (audio and visual) and the multimodal anticipation of a context (visual objects, sound objects) and user task changes.
+
+
+
+% check if these are potential references for anticipytory interfaces
+%https://openaccess.thecvf.com/content/CVPR2026F/papers/Liang_Anticipatory_Planning_for_Multimodal_AI_Agents_CVPRF_2026_paper.pdf
+% https://drops.dagstuhl.de/storage/04dagstuhl-reports/volume12/issue05/22202/DagRep.12.5.131/DagRep.12.5.131.pdf
+
+
+
+
+\section{Formative Study}
+
+\subsection{Survey Design}
+Goal of the user survey:
+- type: which audio notification type is preferred?
+- timing: when is the delivery of audio notifications preferred?
+- get a sense of how social context, task engagement, and present soundscape (background music, speech, traffic) influence user preferences
+
+Scenarios were selected using a Taguchi L9 orthogonal array~\cite{taguchi1987system, roy2010primer} over three factors derived from the utility function, social setting -- $A_{\text{social}}$ (alone / passive co-presence / interactive co-presence), task load -- $E_{\text{task}}$ (low / high mental / high physical), and soundscape -- $C_M$ (quiet / music / speech). The L9 design guarantees that each factor-level appears in three scenarios and that every pair of factor-levels co-occurs exactly once, providing balanced coverage of all main effects in nine trials rather than the 27 cells a full factorial would require. The choice of scene content additionally prioritized everyday situations so participants could easily immerse themselves in the scenarios. An overview of the nine scenarios can be found in \autoref{sec:scenarios}.
+
+
+File sources: Audio files from Pixabay, combined with self-recorded environment sounds and fan sounds, additional speech segments generated using ElevenLabs, images generated using Nano Banana 2
+
+
+\subsection{Sample Size Justification}
+
+Our survey is a three-factor within-subjects design with three levels per factor (3×3×3), realized as a Taguchi L9 orthogonal-array fraction (9 of 27 cells), with three audio notification types (earcon, short speech, rich speech) presented within each scenario.
+
+We conducted an a priori power analysis using G*Power~\cite{faul2007g} (version 3.1.9.6) to determine the required sample size for the primary inferential test of our scenario design: a one-way repeated-measures ANOVA over the three levels of each utility variable (social setting, task load, soundscape), with each participant contributing one mean rating per factor-level aggregated across the three scenes at that level under a Taguchi L9 design~\cite{taguchi1987system}. We aimed to detect a medium-sized within-subjects effect of factor-level on subjective ratings. Following the effect-size conventions for HCI established by \citet{yatani2016effect}, we set the anticipated effect size to Cohen's $f = 0.25$. To account for the three parallel factor analyses (social setting, task load, soundscape), we applied a Bonferroni correction to the family-wise error rate, yielding a per-test significance level of $\alpha = 0.05/3 \approx 0.0167$, with a desired statistical power of $1 - \beta = 0.80$. We assumed a correlation among repeated measures of $\rho = 0.5$ and a nonsphericity correction of $\epsilon = 1$, consistent with default conventions for repeated-measures designs with a small number of within-subjects levels. 
+%In the G*Power setup, the number of groups was set to 1 and the number of measurements to 3, corresponding to the three levels of each utility factor. 
+The power analysis indicated a minimum total sample size of 36 participants (achieved power $1 - \beta = 0.807$, noncentrality parameter $\lambda = 13.5$, critical $F = 4.34$ with $(2, 70)$ degrees of freedom). The study was approved by the local ethics review board.
+
+% alpha non-corrected 0.05 -> sample size 28
+
+\subsection{Procedure}
+The nine scenarios were presented to participants in random order. The same important and urgent message from a close friend was used in every scenario: \emph{New WhatsApp from Lilly: "When are you here?"}. 
+
+
+\subsection{Analysis}
+To analyze our repeated-measures design, we fitted Linear Mixed Models (LMMs). LMMs account for the fact that the same participant provides multiple ratings across different scenarios. By adding the participant ID as a random effect, the model controls for individual baseline differences (e.g., some users generally rating everything more conservatively). 
+We fitted four models for the dependent variables of Social Acceptability, Disruption, Detectability, and overall Appropriateness  ($\text{DependentVariable} \sim \text{Notification Type} + \text{Social Setting} + \text{Task Load} + \text{Soundscape} + (1 | \text{Participant})$)
+
+
+\subsection{Results}
+
+The mixed-effects model showed moderate explanatory power. The fixed effects explained 28-36\% of the variance (marginal $R^2$: earcon), while including participant-level random effects explained 49-54\% of the variance (conditional $R^2$), indicating substantial between-participant variability and justifying the mixed-effects approach over simpler alternatives. 
+
+Because our scenarios were structured using a fractional Taguchi L9 design rather than a full-factorial design, we only evaluated the main effects of the fixed factors (Social Setting, Task Load, and Soundscape) on the dependent variables (Social Acceptability, Disruption, Detectability) using a Type III Wald $\chi^2$ test. All factors were tested with 2 degrees of freedom. All main effects reached significance (\autoref{tab:main_effects_survey}). 
+
+
+% MAIN EFFECT TABLE
+\begin{table}[b]
+\centering
+\caption{Main effect tests (Type III Wald $\chi^2$) for each factor across the dependent variables.}
+\label{tab:main_effects_survey}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+\textbf{Factor} & \textbf{Disruption} & \textbf{Social Acc.} & \textbf{Detectability} \\
+\midrule
+Notification Type & $\chi^2 = 191.91$*** & $\chi^2 = 61.89$*** & $\chi^2 = 7.47$*\hphantom{**} \\
+Social Setting    & $\chi^2 = 12.18$**\hphantom{*}  & $\chi^2 = 218.02$*** & $\chi^2 = 10.43$**\hphantom{*} \\
+Task Load         & $\chi^2 = 202.71$*** & $\chi^2 = 58.08$***  & $\chi^2 = 29.03$*** \\
+Soundscape        & $\chi^2 = 39.97$***  & $\chi^2 = 76.38$***  & $\chi^2 = 109.81$*** \\
+\bottomrule
+\multicolumn{4}{l}{\small \textit{Note:} * $p < .05$, ** $p < .01$, *** $p < .001$. All tests with $df = 2$.}
+\end{tabular}
+\end{table}
+
+
+
+We followed up with Bonferroni-corrected post hoc comparisons between the three levels in each dependent variable (Social Acceptability, Disruption, Detectability). \autoref{fig:plots_survey} displays the influence of the three factors on user perceptions of audio notifications.
+
+
+\textcolor{red}{include the dominance analysis
+Which dimensions explain why people find one notification type more appropriate than another? Performed a dominance analysis.}
+
+
+\begin{figure}[ht]
+    \centering
+    % Social Acceptability
+    \begin{subfigure}{0.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/plot_social.png}
+        \caption{Social Acceptability by Social Setting}
+        \label{fig:social}
+    \end{subfigure}
+    \hfill
+    % Disruption
+    \begin{subfigure}{0.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/plot_disruption.png}
+        \caption{Disruption by Task Load}
+        \label{fig:disrupt}
+    \end{subfigure}
+    \vfill
+    % Detectability
+    \begin{subfigure}{0.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/plot_detectability.png}
+        \caption{Detectability by Soundscape}
+        \label{fig:detect}
+    \end{subfigure}
+
+    \caption{Survey results showing the influence of contextual and task factors on user perception of audio notification (a) social acceptability, (b) disruption, and (c) detectability.}
+    \label{fig:plots_survey}
+\end{figure}
+
+
+\textcolor{red}{include the summary ratings on overall preferences for type and timing and report intra-user variations in type and timing preference to argue that our system is needed as context and task greatly impact preferences, which static settings cannot accommodate. Include both pie charts}
+
+\begin{figure}[ht]
+    \centering
+    % Type
+    \begin{subfigure}{0.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/pie_type.png}
+        \caption{Overall type preference}
+        \label{fig:pie_type}
+    \end{subfigure}
+    \hfill
+    % Timing
+    \begin{subfigure}{0.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{figures/pie_time.png}
+        \caption{Overall timing preference}
+        \label{fig:pie_time}
+    \end{subfigure}
+
+    \caption{Survey results on overall user preferences for audio notification type and timing on smart glasses.}
+    \label{fig:pie_plots_survey}
+\end{figure}
+
+
+% work meeting versus casual chat with a friend
+Previous work showed that the presence of a conversation alone is not enough to determine the suitability of a notification. They show that the formality of a conversation determines suitability, with more formal conversations showing lower receptiveness to notifications~\cite{schulze2016conversational}. The same can be seen from our results on the "meeting" versus "conversation with a friend" scenario.
+
+
+\subsection{Estimating Weights}
+% -> Use a conditional logit model or something similar to learn the weights of the contextual factors (Detectability C_M, Disruption E_task, SocialAcceptability A_social) in the utility function 
+% a discrete-choice model fit on the Overall preferences provides initial weight estimates with confidence intervals
+
+
+
+\section{AudioAdapt Framework}
+
+
+
+%Why do we need forecasting? Why is a simple, naive loop that keeps asking whether now is an appropriate time to deliver the audio notification not enough? When we as humans are looking for an opportune moment to interrupt, e.g., a conversation, we keep a memory of the past to anticipate the future. E.g. if we observe someone cooking and we see that they are turning on the stove, and taking out eggs from the fridge, we can anticipate that the person will sometime soon put oil into the pan, crack the eggs into the pan and start frying the eggs. We would therefore know that once the stove is on and especially once the oil is inside the frying pan, disrupting the user is not a good idea.
+
+% take past into account when predicting the future, use this information to make a decision on the interruption of the user task
+
+\subsubsection{Option 2: Modeling Opportune Timing and Auditory Display Type}
+ 
+We formulate auditory notification delivery as a utility optimization problem over future candidate delivery times and auditory display types. For every future point in time within a prediction horizon $H$, the system estimates the utility $U(t,d)$ of triggering an auditory notification of type $d$ from the trade-off between the anticipated benefit of delivery and the anticipated costs of interrupting the user (\autoref{eq:utility}). The decision variable $d$ represents the auditory display type, allowing the system to select either an earcon or a speech notification. The most opportune notification strategy is the combination of delivery time $t^*$ and display type $d^*$ that maximizes overall utility (\autoref{eq:timing_optimization}).
+ 
+The benefit term $B(t,d)$ combines the importance $I_n$ of the notification, its urgency at the time of delivery, and the semantic benefit $G_d$ of the selected display type. Speech notifications convey sender and content directly, so that the user does not have to interrupt the ongoing activity and retrieve the information from the device. Participants named this immediate availability of information as the main reason for preferring speech. An earcon signals only the occurrence and the category of a notification, which leaves the actual message content to be retrieved manually, and we therefore model the semantic benefit as $G_{\text{earcon}} \ll G_{\text{speech}}$. Because $G_d$ enters the benefit as a constant offset while all cost terms are context dependent, the two display types are traded off against each other by the situation rather than by a fixed preference: speech is selected exactly when its additional social, task, and unmasking costs in the predicted context remain below its semantic advantage, $\lambda_I \Delta C_I(t) + \lambda_M \Delta C_M(t) < \delta\,(G_{\text{speech}} - G_{\text{earcon}})$, and an earcon is selected otherwise.
+ 
+\citet{horvitz1999attention-sensitive} introduced an expected \textbf{cost of deferred action} for notifications, which grows the longer an alert is withheld. We adopt this notion and model urgency not as a fixed property of the notification but as an effective urgency $\tilde{U}_n(t)$ that increases with the delay for which delivery has already been deferred (\autoref{eq:effective_urgency}). The delay is measured relative to the arrival time $t_a$ of the notification rather than to the current planning origin $t_0$, so that the pressure to deliver accumulates across the successive re-forecasting cycles. If no opportune moment is found within one anticipated horizon, the growing benefit of the following cycles eventually outweighs the interruption cost of the least unsuitable moment, and delivery is enforced. 
+%The escalation is bounded, as $\tilde{U}_n(t)$ starts at the assigned urgency $U_n$ and saturates towards $1$, and its rate is controlled by the urgency time constant $\tau_u$, which we interpolate geometrically between $30$\,s for maximally urgent and $3600$\,s for non-urgent notifications. Since the effective urgency is $95\,\%$ saturated after approximately $3\tau_u$, a maximally urgent notification is delivered within about $1.5$ minutes, a notification of medium urgency waits for up to about $16$ minutes, and a non-urgent notification waits for up to about three hours before urgency alone forces delivery. Whether escalation forces delivery at all additionally depends on importance, since the attainable benefit is bounded by $\alpha I_n + \beta + \delta G_d$: a notification that is neither important nor urgent never accumulates enough benefit to outweigh a costly context and is therefore withheld until a genuinely uncritical moment occurs.
+ 
+The \textbf{interruption cost} $C_I(t,d)$ captures the anticipated disruption caused by delivering a particular auditory display type in the predicted social and task context (\autoref{eq:interrupt_cost}). Both constituents are estimated per display type, since the same context is disrupted to a different degree depending on what is played. Our formative study showed that speech notifications incur a higher social cost and a higher task disruption than earcons, because they convey semantic information and thereby recruit greater attentional and linguistic processing resources. 
+ 
+The \textbf{acoustic unmasking cost} $C_M(t,d)$ models the acoustic modification that the selected display would require in order to remain salient within the predicted future soundscape (\autoref{eq:unmasking_cost}). Predicting the exact loudness and spectral composition of a future soundscape is not plausible and any prediction would be highly uncertain. We therefore retrieve a coarse estimate $C_M(t,d)$ directly from the forecast soundscape $\hat{\mathcal{S}}(t)$, that is, from the predicted overall scene loudness and the predicted sound sources with their type, occurrence probability, and proximity, and their expected interference with display type $d$. The concrete acoustic adaptation of the auditory display is computed only at delivery time from the measured soundscape signal, so that planning operates on a coarse but robust masking estimate, while rendering operates on observed audio.
+ 
+All benefit and cost terms are normalized to the range $[0,1]$, resulting in an overall utility value $U(t,d)\in[-1,1]$, where positive values indicate beneficial notification delivery opportunities and negative values indicate unsuitable moments for auditory interruption. Since $\tilde{U}_n(t)$ increases with delay, candidates of equal utility are resolved in favour of the earliest delivery time, and remaining ties in favour of the less intrusive display type.
+ 
+\begin{equation}
+(t^*, d^*) = \arg\max_{t \in [t_0,\,t_0+H],\; d \in \mathcal{D}} U(t,d)
+\label{eq:timing_optimization}
+\end{equation}
+
+\begin{equation}
+U(t,d) =
+\underbrace{
+\alpha I_n + \beta \tilde{U}_n(t) + \delta\, G_d
+}_{\text{Benefit } B(t,d)}
+-
+\underbrace{
+\Big[
+\lambda_I\, C_I(t,d)
++ \lambda_M\, C_M(t,d)
+\Big]
+}_{\text{Cost } C(t,d)}
+\label{eq:utility}
+\end{equation}
+
+\begin{equation}
+I_n = w_s I_{\text{sender}} + w_c I_{\text{content}}
+\label{eq:importance}
+\end{equation}
+\begin{equation}
+\tilde{U}_n(t) = 1 - (1 - U_n)\, e^{-\frac{t_0 - t_a}{\tau_u}}
+\label{eq:effective_urgency}
+\end{equation}
+\begin{equation}
+C_I(t,d) =
+w_A\, A_{\text{social}}(t,d)
++
+w_D\, D_{\text{task}}(t,d)
+\label{eq:interrupt_cost}
+\end{equation}
+\begin{equation}
+C_M(t,d) = \mathcal{M}\big(\hat{\mathcal{S}}(t),\, d\big)
+\label{eq:unmasking_cost}
+\end{equation}
+
+\noindent
+where:
+\begin{itemize}
+\item $t^*$ -- optimal future delivery time,
+\item $d^*$ -- optimal auditory display type,
+\item $\mathcal{D} = \{earcon, speech\}$ -- set of available auditory display types,
+\item $t_a$ -- arrival time of the notification, $t_0$ -- current planning origin, $H$ -- prediction horizon,
+\item $U(t,d)\in[-1,1]$ -- utility of triggering notification type $d$ at time $t$,
+\item $B(t,d)\in[0,1]$ -- anticipated benefit of delivering notification type $d$ at time $t$,
+\item $C(t,d)\in[0,1]$ -- anticipated cost of delivering notification type $d$ at time $t$,
+\item $I_n\in[0,1]$ -- importance of the notification,
+\item $I_{\text{sender}}\in[0,1]$ -- importance of the sender,
+\item $I_{\text{content}}\in[0,1]$ -- importance of the content,
+\item $G_d\in[0,1]$ -- semantic benefit / notification content of display type $d$, with $G_{\text{earcon}} \ll G_{\text{speech}}$,
+\item $U_n\in[0,1]$ -- urgency of the notification at arrival time $t_a$,
+\item $\tilde{U}_n(t)\in[U_n,1]$ -- urgency at delivery time $t$, increasing with delay $t-t_a$,
+\item $\tau_u$ -- time constant controlling how quickly deferral pressure accumulates,
+\item $C_I(t,d)\in[0,1]$ -- interruption cost of notification type $d$ at time $t$,
+\item $A_{\text{social}}(t,d)\in[0,1]$ -- anticipated social inappropriateness of notification type $d$ at time $t$,
+\item $D_{\text{task}}(t,d)\in[0,1]$ -- anticipated task disruption caused by notification type $d$ at time $t$,
+\item $C_M(t,d)\in[0,1]$ -- acoustic unmasking cost of notification type $d$ at time $t$,
+\item $\hat{\mathcal{S}}(t)$ -- forecast soundscape at time $t$, predicted overall loudness and sound sources,
+\item $\mathcal{M}(\cdot)$ -- estimator mapping the forecast soundscape and display type to an unmasking cost,
+\item $\alpha, \beta, \delta, \lambda_*, w_*$ -- tunable weights, where $\alpha + \beta + \delta = 1$, $\lambda_I + \lambda_M = 1$, $w_s + w_c = 1$, and $w_A + w_D = 1$.
+\end{itemize}
+
+% \subsection{Optimizing Notification Timing and Type}
+
+% We formulate audio notification delivery as a utility optimization problem over future candidate delivery times and notification types. For every future point in time within a prediction horizon $H$, the system estimates the utility $U(t,d)$ of triggering an auditory notification of type $d$ based on the trade-off between notification benefit and interruption-related costs (\autoref{eq:utility}). The decision variable $d$ represents the auditory display type, allowing the system to select either an earcon or a speech notification. The benefit term models the importance $I_n$ and urgency $U_n$ of the notification, while the cost terms model the expected disruption caused by the selected auditory display.
+% \citet{horvitz1999attention-sensitive} introduced an expected cost of delayed action for notifications. Similarly, we include an exponential decay term $e^{-\gamma (t-t_0)}$, which reduces the urgency contribution as notification delivery is delayed. This models the assumption that short delays have little effect on notification value, whereas longer delays progressively decrease the usefulness of timely information delivery.
+% The interruption cost $C_I(t,d)$ captures the anticipated disruption caused by delivering a particular audio notification type in the current social and task context (\autoref{eq:interrupt_cost}). We assume that social inappropriateness $A_{\text{social}}(t)$ and task engagement $E_{\text{task}}(t)$ are properties of the user's context and therefore independent of notification type. However, the degree to which these contextual factors contribute to interruption cost depends on the selected auditory display. For example, speech notifications are expected to incur a higher social disruption cost than earcons during meetings or conversations because they convey semantic information and attract greater attentional resources. The acoustic masking cost $C_M(t,d)$ models the auditory modifications required to ensure salience of the selected notification within the predicted future soundscape (\autoref{eq:unmasking_cost}). In particular, earcons may require larger loudness increases or pitch shifts to remain detectable under masking conditions, whereas speech notifications may remain intelligible with fewer acoustic modifications.
+% All utility, benefit, and cost terms are normalized to the range $[0,1]$, resulting in an overall utility value $U(t,d) \in [-1,1]$, where positive values indicate beneficial notification delivery opportunities and negative values indicate unsuitable moments for auditory interruption. The most opportune auditory notification strategy is then selected as the combination of future delivery time $t^*$ and notification type $d^*$ that maximizes overall utility (\autoref{eq:timing_optimization}).
+
+
+
+% \begin{equation}
+% (t^*, d^*) = \arg\max_{t \in [t_0,t_0+H],d \in \mathcal{D}}
+% U(t,d)
+% \label{eq:timing_optimization}
+% \end{equation}
+
+% \begin{equation}
+% U(t,d) =
+% \underbrace{
+% \alpha I_n
+% +
+% \beta U_n e^{-\gamma (t-t_0)}
+% }_{\text{Benefit } B(t)}
+% -
+% \underbrace{
+% \lambda_I C_I(t,d)
+% +
+% \lambda_E C_M(t,d)
+% }_{\text{Cost } C(t,d)}
+% \label{eq:utility}
+% \end{equation}
+
+% \begin{equation}
+% I_n = w_s I_{sender} + w_c I_{content}
+% \end{equation}
+
+% \begin{equation}
+% C_I(t,d) =
+% w_a A_{\text{social}}(t,d)
+% +
+% w_e E_{\text{task}}(t)
+% \label{eq:interrupt_cost}
+% \end{equation}
+
+% \begin{equation}
+% C_M(t,d) =
+% w_l \Delta L(t,d)
+% +
+% w_p \Delta P(t,d)
+% \label{eq:unmasking_cost}
+% \end{equation}
+
+% \noindent
+% where:
+% \begin{itemize}
+% \item $t^*$ -- optimal future delivery time,
+% \item $d^*$ -- optimal auditory display type,
+% \item $\mathcal{D} = \{earcon, speech\}$ -- set of available auditory display types,
+% \item $U(t,d)\in[-1,1]$ -- utility of triggering notification type $d$ at time $t$,
+% \item $I_n\in[0,1]$ -- importance of the notification,
+% \item $I_{sender}\in[0,1]$ -- importance of the sender,
+% \item $I_{content}\in[0,1]$ -- importance of the content,
+% \item $U_n\in[0,1]$ -- urgency of the notification,
+% \item $\gamma$ -- controls the temporal decay of urgency over delay,
+% \item $C_I(t,d)\in[0,1]$ -- interruption cost of notification type $d$ at time $t$,
+% \item $C_M(t,d)\in[0,1]$ -- acoustic unmasking cost of notification type $d$ at time $t$,
+% \item $A_{\text{social}}(t,d)\in[0,1]$ -- anticipated social inappropriateness of notification type $d$ at time $t$,
+% \item $E_{\text{task}}(t)\in[0,1]$ -- anticipated task engagement level at time $t$,
+% \item $\Delta L(t,d)\in[0,1]$ -- normalized loudness increase required for notification type $d$ at time $t$,
+% \item $\Delta P(t,d)\in[0,1]$ -- normalized pitch shift required for notification type $d$ at time $t$,
+% \item $\alpha, \beta, \gamma, \lambda_*, w_*$ - tunable weights, where $\alpha + \beta = 1$, $\lambda_I + \lambda_E = 1$, and so on.
+% \end{itemize}
+
+
+\subsection{Step 1: Multimodal Scene Analysis}
+
+A VLM is used for image captioning to create a history of egocentric video frames from the smart glass's camera stream.
+Rather than directly predicting the optimal audio notification type and timing, a VLM is prompted to provide a structured JSON output that captures a description of the current scene's social, task, and soundscape properties.
+
+% change detection
+To maximize information density while reducing cost, scene descriptions are generated adaptively rather than at a fixed rate. At a fixed sampling interval, each frame and its preceding audio window are embedded with CLIP~\cite{radford2021clip} (image) and CLAP~\cite{elizade2023clap} (audio), L2-normalized, and compared by cosine similarity against a smoothed reference formed from the running average of the three most recent embeddings of the current context. A new VLM caption is requested only when the visual or acoustic similarity falls below a configurable threshold, indicating a meaningful change in context. When no change is detected, no VLM call is made. Instead, the persistence duration of the current description is extended by one sampling interval.
+This yields an event-based rather than frame-based history. Activity-dense periods, such as cooking, where the scene changes rapidly, are captured at full temporal detail, since each change triggers a fresh scene analysis. Activity-sparse periods, such as desk work, are collapsed into few descriptions annotated with its accumulated duration, eliminating redundant captions that a fixed-interval analysis would produce. This benefits downstream LLM anticipation of future context and actions by removing redundant tokens.
+
+\subsubsection{Episodic memory}
+Without memory, an agent may analyze a new scene, forgetting previously established facts. Episodic memory preserves, e.g., records of event sequences that an agent can retrieve and reason about, providing context beyond what it perceives in the current moment~\cite{chhikara2025mem0}. 
+Within our system, we implement a memory component by asking the VLM to return, alongside the scene description fields, an updated free-text memory that integrates the current observation into the memory string returned on the previous call. This memory is instructed to maintain continuity of the current task across momentary occlusions and viewpoint changes, and to compress completed activities into a compact retrospective narrative of prior actions, social context, and soundscape, e.g.: "The device owner previously packed a suitcase in a bedroom before moving through the home. They transitioned into a laundry room to begin a new task: loading clothing into the washing machine. The room has remained quiet throughout the process, and the owner is now holding a container of detergent pods while preparing to add them to the machine.". 
+To avoid additional inference cost, we update memory directly in the same VLM call used for scene description, rather than invoking a separate API call. 
+In parallel to the dynamically updated memory field, a memory log of timestamped one-sentence summaries per frame is stored for later use as structured, lightweight input to the anticipation step.
+
+
+% explain the structure of the VLM response schema and what the output per frame contains!
+
+% rewrite
+%\paragraph{Social Inappropriateness} At its core, the social acceptability of an audio notification comes down to unwarranted attention capture. It occurs when a private digital event forcibly intrudes upon a shared physical space, breaking the established social contract, disrupting collective focus, or violating the expected acoustic baseline of an environment.
+
+%\paragraph{Task Engagement} ...
+
+
+%\paragraph{Soundscape}
+%A structured output of all sound objects in the scene is provided. Their type of sound, location, and estimated loudness are stated in the VLM output.
+
+
+
+\subsection{Step 2: Anticipating the Future}
+
+% zero-shot action anticipation (no examples, only history of the context)?  --> one example in prompt?
+
+Without anticipating how the future context and task will evolve, we cannot know whether the current moment is more or less opportune than a future moment. This would not matter if a simple looping system could wait indefinitely until a good moment arises. However, most notifications are time-sensitive and should not be delayed for long periods (our survey showed that participants want a maximum delay of ...). In the same way, if we are debating when to interrupt a colleague who is busy finishing a task, we would consider the near past, the current moment, and anticipate the future based on our observations and experience to decide when to interrupt.
+Previous work showed that considering the user's past behavior increases prediction accuracy of opportune notification timing~\cite{pielot2017interruptibility}.
+Thus, we included an anticipation module to determine the most opportune delivery time $t^*$ within the near future.
+
+We input captions of the past frames (images + audio extracted at a 5\,s
+interval), giving the VLM context to base the anticipation on. We prompt the model to predict an ordered sequence of 5 discrete future steps, coherent phases of scene and activity (e.g., "user waits for the kettle to boil", "kettle boiling", "user pours the drink"), and to estimate, for each step, a duration range (minimum - maximum seconds), leveraging LLM-inherent priors on typical action sequences and activity durations.
+From these estimated durations, we derive, for every step, an earliest and latest possible start time as the sum of the preceding steps' minimum and maximum durations, respectively. The step's expected offset $t$ is the midpoint of this start window. 
+Each anticipated step also carries the same scene descriptors as the observed captions (sound sources and loudness, social context, task engagement), plus a per-step prediction uncertainty rating. 
+%The output schema is available in the Appendix. 
+
+Instead of using the entire scene description history in full detail, which would increase token cost and latency as the session progresses, we opt for a hybrid approach: granular detail from the near past context (the 5 most recent full VLM scene descriptions) combined with a compact high-level history log containing only one-line task-description summaries and timestamps for everything older.
+
+\subsubsection{LLM-Based Anticipation}
+The structured output of the history of the scene, including its sound objects, is provided to an LLM. LLM-inherent priors on typical action sequences are used to reason about the user's future actions and context changes, including changes to the soundscape. Based on this scene anticipation, the cost of interruption and cost of energetic unmasking of the audio notification (for each audio notification type) is computed for the future horizon of X time steps $t_1$ to $H$.
+
+\subsection{Step 3: Optimization}
+% few-shot learning for good estimation of cost parameters given the scene
+Based on the forecast, the cost of interruption and cost of energetic unmasking of every audio notification type is computed for the current moment $t_0$ and the future horizon of 5 time steps $t_1$ to $H$.
+
+% Estimating Interruption
+\subsubsection{Estimating Interruption}
+
+
+% Estimating Energetic Masking
+\subsubsection{Estimating Energetic Masking}
+
+% Computing Utility
+\subsubsection{Optimizing Timing \& Type}
+The inferred variables from the multimodal scene analysis (VLM output and auditory salience output) are plugged into the utility optimization for timing and type decisions.
+
+% Optimizing Acoustic Salience
+\subsubsection{Optimizing Acoustic Salience}
+Once the most opportune timing and audio notification type have been determined, the audio notification's acoustic parameters are optimized to ensure salience.
+
+% include optimization math
+
+\section{User Study}
+We ran a within-subject study with one independent variable, method type, with two levels: Baseline (notification delivered when it arrives), AudioAdapt (optimized delivery time \& type). 
+% which type in the baseline condition?
+We tested the two conditions for 3 scenarios: ....
+We delivered X notifications per scenario and condition (varying importance and urgency?). As dependent variables, we measured notification social acceptability, detectability, disruptiveness, and overall appropriateness using 7-point Likert scales. 
+
+A Latin square design was used to counterbalance the order of the scenarios and conditions.
+
+
+\section{Discussion}
+
+\subsection{Limitations}
+The LLM used for action anticipation is not fine-tuned on the next-action prediction task. As shown by \citet{shaikh2026learning}, this could increase accuracy by up to 11\% compared to zero-shot prompting.
+
+
+
+
+%%
+%% The acknowledgments section is defined using the "acks" environment
+%% (and NOT an unnumbered section). This ensures the proper
+%% identification of the section in the article metadata, and the
+%% consistent spelling of the heading.
+% \begin{acks}
+% To Robert, for the bagels and explaining CMYK and color spaces.
+% \end{acks}
+
+%%
+%% The next two lines define the bibliography style to be used, and
+%% the bibliography file.
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{audio-adapt}
+
+
+%%
+%% If your work has an appendix, this is the place to put it.
+\appendix
+
+\section{Survey Scenarios}
+\label{sec:scenarios}
+
+Scenarios follow a Taguchi L9 orthogonal array over three factors with three levels each: \textit{Social setting} (alone / passive co-presence / interactive co-presence), \textit{Task load} (low / high mental / high physical), and \textit{Soundscape} (quiet / music / speech), ensuring each factor-level appears in three scenarios, and every pair of factor-levels co-occurs once.
+
+\begin{table}[h]
+\centering
+\caption{Survey scenarios}
+\label{tab:scenarios}
+\begin{tabular}{@{}clllp{7.5cm}@{}}
+\toprule
+\textbf{\#} & \textbf{Social setting} & \textbf{Task load} & \textbf{Soundscape} & \textbf{Scenario} \\
+\midrule
+1 & Alone       & High mental   & Quiet  & Coding at home in a quiet apartment \\
+2 & Alone       & Low           & Music  & Listening to music on the couch at home \\
+3 & Alone       & High physical & Speech & Cooking dinner alone with podcast on \\
+\midrule
+4 & Passive     & High mental   & Music  & Studying alone in a coffee shop with background music \\
+5 & Passive     & Low           & Speech & Grocery shopping with store announcements \\
+6 & Passive     & High physical & Quiet  & Cycling alone through a street with minor traffic\\
+\midrule
+7 & Interactive & High mental   & Speech & Team meeting, actively contributing \\
+8 & Interactive & Low           & Quiet  & Having a friend over, she briefly checks her phone \\
+9 & Interactive & High physical & Music  & Setting up a tent with friends \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\end{document}
+\endinput
+%%
+%% End of file `sample-sigconf.tex'.

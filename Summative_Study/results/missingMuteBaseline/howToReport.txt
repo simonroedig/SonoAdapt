@@ -1,0 +1,30 @@
+A potential concern is the absence of a dedicated mute baseline for high-urgency notifications. To address this, we asked participants (n = 17, collected post-experimentally to avoid influencing the main ratings) to rate the appropriateness of muting high-urgency messages such as "I think I forgot to turn the stove off. Can you check?" on the same 7-point scale. Ratings confirmed that muting urgent messages would be perceived as highly inappropriate (M = 1.38, Mdn = 1.0), far below all three tested systems (Earcon: M = 4.72, Speech: M = 5.37, SonoAdapt: M = 5.48). This validates SonoAdapt's design decision to always deliver high-urgency notifications auditorily."
+
+
+
+"To rule out a fully silent baseline, we additionally asked participants post-experimentally (n = 17) to rate the appropriateness of muting high-urgency messages. Ratings confirmed this would be highly inappropriate (M = 1.38, Mdn = 1.0), far below all tested systems. Combined with the finding that AudioAdapt's suppression of low-urgency notifications was rated as highly appropriate (M = 6.15), this validates the system's selective strategy: suppress when urgency is low, deliver auditorily when urgency is high."
+
+
+
+
+
+
+
+
+
+n = 17 is sufficient for a floor-effect check — the result is so extreme that even n = 10 would be convincing.
+
+Rating	Count	Treatment of "1–2" ambiguous
+1	10	—
+2	3	—
+3	1	—
+1–2 (ambiguous)	3	Use midpoint 1.5
+With midpoint for ambiguous (n=17):
+
+M = (10×1 + 3×2 + 1×3 + 3×1.5) / 17 = (10 + 6 + 3 + 4.5) / 17 = 23.5 / 17 = 1.38
+Mdn = 1.0
+Excluding ambiguous (n=14):
+
+M = (10×1 + 3×2 + 1×3) / 14 = 19/14 = 1.36
+Mdn = 1.0
+Either way it's ~1.4 on a 7-point scale — floor effect, completely inappropriate.

@@ -1,0 +1,21 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Interaction Effects (Aligned Rank Transform)}
+\label{sec:art_interactions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+The main effect of system reported above collapses across urgency/importance and scenario. Before decomposing it, we formally tested whether the system effect depends on these factors using the Aligned Rank Transform \citep[ART;][]{Wobbrock_11_ART}, a nonparametric procedure for factorial designs with ordinal data. ART aligns each response by stripping all effects except the target, ranks the aligned values, and submits them to a repeated-measures ANOVA. Partial eta squared ($\eta^2_p$) is reported as the effect size.
+
+\paragraph{System $\times$ Urgency/Importance.}
+The ART ANOVA revealed significant System $\times$ Urgency/Importance interactions for all three applicable measures (detectability excluded, as SonoAdapt mutes Low notifications):
+appropriateness ($F(2,44) = 28.57$, $p < .001$, $\eta^2_p = 0.565$),
+social acceptability ($F(2,44) = 44.57$, $p < .001$, $\eta^2_p = 0.670$), and
+disruptiveness ($F(2,44) = 73.81$, $p < .001$, $\eta^2_p = 0.770$).
+The system effect therefore depends on urgency/importance, which motivates the decomposition in Section~\ref{sec:simple_effects}.
+
+\paragraph{System $\times$ Scenario (High Urgency/Importance Only).}
+For High notifications, where all three systems delivered sound, the System $\times$ Scenario interaction was significant for all four measures:
+appropriateness ($F(2,44) = 3.39$, $p = .043$, $\eta^2_p = 0.134$),
+social acceptability ($F(2,44) = 3.67$, $p = .033$, $\eta^2_p = 0.143$),
+detectability ($F(2,44) = 5.72$, $p = .006$, $\eta^2_p = 0.206$), and
+disruptiveness ($F(2,44) = 22.32$, $p < .001$, $\eta^2_p = 0.504$).
+The preferred modality thus depends on the scenario, which the cell-level analysis in Section~\ref{sec:further_effects} explores in detail.

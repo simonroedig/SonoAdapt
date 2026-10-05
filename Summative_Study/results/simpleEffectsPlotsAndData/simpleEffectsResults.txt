@@ -1,0 +1,375 @@
+
+========================================================================================
+SonoAdapt Summative Study — Simple-Effects Analysis (System × Urgency)
+========================================================================================
+Data source: C:\Users\simon\Desktop\SonoAdapt_SummativeStudy\results\raw.xlsx
+Output dir:  C:\Users\simon\Desktop\SonoAdapt_SummativeStudy\results\simpleEffectsPlotsAndData
+
+Raw rows loaded: 28
+Rows after removing pilot: 27
+Total trials (long format): 324
+Participants: 27
+
+----------------------------------------------------------------------------------------
+OUTLIER REMOVAL
+----------------------------------------------------------------------------------------
+Outliers removed: Tejaswini, Ritika, Anna, Osama (4 participants)
+Participants remaining: 23 (was 27)
+
+SonoAdapt+LOW: 46 trials have Detectability set to NaN (silent by design)
+
+Trials after split: LOW = 138, HIGH = 138
+  LOW participants:  23
+  HIGH participants: 23
+
+
+========================================================================================
+SIMPLE EFFECTS — LOW URGENCY/IMPORTANCE NOTIFICATIONS
+========================================================================================
+N = 23 participants.  Each participant's score per system is the mean
+of their LOW-urgency trials for that system (2 trials: Interview + Math).
+
+SonoAdapt mutes LOW notifications → Detectability is N/A for SonoAdapt.
+
+
+----------------------------------------------------------------------------------------
+LOW: [Appropriateness]  (1 = completely inappropriate … 7 = completely appropriate; higher = better)
+----------------------------------------------------------------------------------------
+
+Trial-level descriptives:
+            n     M    SD  Mdn   Q1   Q3  Min  Max
+system                                            
+Earcon     46  4.26  1.79  4.0  3.0  6.0    1    7
+Speech     46  1.93  0.93  2.0  1.0  2.0    1    5
+SonoAdapt  46  6.15  1.28  7.0  6.0  7.0    2    7
+
+Participant-level means (unit of analysis, N = 23):
+              M    SD  Mdn   Q1    Q3  Min  Max
+system                                         
+Earcon     4.26  1.47  4.0  3.0  5.25  2.0  7.0
+Speech     1.93  0.71  2.0  1.5  2.25  1.0  4.0
+SonoAdapt  6.15  0.90  6.5  5.5  7.00  4.0  7.0
+
+Friedman omnibus test:
+  χ²(2) = 41.69,  p = 0.00000  ***
+  Kendall's W = 0.906
+
+Post-hoc: Wilcoxon signed-rank tests, Holm-Bonferroni corrected (3 comparisons):
+  Comparison                      ΔM       W         p    p_Holm    r_rb      r    d_z   sig
+  Earcon vs Speech              2.33     0.0   0.00003   0.00007    1.00   0.88   1.44   ***  [<.025]
+  Earcon vs SonoAdapt          -1.89    11.5   0.00029   0.00029   -0.90   0.75  -1.17   ***  [<.025]
+  Speech vs SonoAdapt          -4.22     0.0   0.00002   0.00007   -1.00   0.88  -3.32   ***  [<.025]
+  (r_rb = matched-pairs rank-biserial; r = |z|/√N; d_z = Cohen's d for paired data)
+
+----------------------------------------------------------------------------------------
+LOW: [SocialAcceptability]  (1 = completely unacceptable  … 7 = completely acceptable;  higher = better)
+----------------------------------------------------------------------------------------
+
+Trial-level descriptives:
+            n     M    SD  Mdn   Q1    Q3  Min  Max
+system                                             
+Earcon     46  4.41  1.77  4.0  3.0  6.00    1    7
+Speech     46  2.89  1.74  2.0  2.0  3.75    1    7
+SonoAdapt  46  6.67  0.73  7.0  7.0  7.00    4    7
+
+Participant-level means (unit of analysis, N = 23):
+              M    SD  Mdn    Q1    Q3  Min  Max
+system                                          
+Earcon     4.41  1.35  4.0  3.25  5.75  2.5  7.0
+Speech     2.89  1.02  3.0  2.00  4.00  1.0  4.5
+SonoAdapt  6.67  0.51  7.0  6.50  7.00  5.5  7.0
+
+Friedman omnibus test:
+  χ²(2) = 41.36,  p = 0.00000  ***
+  Kendall's W = 0.899
+
+Post-hoc: Wilcoxon signed-rank tests, Holm-Bonferroni corrected (3 comparisons):
+  Comparison                      ΔM       W         p    p_Holm    r_rb      r    d_z   sig
+  Earcon vs Speech              1.52    12.0   0.00019   0.00019    0.91   0.78   1.04   ***  [<.025]
+  Earcon vs SonoAdapt          -2.26     0.0   0.00004   0.00008   -1.00   0.86  -1.69   ***  [<.025]
+  Speech vs SonoAdapt          -3.78     0.0   0.00003   0.00008   -1.00   0.88  -3.05   ***  [<.025]
+  (r_rb = matched-pairs rank-biserial; r = |z|/√N; d_z = Cohen's d for paired data)
+
+----------------------------------------------------------------------------------------
+LOW: [Disruptiveness]  (1 = not disruptive at all    … 7 = extremely disruptive;   LOWER = better)
+----------------------------------------------------------------------------------------
+
+Trial-level descriptives:
+            n     M    SD  Mdn   Q1   Q3  Min  Max
+system                                            
+Earcon     46  3.61  1.60  3.0  2.0  5.0    1    6
+Speech     46  5.70  1.35  6.0  5.0  7.0    2    7
+SonoAdapt  46  1.00  0.00  1.0  1.0  1.0    1    1
+
+Participant-level means (unit of analysis, N = 23):
+              M    SD  Mdn    Q1   Q3  Min  Max
+system                                         
+Earcon     3.61  1.45  3.5  2.50  4.5  1.5  6.0
+Speech     5.70  1.20  6.0  5.25  6.5  2.5  7.0
+SonoAdapt  1.00  0.00  1.0  1.00  1.0  1.0  1.0
+
+Friedman omnibus test:
+  χ²(2) = 45.07,  p = 0.00000  ***
+  Kendall's W = 0.980
+
+Post-hoc: Wilcoxon signed-rank tests, Holm-Bonferroni corrected (3 comparisons):
+  Comparison                      ΔM       W         p    p_Holm    r_rb      r    d_z   sig
+  Earcon vs Speech             -2.09     0.0   0.00006   0.00008   -1.00   0.84  -1.50   ***  [<.025]
+  Earcon vs SonoAdapt           2.61     0.0   0.00003   0.00008    1.00   0.88   1.80   ***  [<.025]
+  Speech vs SonoAdapt           4.70     0.0   0.00003   0.00008    1.00   0.88   3.90   ***  [<.025]
+  (r_rb = matched-pairs rank-biserial; r = |z|/√N; d_z = Cohen's d for paired data)
+
+----------------------------------------------------------------------------------------
+LOW: [Detectability]  (1 = very difficult to detect … 7 = very easy to detect;    higher = better)
+  NOTE: Only Earcon vs Speech (SonoAdapt is muted → N/A)
+----------------------------------------------------------------------------------------
+
+Trial-level descriptives:
+         n     M    SD  Mdn   Q1   Q3  Min  Max
+system                                         
+Earcon  46  6.09  1.40  7.0  6.0  7.0  2.0  7.0
+Speech  46  6.50  1.03  7.0  6.0  7.0  1.0  7.0
+
+Participant-level means (N = 23):
+           M    SD  Mdn   Q1   Q3  Min  Max
+system                                     
+Earcon  6.09  1.29  6.5  6.0  7.0  2.5  7.0
+Speech  6.50  0.72  7.0  6.0  7.0  4.0  7.0
+
+Wilcoxon signed-rank test:
+  Earcon vs Speech:  ΔM = -0.41,  W = 28.0,  p = 0.11846  n.s.
+  r_rb = -0.47,  r = 0.32,  d_z = -0.29
+
+Saved: C:\Users\simon\Desktop\SonoAdapt_SummativeStudy\results\simpleEffectsPlotsAndData\participantMeans_LOW.csv
+
+========================================================================================
+SIMPLE EFFECTS — HIGH URGENCY/IMPORTANCE NOTIFICATIONS
+========================================================================================
+N = 23 participants.  Each participant's score per system is the mean
+of their HIGH-urgency trials for that system (2 trials: Interview + Math).
+
+All systems deliver audible notifications for HIGH → all 4 DVs valid.
+
+
+----------------------------------------------------------------------------------------
+HIGH: [Appropriateness]  (1 = completely inappropriate … 7 = completely appropriate; higher = better)
+----------------------------------------------------------------------------------------
+
+Trial-level descriptives:
+            n     M    SD  Mdn   Q1   Q3  Min  Max
+system                                            
+Earcon     46  4.72  1.83  6.0  3.0  6.0    1    7
+Speech     46  5.37  1.45  6.0  5.0  6.0    2    7
+SonoAdapt  46  5.48  1.26  6.0  5.0  6.0    1    7
+
+Participant-level means (unit of analysis, N = 23):
+              M    SD  Mdn    Q1   Q3  Min  Max
+system                                         
+Earcon     4.72  1.50  5.5  3.50  6.0  1.5  6.5
+Speech     5.37  0.83  5.5  4.75  6.0  4.0  6.5
+SonoAdapt  5.48  0.86  5.5  5.00  6.0  3.5  7.0
+
+Friedman omnibus test:
+  χ²(2) = 3.88,  p = 0.14364  n.s.
+  Kendall's W = 0.084
+
+Post-hoc: Wilcoxon signed-rank tests, Holm-Bonferroni corrected (3 comparisons):
+  Comparison                      ΔM       W         p    p_Holm    r_rb      r    d_z   sig
+  Earcon vs Speech             -0.65    81.0   0.13504   0.27008   -0.36   0.31  -0.39   n.s.
+  Earcon vs SonoAdapt          -0.76    69.5   0.06266   0.18797   -0.45   0.39  -0.46   n.s.
+  Speech vs SonoAdapt          -0.11    66.0   0.61562   0.61562   -0.14   0.10  -0.08   n.s.
+  (r_rb = matched-pairs rank-biserial; r = |z|/√N; d_z = Cohen's d for paired data)
+
+----------------------------------------------------------------------------------------
+HIGH: [SocialAcceptability]  (1 = completely unacceptable  … 7 = completely acceptable;  higher = better)
+----------------------------------------------------------------------------------------
+
+Trial-level descriptives:
+            n     M    SD  Mdn   Q1   Q3  Min  Max
+system                                            
+Earcon     46  5.61  1.32  6.0  5.0  7.0    2    7
+Speech     46  5.13  1.48  5.0  5.0  6.0    1    7
+SonoAdapt  46  5.54  1.24  5.5  5.0  7.0    3    7
+
+Participant-level means (unit of analysis, N = 23):
+              M    SD  Mdn    Q1    Q3  Min  Max
+system                                          
+Earcon     5.61  0.93  6.0  5.00  6.25  3.5  6.5
+Speech     5.13  0.84  5.0  5.00  5.50  3.0  6.5
+SonoAdapt  5.54  0.95  6.0  5.25  6.00  3.5  7.0
+
+Friedman omnibus test:
+  χ²(2) = 7.46,  p = 0.02397  *
+  Kendall's W = 0.162
+
+Post-hoc: Wilcoxon signed-rank tests, Holm-Bonferroni corrected (3 comparisons):
+  Comparison                      ΔM       W         p    p_Holm    r_rb      r    d_z   sig
+  Earcon vs Speech              0.48    46.0   0.02612   0.05224    0.56   0.46   0.48   .
+  Earcon vs SonoAdapt           0.07    78.0   0.74181   0.74181    0.09   0.07   0.05   n.s.
+  Speech vs SonoAdapt          -0.41    36.5   0.01589   0.04766   -0.62   0.49  -0.44   *
+  (r_rb = matched-pairs rank-biserial; r = |z|/√N; d_z = Cohen's d for paired data)
+
+----------------------------------------------------------------------------------------
+HIGH: [Detectability]  (1 = very difficult to detect … 7 = very easy to detect;    higher = better)
+----------------------------------------------------------------------------------------
+
+Trial-level descriptives:
+            n     M    SD  Mdn   Q1   Q3  Min  Max
+system                                            
+Earcon     46  5.96  1.26  6.0  6.0  7.0  1.0  7.0
+Speech     46  6.41  1.22  7.0  6.0  7.0  1.0  7.0
+SonoAdapt  46  6.33  0.76  6.0  6.0  7.0  4.0  7.0
+
+Participant-level means (unit of analysis, N = 23):
+              M    SD  Mdn    Q1    Q3  Min  Max
+system                                          
+Earcon     5.96  1.08  6.0  5.75  6.75  3.0  7.0
+Speech     6.41  0.87  7.0  6.00  7.00  4.0  7.0
+SonoAdapt  6.33  0.56  6.5  6.00  6.75  5.0  7.0
+
+Friedman omnibus test:
+  χ²(2) = 6.92,  p = 0.03146  *
+  Kendall's W = 0.150
+
+Post-hoc: Wilcoxon signed-rank tests, Holm-Bonferroni corrected (3 comparisons):
+  Comparison                      ΔM       W         p    p_Holm    r_rb      r    d_z   sig
+  Earcon vs Speech             -0.46    21.5   0.02632   0.07897   -0.64   0.46  -0.36   .
+  Earcon vs SonoAdapt          -0.37    12.0   0.03031   0.07897   -0.69   0.44  -0.48   .
+  Speech vs SonoAdapt           0.09    42.5   0.31151   0.31151    0.29   0.21   0.08   n.s.
+  (r_rb = matched-pairs rank-biserial; r = |z|/√N; d_z = Cohen's d for paired data)
+
+----------------------------------------------------------------------------------------
+HIGH: [Disruptiveness]  (1 = not disruptive at all    … 7 = extremely disruptive;   LOWER = better)
+----------------------------------------------------------------------------------------
+
+Trial-level descriptives:
+            n     M    SD  Mdn   Q1   Q3  Min  Max
+system                                            
+Earcon     46  3.41  1.29  4.0  2.0  4.0    1    6
+Speech     46  5.54  1.35  6.0  5.0  7.0    2    7
+SonoAdapt  46  4.28  1.83  5.0  3.0  6.0    1    7
+
+Participant-level means (unit of analysis, N = 23):
+              M    SD  Mdn   Q1   Q3  Min  Max
+system                                        
+Earcon     3.41  1.12  3.5  2.5  4.0  1.5  5.5
+Speech     5.54  0.96  5.5  5.0  6.0  3.0  7.0
+SonoAdapt  4.28  1.41  5.0  3.0  5.5  1.5  6.0
+
+Friedman omnibus test:
+  χ²(2) = 35.65,  p = 0.00000  ***
+  Kendall's W = 0.775
+
+Post-hoc: Wilcoxon signed-rank tests, Holm-Bonferroni corrected (3 comparisons):
+  Comparison                      ΔM       W         p    p_Holm    r_rb      r    d_z   sig
+  Earcon vs Speech             -2.13     0.0   0.00003   0.00008   -1.00   0.88  -1.90   ***  [<.025]
+  Earcon vs SonoAdapt          -0.87    31.5   0.00573   0.00573   -0.70   0.57  -0.74   **  [<.025]
+  Speech vs SonoAdapt           1.26     8.0   0.00027   0.00055    0.92   0.76   1.02   ***  [<.025]
+  (r_rb = matched-pairs rank-biserial; r = |z|/√N; d_z = Cohen's d for paired data)
+
+Saved: C:\Users\simon\Desktop\SonoAdapt_SummativeStudy\results\simpleEffectsPlotsAndData\participantMeans_HIGH.csv
+
+========================================================================================
+SUMMARY TABLE — LOW URGENCY
+========================================================================================
+
+N = 23 participants (after outlier removal)
+
+DV                           Earcon       Speech    SonoAdapt    Friedman χ²          p      W   sig
+----------------------------------------------------------------------------------------------------
+Appropriateness         4.26 (1.47)  1.93 (0.71)  6.15 (0.90)          41.69    0.00000  0.906   ***
+SocialAcceptability     4.41 (1.35)  2.89 (1.02)  6.67 (0.51)          41.36    0.00000  0.899   ***
+Detectability           6.09 (1.29)  6.50 (0.72)  N/A (muted)   (2-sys Wilc.)                     —
+Disruptiveness          3.61 (1.45)  5.70 (1.20)  1.00 (0.00)          45.07    0.00000  0.980   ***
+
+Values are M (SD) at the participant level.
+
+
+========================================================================================
+PAIRWISE SUMMARY — LOW URGENCY
+========================================================================================
+
+DV                     Comparison                      ΔM     p_Holm    r_rb    d_z   sig
+-----------------------------------------------------------------------------------------------
+Appropriateness        Earcon vs Speech              2.33    0.00007    1.00   1.44   ***
+Appropriateness        Earcon vs SonoAdapt          -1.89    0.00029   -0.90  -1.17   ***
+Appropriateness        Speech vs SonoAdapt          -4.22    0.00007   -1.00  -3.32   ***
+
+SocialAcceptability    Earcon vs Speech              1.52    0.00019    0.91   1.04   ***
+SocialAcceptability    Earcon vs SonoAdapt          -2.26    0.00008   -1.00  -1.69   ***
+SocialAcceptability    Speech vs SonoAdapt          -3.78    0.00008   -1.00  -3.05   ***
+
+Detectability          Earcon vs Speech             -0.41    0.11846   -0.47  -0.29   n.s.
+
+Disruptiveness         Earcon vs Speech             -2.09    0.00008   -1.00  -1.50   ***
+Disruptiveness         Earcon vs SonoAdapt           2.61    0.00008    1.00   1.80   ***
+Disruptiveness         Speech vs SonoAdapt           4.70    0.00008    1.00   3.90   ***
+
+========================================================================================
+SUMMARY TABLE — HIGH URGENCY
+========================================================================================
+
+N = 23 participants (after outlier removal)
+
+DV                           Earcon       Speech    SonoAdapt    Friedman χ²          p      W   sig
+----------------------------------------------------------------------------------------------------
+Appropriateness         4.72 (1.50)  5.37 (0.83)  5.48 (0.86)           3.88    0.14364  0.084   n.s.
+SocialAcceptability     5.61 (0.93)  5.13 (0.84)  5.54 (0.95)           7.46    0.02397  0.162   *
+Detectability           5.96 (1.08)  6.41 (0.87)  6.33 (0.56)           6.92    0.03146  0.150   *
+Disruptiveness          3.41 (1.12)  5.54 (0.96)  4.28 (1.41)          35.65    0.00000  0.775   ***
+
+Values are M (SD) at the participant level.
+
+
+========================================================================================
+PAIRWISE SUMMARY — HIGH URGENCY
+========================================================================================
+
+DV                     Comparison                      ΔM     p_Holm    r_rb    d_z   sig
+-----------------------------------------------------------------------------------------------
+Appropriateness        Earcon vs Speech             -0.65    0.27008   -0.36  -0.39   n.s.
+Appropriateness        Earcon vs SonoAdapt          -0.76    0.18797   -0.45  -0.46   n.s.
+Appropriateness        Speech vs SonoAdapt          -0.11    0.61562   -0.14  -0.08   n.s.
+
+SocialAcceptability    Earcon vs Speech              0.48    0.05224    0.56   0.48   .
+SocialAcceptability    Earcon vs SonoAdapt           0.07    0.74181    0.09   0.05   n.s.
+SocialAcceptability    Speech vs SonoAdapt          -0.41    0.04766   -0.62  -0.44   *
+
+Detectability          Earcon vs Speech             -0.46    0.07897   -0.64  -0.36   .
+Detectability          Earcon vs SonoAdapt          -0.37    0.07897   -0.69  -0.48   .
+Detectability          Speech vs SonoAdapt           0.09    0.31151    0.29   0.08   n.s.
+
+Disruptiveness         Earcon vs Speech             -2.13    0.00008   -1.00  -1.90   ***
+Disruptiveness         Earcon vs SonoAdapt          -0.87    0.00573   -0.70  -0.74   **
+Disruptiveness         Speech vs SonoAdapt           1.26    0.00055    0.92   1.02   ***
+
+========================================================================================
+GENERATING PLOTS
+========================================================================================
+  Saved: fig_simpleEffects_LOW_SonoAdapt.png / .pdf
+  Saved: fig_simpleEffects_LOW_AudioAdapt.png / .pdf
+  Saved: fig_simpleEffects_HIGH_SonoAdapt_4DV.png / .pdf
+  Saved: fig_simpleEffects_HIGH_SonoAdapt_3DV.png / .pdf
+  Saved: fig_simpleEffects_HIGH_AudioAdapt_4DV.png / .pdf
+  Saved: fig_simpleEffects_HIGH_AudioAdapt_3DV.png / .pdf
+
+
+========================================================================================
+CROSS-URGENCY COMPARISON — System means by urgency level
+========================================================================================
+
+                                           —— LOW ——                              —— HIGH ——
+DV                           Earcon       Speech    SonoAdapt          Earcon       Speech    SonoAdapt
+--------------------------------------------------------------------------------------------------------------
+Appropriateness                4.26         1.93         6.15            4.72         5.37         5.48
+SocialAcceptability            4.41         2.89         6.67            5.61         5.13         5.54
+Detectability                  6.09         6.50          N/A            5.96         6.41         6.33
+Disruptiveness                 3.61         5.70         1.00            3.41         5.54         4.28
+
+SonoAdapt-LOW Detectability = N/A (system mutes LOW notifications).
+
+
+========================================================================================
+DONE
+========================================================================================
+All results saved to: C:\Users\simon\Desktop\SonoAdapt_SummativeStudy\results\simpleEffectsPlotsAndData

@@ -1,0 +1,114 @@
+================================================================================
+DEMOGRAPHICS — Data Reference for Writing
+================================================================================
+
+--------------------------------------------------------------------------------
+SAMPLE OVERVIEW
+--------------------------------------------------------------------------------
+  Total raw survey responses:    28
+  Removed (pilot row):           1
+  Removed (outliers):            4
+  Final sample:                  N = 23
+  Trials per participant:        12
+  Total observations:            276
+
+--------------------------------------------------------------------------------
+AGE
+--------------------------------------------------------------------------------
+  Range: 21–40
+  M = 28.83, SD = 5.45, Mdn = 28.0
+
+--------------------------------------------------------------------------------
+GENDER
+--------------------------------------------------------------------------------
+  Female: 14 (60.9%)
+  Male: 9 (39.1%)
+
+--------------------------------------------------------------------------------
+ENGLISH PROFICIENCY
+--------------------------------------------------------------------------------
+  Understand perfectly: 12 (52.2%)
+  Understand very well: 8 (34.8%)
+  Understand well: 3 (13.0%)
+  → At least 'very well' or 'perfectly': 20 (87.0%)
+
+--------------------------------------------------------------------------------
+SMART GLASSES EXPERIENCE
+--------------------------------------------------------------------------------
+  Never: 22 (95.7%)
+  Tried once or twice: 1 (4.3%)
+  → No experience at all: 22 (95.7%)
+
+================================================================================
+PRE-WRITTEN LaTeX PARAGRAPH (Recruitment and Data Filtering)
+================================================================================
+
+\subsection{Recruitment and Data Filtering}
+In total, 28 raw survey responses were recorded. We excluded 4 participants identified as outliers based on predefined criteria. After removing the pilot session and 4 outliers, our final dataset consisted of $N = 23$ valid participants.
+
+Due to the fully within-subjects design with 3 notification systems (Earcon, Speech, SonoAdapt), 2 urgency/importance levels (low, high), and 2 scenarios (interview, math), each participant completed 12 trials, yielding a total of 276 individual observations (23 participants $\times$ 12 trials) for the statistical analysis.
+
+The final sample consisted of 23 participants (14 female, 9 male). Participants were between 21 and 40 years old ($M = 28.83$, $SD = 5.45$). As the study was conducted in English, participants self-reported their English proficiency. All participants indicated at least a good level of proficiency, with 20 (87.0\%) reporting that they understood English very well or perfectly. Regarding smart glasses experience, 22 participants (95.7\%) reported having no prior experience with smart glasses.
+
+
+================================================================================
+COPYABLE SNIPPETS
+================================================================================
+
+  N = 23
+  Age: 21–40 years (M = 28.83, SD = 5.45)
+  Gender: 14 female, 9 male
+  English ≥ very well: 20 (87.0%)
+  No glasses experience: 22 (95.7%)
+  Total observations: 276 (23 × 12)
+
+
+================================================================================
+BACKGROUND DATA (for Results > Background section)
+================================================================================
+
+  Smart glasses experience:
+    Never:                22 (95.7%)
+    Tried once or twice:   1 ( 4.3%)
+
+  Desired auditory notifications via smart glasses (multi-select):
+    Phone Calls:                           18 (78.3%)
+    Navigation / Directions:               17 (73.9%)
+    Calendar / Reminder Alerts:            16 (69.6%)
+    Direct Instant Messages (WhatsApp):    12 (52.2%)
+    Emails:                                 6 (26.1%)
+
+  Importance/Urgency attitudes (agree + somewhat agree + strongly agree):
+    Only important messages:   18 (78.3%)
+    Only urgent messages:      20 (87.0%)
+
+  Smartphone notification settings:
+    Visual + Vibration:            11 (47.8%)  — most common
+    Visual only:                    5 (21.7%)
+    Muted / Do Not Disturb:        4 (17.4%)
+    Visual + Audio:                 2 ( 8.7%)
+    Visual + Vibration + Audio:     1 ( 4.3%)
+    → Audio enabled overall:        3 (13.0%)
+
+  Reasons for notification settings (multi-select):
+    Social Etiquette:   14 (60.9%)
+    Personal Focus:     13 (56.5%)
+    Awareness:          10 (43.5%)
+    Habit:               5 (21.7%)
+    Privacy:             4 (17.4%)
+
+
+================================================================================
+PRE-WRITTEN LaTeX PARAGRAPH (Results > Background)
+================================================================================
+
+\subsection{Background}
+As in the formative study (see Section~\ref{sec:formative_background}), we collected background information on participants' prior smart glasses experience, smartphone notification habits, and attitudes toward auditory notifications on smart glasses.
+
+Similarly to the formative study, the vast majority of participants had no prior experience with smart glasses: 22 (95.7\%) had never used smart glasses, while one participant (4.3\%) had tried them once or twice.
+
+Regarding which notifications participants would want to receive auditorily through smart glasses, phone calls remained the most frequently selected type (78.3\%), followed by navigation instructions (73.9\%), calendar or reminder alerts (69.6\%), and direct instant messages such as WhatsApp (52.2\%). Emails were selected less frequently (26.1\%). These preferences closely mirror those observed in the formative study.
+
+Participants also showed a clear preference for reserving auditory notifications for messages of higher relevance. Overall, 78.3\% agreed (somewhat, or strongly) that they would only want to be notified auditorily about important messages, while this proportion increased to 87.0\% for urgent messages.
+
+Consistent with the formative study, the active use of audio notifications on participants' smartphones was uncommon, with only 13.0\% enabling audible alerts. Most participants relied on visual notifications combined with vibration (47.8\%), visual notifications only (21.7\%), or had notifications disabled entirely (17.4\%). The most frequently cited reasons for these settings were social etiquette (60.9\%) and personal focus (56.5\%), again aligning with the formative findings.

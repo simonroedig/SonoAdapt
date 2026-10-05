@@ -1,0 +1,294 @@
+================================================================================
+FURTHER EFFECTS — forUnderstandingAndWriting.txt
+================================================================================
+
+─── EASY-TO-UNDERSTAND SUMMARY ────────────────────────────────────────────────
+
+"Why do the system differences look the way they do?"
+
+These are EXPLORATORY pairwise analyses that dig into the individual
+cells of the 3 (System) × 2 (Urgency) × 2 (Scenario) design.
+They answer four specific questions:
+
+  Group 1: Does urgency/importance change the ratings for each system?
+  Group 2: Does SonoAdapt produce the same ratings as the baseline it mimics?
+  Group 3: In each scenario, was SonoAdapt's choice the better system?
+  Group 4: Does the scenario (Interview vs Math) affect ratings?
+
+
+─── WHAT MAKES THIS DIFFERENT FROM MAIN/SIMPLE EFFECTS ────────────────────────
+
+  Main effects:    1 factor (System), 3 levels, Friedman + Holm pairwise
+  Simple effects:  Same, but split by Urgency (2 separate analyses)
+  Further effects: Individual CELL-LEVEL comparisons (2 conditions each)
+
+Further effects are EXPLORATORY. They use uncorrected p-values (no
+Holm correction across groups) because they are hypothesis-generating,
+not confirmatory. This is standard practice — you report them as
+exploratory and let the reader judge the pattern.
+
+
+─── GROUP 1: URGENCY/IMPORTANCE EFFECT ────────────────────────────────────────
+
+QUESTION: "Does urgency level change how each system is rated?"
+
+WHAT WE COMPARE:
+  Within each System × Scenario cell, compare Low vs High.
+  4 comparisons:
+    • Interview × Earcon:  Low vs High
+    • Interview × Speech:  Low vs High
+    • Math × Earcon:       Low vs High
+    • Math × Speech:       Low vs High
+  (SonoAdapt is excluded because LOW = muted and HIGH = earcon or speech,
+   so comparing them would mix modality and urgency — not meaningful.)
+
+DATA:
+  Each participant has exactly 1 trial per cell → paired Wilcoxon directly
+  on the single trial values (no averaging needed).
+
+KEY FINDING:
+  Speech shows a MASSIVE Low→High improvement in Appropriateness:
+    Interview: 1.65 → 4.87 (p < .001)
+    Math:      2.22 → 5.87 (p < .001)
+  Earcon is much more stable — urgency barely changes the ratings.
+
+INTERPRETATION:
+  Speech is very context-dependent: terrible for low-urgency (disruptive,
+  inappropriate) but acceptable for high-urgency. Earcon is more "neutral"
+  across urgency levels. This is WHY SonoAdapt's decision to mute LOW
+  notifications (instead of playing speech) is so effective.
+
+PLOT: fig_urgencyEffect.png/.pdf
+  2×2 grid (rows: Interview/Math, cols: Earcon/Speech).
+  Blue = Low, Red = High. Stars show significant differences.
+
+
+─── GROUP 2: SANITY CHECKS ────────────────────────────────────────────────────
+
+QUESTION: "Does SonoAdapt produce the same ratings as the baseline system
+           it resolves to?"
+
+BACKGROUND:
+  For HIGH urgency, SonoAdapt plays:
+    • Earcon in the Interview scenario
+    • Speech in the Math scenario
+  If the system works correctly, SonoAdapt's ratings should be statistically
+  indistinguishable from the corresponding baseline.
+
+WHAT WE COMPARE:
+  • Interview HIGH: Earcon vs SonoAdapt (which played Earcon)
+  • Math HIGH:      Speech vs SonoAdapt (which played Speech)
+
+DATA:
+  1 trial per participant per condition → paired Wilcoxon.
+
+KEY FINDING:
+  ✅ ALL sanity checks PASS. No significant differences on any DV.
+  All p-values > .15. SonoAdapt's adaptive output is perceived identically
+  to the corresponding baseline.
+
+WHY THIS MATTERS:
+  This validates two things:
+  1. The adaptive system works as designed (plays the right sound).
+  2. It justifies using baseline data for the Group 3 analysis (see below).
+
+PLOT: fig_sanityChecks_SonoAdapt.png/.pdf (and AudioAdapt variant)
+  1×2 grid. Titles explicitly state what SonoAdapt resolves to:
+    "Sanity: Interview HIGH — Earcon vs SonoAdapt (= Earcon)"
+    "Sanity: Math HIGH — Speech vs SonoAdapt (= Speech)"
+
+
+─── GROUP 3: SYSTEM CHOICE FOR HIGH ───────────────────────────────────────────
+
+QUESTION: "Was SonoAdapt's adaptive choice (Earcon in Interview, Speech in
+           Math) actually the BETTER option in each scenario?"
+
+IMPORTANT — WHAT DATA IS USED:
+  We compare baseline Earcon vs baseline Speech for HIGH in each scenario.
+  We do NOT use SonoAdapt's data points here.
+
+  WHY? Because the sanity checks (Group 2) already proved that SonoAdapt's
+  ratings are identical to the baseline it resolves to. So comparing baseline
+  Earcon vs baseline Speech effectively compares "what SonoAdapt chose" vs
+  "what it didn't choose." Using baseline data is cleaner because:
+    (a) Participants explicitly knew they were hearing "earcon" or "speech"
+        in the baseline conditions (no adaptive system in between).
+    (b) The sanity check validates this substitution.
+
+  A REVIEWER MIGHT ASK: "Why not use SonoAdapt's actual data?"
+  ANSWER: We first established via sanity checks that SonoAdapt ≈ Baseline
+  (all p > .15). Therefore, baseline data is a valid and cleaner proxy.
+  Using SonoAdapt's data directly would give near-identical results (as
+  the sanity checks prove) but would introduce the additional variable of
+  participants knowing it was the "adaptive system."
+
+WHAT WE COMPARE:
+  • Interview HIGH: Earcon vs Speech → SonoAdapt chose Earcon
+  • Math HIGH:      Earcon vs Speech → SonoAdapt chose Speech
+
+KEY FINDINGS:
+
+  Interview — SonoAdapt correctly chose Earcon:
+    • Disruptiveness: Earcon (3.13) vs Speech (5.78), p < .001 ***
+      → Earcon is FAR less disruptive during an interview.
+    • Social Acceptability: Earcon (5.43) vs Speech (4.43), p = .006 **
+      → Earcon is more socially acceptable in a conversation.
+    • Appropriateness: no significant difference (both ~5).
+    → Earcon is the clear winner in Interview.
+
+  Math — SonoAdapt correctly chose Speech:
+    • Appropriateness: Speech (5.87) vs Earcon (4.70), p = .042 *
+    • Detectability: Speech (6.78) vs Earcon (5.78), p = .002 **
+    • Disruptiveness: Speech (5.30) vs Earcon (3.70), p < .001 ***
+      (Speech is MORE disruptive, but the Appropriateness and Detectability
+       advantages outweigh this — during a solo math task, being noticeable
+       matters more than being unobtrusive.)
+    → Speech is the better choice for Math (high detectability + appropriate).
+
+PLOT: fig_systemChoice_SonoAdapt.png/.pdf (and AudioAdapt variant)
+  1×2 grid. Titles clearly state which system was chosen:
+    "Interview HIGH: Earcon (chosen by SonoAdapt) vs Speech"
+    "Math HIGH: Earcon vs Speech (chosen by SonoAdapt)"
+
+
+─── GROUP 4: SCENARIO EFFECT ──────────────────────────────────────────────────
+
+QUESTION: "Does the scenario (Interview vs Math) influence the ratings
+           for each system?"
+
+WHAT WE COMPARE:
+  Within each System × Urgency cell, compare Interview vs Math.
+  6 comparisons:
+    • Speech × High:     Interview vs Math
+    • Speech × Low:      Interview vs Math
+    • Speech × Combined: Interview vs Math (mean of Low+High per scenario)
+    • Earcon × High:     Interview vs Math
+    • Earcon × Low:      Interview vs Math
+    • Earcon × Combined: Interview vs Math
+
+DATA:
+  1 trial per participant per cell (High/Low) or mean of 2 (Combined).
+
+KEY FINDINGS:
+  Speech is VERY scenario-dependent:
+    • Appropriateness: better in Math than Interview (almost all p < .05)
+    • Social Acceptability: dramatically better in Math (p < .001 for Low/Comb.)
+    • Detectability: higher in Math (p < .05)
+    → Speech in Interview is perceived as socially inappropriate (interrupting
+      a conversation), but in Math (solo task) it's acceptable.
+
+  Earcon is more consistent across scenarios:
+    • Most DVs show no significant scenario difference.
+    • Exception: Disruptiveness is slightly higher in Math (p < .05).
+
+INTERPRETATION:
+  This confirms WHY SonoAdapt's adaptive strategy is effective:
+  it avoids speech in Interview (where speech is inappropriate) and
+  uses speech in Math (where speech works well). The scenario effect
+  for speech validates SonoAdapt's decision-making logic.
+
+PLOT: fig_scenarioEffect.png/.pdf
+  2×3 grid (rows: Speech/Earcon, cols: High/Low/Combined).
+  Blue = Interview, Orange = Math.
+
+
+─── ALL STATISTICAL TESTS IN THIS FILE ────────────────────────────────────────
+
+ALL comparisons use:
+  Test:         Wilcoxon signed-rank (2-condition, paired)
+  Why:          Each comparison has exactly 2 conditions (e.g., Low vs High)
+                → Friedman is not needed (Friedman requires ≥3 groups).
+  Effect sizes: r_rb (rank-biserial), r (|Z|/√N), Cohen's d_z
+  Correction:   NONE — these are exploratory analyses.
+                P-values are uncorrected within each comparison.
+                This is explicitly stated in all output.
+
+WHY UNCORRECTED?
+  These are exploratory, hypothesis-generating analyses. Applying strict
+  corrections across 20+ comparisons would be overly conservative and
+  would mask genuine patterns. The standard in HCI is to:
+  1. Report main effects with correction (done in mainEffects.py)
+  2. Report exploratory follow-ups with uncorrected p-values + explicit
+     labeling as "exploratory"
+  A reviewer accepts this as long as you don't claim confirmatory results.
+
+
+─── ALL PLOTS IN THIS FOLDER ──────────────────────────────────────────────────
+
+  fig_urgencyEffect.png/.pdf              Group 1: Low vs High per cell
+  fig_sanityChecks_SonoAdapt.png/.pdf     Group 2: Sanity checks (thesis)
+  fig_sanityChecks_AudioAdapt.png/.pdf    Group 2: Sanity checks (paper)
+  fig_systemChoice_SonoAdapt.png/.pdf     Group 3: System choice (thesis)
+  fig_systemChoice_AudioAdapt.png/.pdf    Group 3: System choice (paper)
+  fig_scenarioEffect.png/.pdf             Group 4: Interview vs Math
+
+
+─── OTHER OUTPUT FILES ────────────────────────────────────────────────────────
+
+  furtherEffectsResults.txt    Full statistical report (all 4 groups)
+  forWriting.txt               Brief summary bullets (from earlier)
+
+
+─── WHAT THE SCRIPT DOES UNDER THE HOOD ───────────────────────────────────────
+
+  1. Loads raw.xlsx, removes pilot, reshapes wide → long
+  2. Maps Likert labels → numeric 1–7
+  3. Removes outliers (same 4 as main/simple effects)
+  4. Pivots to per-cell participant-level values
+  5. For each group (1–4):
+     a. Defines the comparison pairs
+     b. Extracts participant-level data for each pair
+     c. Runs Wilcoxon signed-rank test per DV
+     d. Computes effect sizes
+  6. Generates separate figures for each group
+  7. Saves all results to furtherEffectsResults.txt
+
+
+─── HOW ALL THREE ANALYSES FIT TOGETHER ───────────────────────────────────────
+
+  LEVEL 1 — Main Effects (mainEffects.py):
+    "Overall, which system is best?"
+    → Confirmatory. Friedman + Holm-corrected pairwise. For the paper.
+
+  LEVEL 2 — Simple Effects (simpleEffects.py):
+    "Is the system preference the same for LOW and HIGH urgency?"
+    → Semi-confirmatory. Same Friedman pipeline, split by urgency.
+
+  LEVEL 3 — Further Effects (furtherEffects.py):
+    "WHY do the differences look the way they do?"
+    → Exploratory. Cell-level pairwise comparisons. Uncorrected.
+    → Validates SonoAdapt's adaptive decisions.
+    → Reveals scenario-dependent patterns.
+
+  STILL PENDING — Interaction Effects:
+    "Is there a formal System × Scenario interaction?"
+    → Your supervisor mentioned using ART (Aligned Rank Transform)
+      repeated-measures in R. This has not been done yet.
+    → Only feasible for HIGH notifications (because SonoAdapt LOW
+      Detectability is NaN, breaking the balanced design).
+
+
+─── REVIEWER DEFENSE NOTES ────────────────────────────────────────────────────
+
+Q: "Why use baseline Earcon/Speech instead of SonoAdapt's data for Group 3?"
+A: The sanity checks (Group 2) establish that SonoAdapt ≈ Baseline for all
+   DVs (all p > .15). Baseline data provides a cleaner comparison because
+   participants knew exactly which notification type they heard.
+
+Q: "These are a lot of comparisons — aren't you p-hacking?"
+A: These are explicitly labeled as exploratory analyses with uncorrected
+   p-values. The confirmatory results are in mainEffects.py (with proper
+   Holm-Bonferroni correction). The exploratory analyses help explain the
+   patterns and validate the adaptive system's design decisions.
+
+Q: "Why not include SonoAdapt in the urgency effect (Group 1)?"
+A: SonoAdapt LOW = muted, SonoAdapt HIGH = earcon/speech. Comparing them
+   would mix notification modality (silence vs sound) with urgency level.
+   This is not a clean comparison and would be misleading.
+
+Q: "The scenario effect (Group 4) — why no correction across 6 comparisons?"
+A: Exploratory. The pattern (speech is scenario-dependent, earcon isn't) is
+   consistent across urgency levels, which strengthens the finding even
+   without formal correction.
+
+Script: furtherEffects.py
