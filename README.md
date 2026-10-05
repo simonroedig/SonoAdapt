@@ -2,8 +2,7 @@
 
 **Context-Aware Auditory Notifications on Smart Glasses via Multimodal AI**
 
-Master Thesis · Human-Computer Interaction
-Supervisor: Dr. Laura Schütz
+Master Thesis · Human-Computer Interaction (LMU) · Supervisor: Dr. Laura Schütz (TUM)
 
 ![SonoAdapt](sonoadapt.png)
 
